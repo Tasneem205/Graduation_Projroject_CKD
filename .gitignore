@@ -179,3 +179,178 @@ doctor_app/app.*.symbols
 !doctor_app/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !doctor_app/dev/ci/**/Gemfile.lock
 !doctor_app/.vscode/settings.json
+
+# Miscellaneous
+user_app/*.class
+user_app/*.log
+user_app/*.pyc
+user_app/*.swp
+user_app/.DS_Store
+user_app/.atom/
+user_app/.buildlog/
+user_app/.history
+user_app/.svn/
+user_app/migrate_working_dir/
+
+# IntelliJ related
+user_app/*.iml
+user_app/*.ipr
+user_app/*.iws
+user_app/.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+user_app/**/doc/api/
+user_app/**/ios/Flutter/.last_build_id
+user_app/.dart_tool/
+user_app/.flutter-plugins
+user_app/.flutter-plugins-dependencies
+user_app/.pub-cache/
+user_app/.pub/
+user_app/build/
+
+# Symbolication related
+user_app/app.*.symbols
+
+# Obfuscation related
+user_app/app.*.map.json
+
+# Android Studio will place build artifacts here
+user_app/android/app/debug
+user_app/android/app/profile
+user_app/android/app/release
+
+
+# Miscellaneous
+user_app/*.class
+user_app/*.lock
+user_app/*.log
+user_app/*.pyc
+user_app/*.swp
+user_app/.DS_Store
+user_app/.atom/
+user_app/.buildlog/
+user_app/.history
+user_app/.svn/
+
+# Visual Studio Code related
+user_app/.classpath
+user_app/.project
+user_app/.settings/
+user_app/.vscode/*
+
+# Flutter repo-specific
+user_app/bin/cache/
+user_app/bin/internal/bootstrap.bat
+user_app/bin/internal/bootstrap.sh
+user_app/bin/mingit/
+user_app/dev/benchmarks/mega_gallery/
+user_app/dev/bots/.recipe_deps
+user_app/dev/bots/android_tools/
+user_app/dev/devicelab/ABresults*.json
+user_app/dev/docs/doc/
+user_app/dev/docs/api_docs.zip
+user_app/dev/docs/flutter.docs.zip
+user_app/dev/docs/lib/
+user_app/dev/docs/pubspec.yaml
+user_app/dev/integration_tests/**/xcuserdata
+user_app/dev/integration_tests/**/Pods
+user_app/packages/flutter/coverage/
+user_app/version
+user_app/analysis_benchmark.json
+
+# packages file containing multi-root paths
+user_app/.packages.generated
+
+# Flutter/Dart/Pub related
+user_app/**/doc/api/
+user_app/.dart_tool/
+user_app/.flutter-plugins
+user_app/.flutter-plugins-dependencies
+user_app/**/generated_plugin_registrant.dart
+user_app/.packages
+user_app/.pub-preload-cache/
+user_app/.pub-cache/
+user_app/.pub/
+user_app/build/
+user_app/flutter_*.png
+user_app/linked_*.ds
+user_app/unlinked.ds
+user_app/unlinked_spec.ds
+
+# Android related
+user_app/**/android/**/gradle-wrapper.jar
+user_app/.gradle/
+user_app/**/android/captures/
+user_app/**/android/gradlew
+user_app/**/android/gradlew.bat
+user_app/**/android/local.properties
+user_app/**/android/**/GeneratedPluginRegistrant.java
+user_app/**/android/key.properties
+user_app/*.jks
+
+# iOS/XCode related
+user_app/**/ios/**/*.mode1v3
+user_app/**/ios/**/*.mode2v3
+user_app/**/ios/**/*.moved-aside
+user_app/**/ios/**/*.pbxuser
+user_app/**/ios/**/*.perspectivev3
+user_app/**/ios/**/*sync/
+user_app/**/ios/**/.sconsign.dblite
+user_app/**/ios/**/.tags*
+user_app/**/ios/**/.vagrant/
+user_app/**/ios/**/DerivedData/
+user_app/**/ios/**/Icon?
+user_app/**/ios/**/Pods/
+user_app/**/ios/**/.symlinks/
+user_app/**/ios/**/profile
+user_app/**/ios/**/xcuserdata
+user_app/**/ios/.generated/
+user_app/**/ios/Flutter/.last_build_id
+user_app/**/ios/Flutter/App.framework
+user_app/**/ios/Flutter/Flutter.framework
+user_app/**/ios/Flutter/Flutter.podspec
+user_app/**/ios/Flutter/Generated.xcconfig
+user_app/**/ios/Flutter/ephemeral
+user_app/**/ios/Flutter/app.flx
+user_app/**/ios/Flutter/app.zip
+user_app/**/ios/Flutter/flutter_assets/
+user_app/**/ios/Flutter/flutter_export_environment.sh
+user_app/**/ios/ServiceDefinitions.json
+user_app/**/ios/Runner/GeneratedPluginRegistrant.*
+
+# macOS
+user_app/**/Flutter/ephemeral/
+user_app/**/Pods/
+user_app/**/macos/Flutter/GeneratedPluginRegistrant.swift
+user_app/**/macos/Flutter/ephemeral
+user_app/**/xcuserdata/
+
+# Windows
+user_app/**/windows/flutter/generated_plugin_registrant.cc
+user_app/**/windows/flutter/generated_plugin_registrant.h
+user_app/**/windows/flutter/generated_plugins.cmake
+
+# Linux
+user_app/**/linux/flutter/generated_plugin_registrant.cc
+user_app/**/linux/flutter/generated_plugin_registrant.h
+user_app/**/linux/flutter/generated_plugins.cmake
+
+# Coverage
+user_app/coverage/
+
+# Symbols
+user_app/app.*.symbols
+
+# Exceptions to above rules.
+!user_app/**/ios/**/default.mode1v3
+!user_app/**/ios/**/default.mode2v3
+!user_app/**/ios/**/default.pbxuser
+!user_app/**/ios/**/default.perspectivev3
+!user_app/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+!user_app/dev/ci/**/Gemfile.lock
+!user_app/.vscode/settings.json
