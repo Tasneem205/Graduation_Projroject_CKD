@@ -3,7 +3,6 @@ images_model/.ipynb_checkpoints
 images_model/dataset
 
 tabular_model/.ipynb_checkpoints
-tabular_model/ckd.model
 
 # Miscellaneous
 doctor_app/*.class
