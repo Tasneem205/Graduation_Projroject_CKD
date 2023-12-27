@@ -4,3 +4,178 @@ images_model/dataset
 
 tabular_model/.ipynb_checkpoints
 tabular_model/ckd.model
+
+# Miscellaneous
+doctor_app/*.class
+doctor_app/*.log
+doctor_app/*.pyc
+doctor_app/*.swp
+doctor_app/.DS_Store
+doctor_app/.atom/
+doctor_app/.buildlog/
+doctor_app/.history
+doctor_app/.svn/
+doctor_app/migrate_working_dir/
+
+# IntelliJ related
+doctor_app/*.iml
+doctor_app/*.ipr
+doctor_app/*.iws
+doctor_app/.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+doctor_app/**/doc/api/
+doctor_app/**/ios/Flutter/.last_build_id
+doctor_app/.dart_tool/
+doctor_app/.flutter-plugins
+doctor_app/.flutter-plugins-dependencies
+doctor_app/.pub-cache/
+doctor_app/.pub/
+doctor_app/build/
+
+# Symbolication related
+doctor_app/app.*.symbols
+
+# Obfuscation related
+doctor_app/app.*.map.json
+
+# Android Studio will place build artifacts here
+doctor_app/android/app/debug
+doctor_app/android/app/profile
+doctor_app/android/app/release
+
+
+# Miscellaneous
+doctor_app/*.class
+doctor_app/*.lock
+doctor_app/*.log
+doctor_app/*.pyc
+doctor_app/*.swp
+doctor_app/.DS_Store
+doctor_app/.atom/
+doctor_app/.buildlog/
+doctor_app/.history
+doctor_app/.svn/
+
+# Visual Studio Code related
+doctor_app/.classpath
+doctor_app/.project
+doctor_app/.settings/
+doctor_app/.vscode/*
+
+# Flutter repo-specific
+doctor_app/bin/cache/
+doctor_app/bin/internal/bootstrap.bat
+doctor_app/bin/internal/bootstrap.sh
+doctor_app/bin/mingit/
+doctor_app/dev/benchmarks/mega_gallery/
+doctor_app/dev/bots/.recipe_deps
+doctor_app/dev/bots/android_tools/
+doctor_app/dev/devicelab/ABresults*.json
+doctor_app/dev/docs/doc/
+doctor_app/dev/docs/api_docs.zip
+doctor_app/dev/docs/flutter.docs.zip
+doctor_app/dev/docs/lib/
+doctor_app/dev/docs/pubspec.yaml
+doctor_app/dev/integration_tests/**/xcuserdata
+doctor_app/dev/integration_tests/**/Pods
+doctor_app/packages/flutter/coverage/
+doctor_app/version
+doctor_app/analysis_benchmark.json
+
+# packages file containing multi-root paths
+doctor_app/.packages.generated
+
+# Flutter/Dart/Pub related
+doctor_app/**/doc/api/
+doctor_app/.dart_tool/
+doctor_app/.flutter-plugins
+doctor_app/.flutter-plugins-dependencies
+doctor_app/**/generated_plugin_registrant.dart
+doctor_app/.packages
+doctor_app/.pub-preload-cache/
+doctor_app/.pub-cache/
+doctor_app/.pub/
+doctor_app/build/
+doctor_app/flutter_*.png
+doctor_app/linked_*.ds
+doctor_app/unlinked.ds
+doctor_app/unlinked_spec.ds
+
+# Android related
+doctor_app/**/android/**/gradle-wrapper.jar
+doctor_app/.gradle/
+doctor_app/**/android/captures/
+doctor_app/**/android/gradlew
+doctor_app/**/android/gradlew.bat
+doctor_app/**/android/local.properties
+doctor_app/**/android/**/GeneratedPluginRegistrant.java
+doctor_app/**/android/key.properties
+doctor_app/*.jks
+
+# iOS/XCode related
+doctor_app/**/ios/**/*.mode1v3
+doctor_app/**/ios/**/*.mode2v3
+doctor_app/**/ios/**/*.moved-aside
+doctor_app/**/ios/**/*.pbxuser
+doctor_app/**/ios/**/*.perspectivev3
+doctor_app/**/ios/**/*sync/
+doctor_app/**/ios/**/.sconsign.dblite
+doctor_app/**/ios/**/.tags*
+doctor_app/**/ios/**/.vagrant/
+doctor_app/**/ios/**/DerivedData/
+doctor_app/**/ios/**/Icon?
+doctor_app/**/ios/**/Pods/
+doctor_app/**/ios/**/.symlinks/
+doctor_app/**/ios/**/profile
+doctor_app/**/ios/**/xcuserdata
+doctor_app/**/ios/.generated/
+doctor_app/**/ios/Flutter/.last_build_id
+doctor_app/**/ios/Flutter/App.framework
+doctor_app/**/ios/Flutter/Flutter.framework
+doctor_app/**/ios/Flutter/Flutter.podspec
+doctor_app/**/ios/Flutter/Generated.xcconfig
+doctor_app/**/ios/Flutter/ephemeral
+doctor_app/**/ios/Flutter/app.flx
+doctor_app/**/ios/Flutter/app.zip
+doctor_app/**/ios/Flutter/flutter_assets/
+doctor_app/**/ios/Flutter/flutter_export_environment.sh
+doctor_app/**/ios/ServiceDefinitions.json
+doctor_app/**/ios/Runner/GeneratedPluginRegistrant.*
+
+# macOS
+doctor_app/**/Flutter/ephemeral/
+doctor_app/**/Pods/
+doctor_app/**/macos/Flutter/GeneratedPluginRegistrant.swift
+doctor_app/**/macos/Flutter/ephemeral
+doctor_app/**/xcuserdata/
+
+# Windows
+doctor_app/**/windows/flutter/generated_plugin_registrant.cc
+doctor_app/**/windows/flutter/generated_plugin_registrant.h
+doctor_app/**/windows/flutter/generated_plugins.cmake
+
+# Linux
+doctor_app/**/linux/flutter/generated_plugin_registrant.cc
+doctor_app/**/linux/flutter/generated_plugin_registrant.h
+doctor_app/**/linux/flutter/generated_plugins.cmake
+
+# Coverage
+doctor_app/coverage/
+
+# Symbols
+doctor_app/app.*.symbols
+
+# Exceptions to above rules.
+!doctor_app/**/ios/**/default.mode1v3
+!doctor_app/**/ios/**/default.mode2v3
+!doctor_app/**/ios/**/default.pbxuser
+!doctor_app/**/ios/**/default.perspectivev3
+!doctor_app/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+!doctor_app/dev/ci/**/Gemfile.lock
+!doctor_app/.vscode/settings.json
