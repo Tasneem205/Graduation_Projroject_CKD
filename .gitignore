@@ -1,3 +1,7 @@
+# for doctor backend
+node_modules
+.env
+
 # for models
 images_model/.ipynb_checkpoints
 images_model/dataset
