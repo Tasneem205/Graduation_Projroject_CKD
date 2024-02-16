@@ -1,6 +1,6 @@
 # for doctor backend
-node_modules
-.env
+doctor_backend/node_modules
+doctor_backend/.env
 
 # for models
 images_model/.ipynb_checkpoints

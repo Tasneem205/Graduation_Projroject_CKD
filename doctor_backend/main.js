@@ -1,5 +1,5 @@
 import Express from "express";
-// import router from "./src/controllers/index.controller.js";
+import router from "./src/controllers/index.controller.js";
 import dotenv from "dotenv";
 // import errorHandler from "./src/middleWares/errorHandler.js";
 import morgan from "morgan";
@@ -14,7 +14,7 @@ app.use(Express.json());
 
 app.use(morgan("dev"));
 
-// app.use("/clinic", router);
+app.use("/clinic", router);
 
 // app.use(errorHandler);
 
