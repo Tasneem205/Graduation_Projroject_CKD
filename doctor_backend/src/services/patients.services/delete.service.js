@@ -3,7 +3,7 @@ import responses from "../../helper/responses.js";
 
 const prisma = new PrismaClient();
 
-const deletePatients = async (req, res) => {
+const deletePatient = async (req, res) => {
     try {
         // TODO: implement me
     } catch (error) {
@@ -11,4 +11,4 @@ const deletePatients = async (req, res) => {
     }
 };
 
-export default deletePatients();
+export default deletePatient;

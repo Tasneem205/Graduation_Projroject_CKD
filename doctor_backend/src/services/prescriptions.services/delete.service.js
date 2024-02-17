@@ -11,4 +11,4 @@ const deletePrescription = async (req, res) => {
     }
 };
 
-export default deletePrescription();
+export default deletePrescription;

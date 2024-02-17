@@ -11,15 +11,24 @@ const getAllPrescriptions = async (req, res) => {
     }
 };
 
-const getPrescriptionWithId = async (req, res) => {
+const getPrescriptionWithPatientId = async (req, res) => {
     try {
         // TODO: implement me
     } catch (error) {
         console.log(error);
     }
 };
+
+const getPrescriptionWithDoctorId = async (req, res) => {
+    try {
+        // TODO: implement me
+    } catch (error) {
+        console.log(error);
+    }
+}
 const functions = {
     getAllPrescriptions,
-    getPrescriptionWithId
+    getPrescriptionWithDoctorId,
+    getPrescriptionWithPatientId
 }
 export default functions;

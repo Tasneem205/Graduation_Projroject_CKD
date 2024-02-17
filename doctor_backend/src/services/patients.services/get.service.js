@@ -18,8 +18,8 @@ const getPatientWithId = async (req, res) => {
         console.log(error);
     }
 };
-const functions = {
+const getFunctions = {
     getAllPatients,
     getPatientWithId
 }
-export default functions;
+export default getFunctions;

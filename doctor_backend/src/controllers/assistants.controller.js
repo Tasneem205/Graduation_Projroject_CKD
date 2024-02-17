@@ -17,3 +17,5 @@ assistantRouter.post("/", postFunctions.assistantLogin); // TODO: add authentica
 assistantRouter.delete("/:id", deleteAssistant);
 
 assistantRouter.put("/:id", updateAssistant);
+
+export default assistantRouter;

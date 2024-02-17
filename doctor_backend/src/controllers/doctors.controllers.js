@@ -4,16 +4,18 @@ import deleteDoctor from "../services/doctors.services/delete.service"
 import postFunctions from "../services/doctors.services/post.service"
 import updateDoctor from "../services/doctors.services/put.service";
 
-const assistantRouter = new Router();
+const doctorRouter = new Router();
 
-assistantRouter.get("/", getFunctions.getAllDoctors);
+doctorRouter.get("/", getFunctions.getAllDoctors);
 
-assistantRouter.get("/:id", getFunctions.getDoctorWithId);
+doctorRouter.get("/:id", getFunctions.getDoctorWithId);
 
-assistantRouter.post("/", postFunctions.addDoctor); // TODO: add middleware for authorization
+doctorRouter.post("/", postFunctions.addDoctor); // TODO: add middleware for authorization
 
-assistantRouter.post("/", postFunctions.doctorLogin); // TODO: add authentication
+doctorRouter.post("/", postFunctions.doctorLogin); // TODO: add authentication
 
-assistantRouter.delete("/:id", deleteDoctor);
+doctorRouter.delete("/:id", deleteDoctor);
 
-assistantRouter.put("/:id", updateDoctor);
+doctorRouter.put("/:id", updateDoctor);
+
+export default doctorRouter;
