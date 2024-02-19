@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import responses from "../../helper/responses";
+import responses from "../../helpers/responses";
 
 const prisma = new PrismaClient();
 

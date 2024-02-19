@@ -1,6 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import responses from "../../helper/responses.js";
-import {channel} from "diagnostics_channel";
+import responses from "../../helpers/responses.js";
 
 const prisma = new PrismaClient();
 

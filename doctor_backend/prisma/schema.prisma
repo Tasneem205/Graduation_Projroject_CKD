@@ -1,0 +1,135 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// model User{
+//   id Int @id@default(autoincrement())
+//   firstname String
+//   lastname String
+//   email String @unique
+//   role Role @default(USER)
+//   createdAt DateTime @default(now())
+//   password String
+//   orders Order[]
+//   verified Boolean @default(false)
+//   otps Otp[]
+// }
+
+//model Otp{
+//   otp String @unique
+//   createdAt DateTime @default(now())
+//   user User @relation(fields: [userId], references: [id])
+//   userId Int
+// }
+
+model Assistant{
+  AssistantID Int @id@default(autoincrement())
+  FirstName String
+  LastName String
+  Email String @unique
+  Password String
+}
+
+model DailyProgress{
+  ProregressID Int @id@default(autoincrement())
+  ProgressData DateTime
+  PatientID Int
+  WaterML Int
+  WalkingTime DateTime @db.Time
+  WalkingSteps Int
+  Excercise DateTime @db.Time
+  DiabetesStatus Int
+  // PressureHigh Int
+  // pressureLow Int
+}
+
+model Doctors{
+  DoctorID Int @id@default(autoincrement())
+  FirstName String
+  LastName String
+  Phone_num String
+  Email String @unique
+  Password String
+}
+
+model followup{
+  followupID  Int @id@default(autoincrement())
+  prescriptionID Int
+  followup_date DateTime
+  followup_notes String
+}
+
+model kidney_scan{
+  Scan_ID Int @id@default(autoincrement())
+  PatientID Int
+  ScanDate DateTime
+  img String
+  class String
+}
+
+// model kidney_test{
+//   TestID Int @id@default(autoincrement())
+//   TestDate DateTime
+//   PatientID Int
+//   pot Float
+//   hemo Float
+//   pcv Float
+//   wbc Float
+//   rbc Float
+//   pc String
+//   pcc String
+//   ba String
+//   htl String
+//   dm String
+//   cad String
+//   appet String
+//   pe
+//
+//
+// }
+
+model medications{
+  medicationID Int @id@default(autoincrement())
+  medication_name String
+  dosage_form String
+  manufacturer String
+  generic_name String
+  therapeutic_class String
+
+}
+
+model patients {
+  PatientID Int @id@default(autoincrement())
+  FirstName String
+  LastName String
+  DateOfBirth DateTime
+  Gender String
+  Email String
+  Password String
+  DoctorID Int
+  Job String
+
+}
+
+model prescriptions{
+  prescriptionID Int @id@default(autoincrement())
+  patientID Int
+  DoctorID Int
+  prescription_date DateTime
+  ExpiryDate DateTime
+}
+model prescriptions_medication{
+  prescriptionID Int @id@default(autoincrement())
+  medicationID Int
+  dosage String
+  frequency String
+  instructions String
+}

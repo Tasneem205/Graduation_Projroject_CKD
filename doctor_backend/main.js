@@ -1,10 +1,8 @@
 import Express from "express";
 import router from "./src/controllers/index.controller.js";
 import dotenv from "dotenv";
-// import errorHandler from "./src/middleWares/errorHandler.js";
+import errorHandler from "./src/middleWares/errorHandler.js";
 import morgan from "morgan";
-
-//.format('YYYY-MM-DD').utc()
 
 const app = Express();
 
@@ -16,7 +14,7 @@ app.use(morgan("dev"));
 
 app.use("/clinic", router);
 
-// app.use(errorHandler);
+app.use(errorHandler);
 
 app.listen(process.env.PORT, () => {
     console.log("Listening on port 4000");
