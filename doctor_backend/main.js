@@ -1,4 +1,4 @@
-import Express from "express";
+import Express from 'express';
 import router from "./src/controllers/index.controller.js";
 import dotenv from "dotenv";
 import errorHandler from "./src/middleWares/errorHandler.js";
@@ -11,6 +11,7 @@ dotenv.config();
 app.use(Express.json());
 
 app.use(morgan("dev"));
+
 
 app.use("/clinic", router);
 

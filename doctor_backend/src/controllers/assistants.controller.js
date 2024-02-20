@@ -1,8 +1,8 @@
 import {Router} from "express";
-import getFunctions from "../services/assistants.services/get.service"
-import deleteAssistant from "../services/assistants.services/delete.service"
-import postFunctions from "../services/assistants.services/post.service"
-import updateAssistant from "../services/assistants.services/put.service";
+import getFunctions from "../services/assistants.services/get.service.js"
+import deleteAssistant from "../services/assistants.services/delete.service.js"
+import postFunctions from "../services/assistants.services/post.service.js"
+import updateAssistant from "../services/assistants.services/put.service.js";
 
 const assistantRouter = new Router();
 

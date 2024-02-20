@@ -1,8 +1,8 @@
 import {Router} from "express";
-import getFunctions from "../services/prescriptions.services/get.service"
-import deletePrescription from "../services/prescriptions.services/delete.service"
-import addPrescription from "../services/prescriptions.services/post.service"
-import updatePrescription from "../services/prescriptions.services/put.service";
+import getFunctions from "../services/prescriptions.services/get.service.js"
+import deletePrescription from "../services/prescriptions.services/delete.service.js"
+import addPrescription from "../services/prescriptions.services/post.service.js"
+import updatePrescription from "../services/prescriptions.services/put.service.js";
 
 const prescriptionRouter = new Router();
 

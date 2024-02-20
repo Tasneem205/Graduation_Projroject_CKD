@@ -1,8 +1,8 @@
 import {Router} from "express";
-import getFunctions from "../services/doctors.services/get.service"
-import deleteDoctor from "../services/doctors.services/delete.service"
-import postFunctions from "../services/doctors.services/post.service"
-import updateDoctor from "../services/doctors.services/put.service";
+import getFunctions from "../services/doctors.services/get.service.js"
+import deleteDoctor from "../services/doctors.services/delete.service.js"
+import postFunctions from "../services/doctors.services/post.service.js"
+import updateDoctor from "../services/doctors.services/put.service.js";
 
 const doctorRouter = new Router();
 

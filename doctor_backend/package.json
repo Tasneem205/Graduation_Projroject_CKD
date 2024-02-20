@@ -2,6 +2,7 @@
   "name": "doctor_backend",
   "version": "1.0.0",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "start": "nodemon main.js",
     "start:dev": "nodemon main.js",
