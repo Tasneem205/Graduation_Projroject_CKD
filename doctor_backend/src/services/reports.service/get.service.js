@@ -3,19 +3,21 @@ import responses from "../../helpers/responses.js";
 
 const prisma = new PrismaClient();
 
-const getAllReports = async (req, res) => {
+const getAllReports = async (req, res, next) => {
     try {
         // TODO: implement me
     } catch (error) {
         console.log(error);
+        next();
     }
 };
 
-const getReportWithTimestamp = async (req, res) => {
+const getReportWithTimestamp = async (req, res, next) => {
     try {
         // TODO: implement me
     } catch (error) {
         console.log(error);
+        next();
     }
 };
 const functions = {

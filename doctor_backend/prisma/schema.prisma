@@ -10,26 +10,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// model User{
-//   id Int @id@default(autoincrement())
-//   firstname String
-//   lastname String
-//   email String @unique
-//   role Role @default(USER)
-//   createdAt DateTime @default(now())
-//   password String
-//   orders Order[]
-//   verified Boolean @default(false)
-//   otps Otp[]
-// }
-
-//model Otp{
-//   otp String @unique
-//   createdAt DateTime @default(now())
-//   user User @relation(fields: [userId], references: [id])
-//   userId Int
-// }
-
 model Assistant{
   AssistantID Int @id@default(autoincrement())
   FirstName String
@@ -47,8 +27,8 @@ model DailyProgress{
   WalkingSteps Int
   Excercise DateTime @db.Time
   DiabetesStatus Int
-  // PressureHigh Int
-  // pressureLow Int
+  PressureHigh Int
+  pressureLow Int
 }
 
 model Doctors{

@@ -8,15 +8,14 @@ const app = Express();
 
 dotenv.config();
 
-app.use(Express.json());
+app.use(Express.json());  // parser
 
 app.use(morgan("dev"));
-
 
 app.use("/clinic", router);
 
 app.use(errorHandler);
 
 app.listen(process.env.PORT, () => {
-    console.log("Listening on port 4000");
+    console.log(`Listening on port ${process.env.PORT}`);
 });

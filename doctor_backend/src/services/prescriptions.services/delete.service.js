@@ -3,11 +3,12 @@ import responses from "../../helpers/responses.js";
 
 const prisma = new PrismaClient();
 
-const deletePrescription = async (req, res) => {
+const deletePrescription = async (req, res, next) => {
     try {
         // TODO: implement me
     } catch (error) {
         console.log(error);
+        next();
     }
 };
 

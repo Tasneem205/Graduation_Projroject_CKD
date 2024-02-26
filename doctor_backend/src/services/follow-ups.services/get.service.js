@@ -3,27 +3,30 @@ import responses from "../../helpers/responses.js";
 
 const prisma = new PrismaClient();
 
-const getAllFollowUps = async (req, res) => {
+const getAllFollowUps = async (req, res, next) => {
     try {
         // TODO: implement me
     } catch (error) {
         console.log(error);
+        next();
     }
 };
 
-const getFollowUpWithPatientId = async (req, res) => {
+const getFollowUpWithPatientId = async (req, res, next) => {
     try {
         // TODO: implement me
     } catch (error) {
         console.log(error);
+        next();
     }
 };
 
-const getFollowUpWithTimestamp = async (req, res) => {
+const getFollowUpWithTimestamp = async (req, res, next) => {
     try {
 
     } catch (error) {
         console.log(error);
+        next();
     }
 }
 const getFunctions = {

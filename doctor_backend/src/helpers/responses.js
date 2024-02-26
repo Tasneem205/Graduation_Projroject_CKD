@@ -10,7 +10,7 @@ function badRequest(res, message) {
     return res.status(400).json({ success: false, message});
 }
 
-function unauthorized(res, message) {
+function unAuthorized(res, message) {
     return res.status(401).json({message: message});
 }
 
@@ -26,7 +26,7 @@ const responses = {
     success,
     created,
     badRequest,
-    unauthorized,
+    unAuthorized,
     notFound,
     internalServerError
 };

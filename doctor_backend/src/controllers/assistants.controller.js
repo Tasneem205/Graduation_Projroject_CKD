@@ -3,6 +3,7 @@ import getFunctions from "../services/assistants.services/get.service.js"
 import deleteAssistant from "../services/assistants.services/delete.service.js"
 import postFunctions from "../services/assistants.services/post.service.js"
 import updateAssistant from "../services/assistants.services/put.service.js";
+import isAdmin from "../middleWares/isAdmin.js"
 
 const assistantRouter = new Router();
 
@@ -10,12 +11,14 @@ assistantRouter.get("/", getFunctions.getAllAssistants);
 
 assistantRouter.get("/:id", getFunctions.getAssistantWithId);
 
-assistantRouter.post("/", postFunctions.addAssistant); // TODO: add middleware for authorization
+assistantRouter.get("/logout", getFunctions.logoutAssistant);
 
-assistantRouter.post("/", postFunctions.assistantLogin); // TODO: add authentication
+assistantRouter.post("/", isAdmin, postFunctions.addAssistant);
 
-assistantRouter.delete("/:id", deleteAssistant);
+assistantRouter.post("/login", postFunctions.assistantLogin);
 
-assistantRouter.put("/:id", updateAssistant);
+assistantRouter.delete("/:id", isAdmin, deleteAssistant);
+
+assistantRouter.put("/", updateAssistant);
 
 export default assistantRouter;

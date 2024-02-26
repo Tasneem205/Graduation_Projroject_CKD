@@ -3,11 +3,12 @@ import responses from "../../helpers/responses.js";
 
 const prisma = new PrismaClient();
 
-const deleteFollowUp = async (req, res) => {
+const deleteFollowUp = async (req, res, next) => {
     try {
         // TODO: implement me
     } catch (error) {
         console.log(error);
+        next();
     }
 };
 
