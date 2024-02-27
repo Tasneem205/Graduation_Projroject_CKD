@@ -5,7 +5,8 @@ const prisma = new PrismaClient();
 
 const getAllAssistants = async (req, res, next) => {
     try {
-        // TODO: implement me
+        const assistants = await prisma.assistant.findMany({});
+        return responses.success(res, "All assistants fetched!", assistants);
     } catch (error) {
         console.log(error);
         next();
@@ -13,8 +14,9 @@ const getAllAssistants = async (req, res, next) => {
 };
 
 const getAssistantWithId = async (req, res, next) => {
-    try {
-        // TODO: implement me
+    try { // TODO: what if the id wasn't valid
+        const assistant = await prisma.assistant.findUnique({ where: { id: +req.params.id } });
+        return responses.success(res, "Assistant found!", assistant);
     } catch (error) {
         console.log(error);
         next();

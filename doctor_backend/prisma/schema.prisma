@@ -12,7 +12,7 @@ datasource db {
 
 model Assistant{
   AssistantID Int @id@default(autoincrement())
-  FirstName String
+  FirstName Stringdoctor_backend/prisma/schema.prisma
   LastName String
   Email String @unique
   Password String
