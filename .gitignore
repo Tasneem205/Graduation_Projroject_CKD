@@ -26,12 +26,6 @@ doctor_app/.history
 doctor_app/.svn/
 doctor_app/migrate_working_dir/
 
-# IntelliJ related
-doctor_app/*.iml
-doctor_app/*.ipr
-doctor_app/*.iws
-doctor_app/.idea/
-
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
 # is commented out by default.

@@ -1,4 +1,4 @@
-# user_app
+# graduation_project
 
 A new Flutter project.
 
