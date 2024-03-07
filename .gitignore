@@ -4,6 +4,10 @@ ckd_db script.sql
 doctor_backend/node_modules
 doctor_backend/.env
 
+# for user backend
+user_backend/node_modules
+user_backend/.env
+
 # for models
 images_model/.ipynb_checkpoints
 images_model/dataset

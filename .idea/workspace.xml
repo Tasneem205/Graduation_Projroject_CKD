@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="04ead2bf-65ce-4878-a126-bc81110f5bfc" name="Changes" comment="" />
+    <list default="true" id="04ead2bf-65ce-4878-a126-bc81110f5bfc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/services/get_users_service.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/src/services/get_users_service.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2a6dS2u13h6d4dNcFSNJjCdyjJZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -22,15 +41,29 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/FCI/GP/Graduation_Projroject_CKD",
+    "last_opened_file_path": "D:/FCI/GP/Graduation_Projroject_CKD/user_backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "show.migrate.to.gradle.popup": "false",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\FCI\GP\Graduation_Projroject_CKD\user_backend" />
+      <recent name="D:\FCI\GP\Graduation_Projroject_CKD\user_backend\src\middleWares" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FCI\GP\Graduation_Projroject_CKD\user_backend\src" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -47,6 +80,8 @@
       <option name="presentableId" value="Default" />
       <updated>1703642959627</updated>
       <workItem from="1703642960775" duration="80000" />
+      <workItem from="1709638121826" duration="1345000" />
+      <workItem from="1709649806024" duration="4458000" />
     </task>
     <servers />
   </component>

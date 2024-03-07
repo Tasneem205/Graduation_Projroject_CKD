@@ -10,49 +10,49 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Assistant{
-  AssistantID Int @id@default(autoincrement())
-  FirstName Stringdoctor_backend/prisma/schema.prisma
-  LastName String
-  Email String @unique
-  Password String
+model Assistant {
+  AssistantID Int    @id @default(autoincrement())
+  FirstName   String
+  LastName    String
+  Email       String @unique
+  Password    String
 }
 
-model DailyProgress{
-  ProregressID Int @id@default(autoincrement())
-  ProgressData DateTime
-  PatientID Int
-  WaterML Int
-  WalkingTime DateTime @db.Time
-  WalkingSteps Int
-  Excercise DateTime @db.Time
+model DailyProgress {
+  ProregressID   Int      @id @default(autoincrement())
+  ProgressData   DateTime
+  PatientID      Int
+  WaterML        Int
+  WalkingTime    DateTime @db.Time
+  WalkingSteps   Int
+  Excercise      DateTime @db.Time
   DiabetesStatus Int
-  PressureHigh Int
-  pressureLow Int
+  PressureHigh   Int
+  pressureLow    Int
 }
 
-model Doctors{
-  DoctorID Int @id@default(autoincrement())
+model Doctors {
+  DoctorID  Int    @id @default(autoincrement())
   FirstName String
-  LastName String
+  LastName  String
   Phone_num String
-  Email String @unique
-  Password String
+  Email     String @unique
+  Password  String
 }
 
-model followup{
-  followupID  Int @id@default(autoincrement())
+model followup {
+  followupID     Int      @id @default(autoincrement())
   prescriptionID Int
-  followup_date DateTime
+  followup_date  DateTime
   followup_notes String
 }
 
-model kidney_scan{
-  Scan_ID Int @id@default(autoincrement())
+model kidney_scan {
+  Scan_ID   Int      @id @default(autoincrement())
   PatientID Int
-  ScanDate DateTime
-  img String
-  class String
+  ScanDate  DateTime
+  img       String
+  class     String
 }
 
 // model kidney_test{
@@ -76,40 +76,39 @@ model kidney_scan{
 //
 // }
 
-model medications{
-  medicationID Int @id@default(autoincrement())
-  medication_name String
-  dosage_form String
-  manufacturer String
-  generic_name String
+model medications {
+  medicationID      Int    @id @default(autoincrement())
+  medication_name   String
+  dosage_form       String
+  manufacturer      String
+  generic_name      String
   therapeutic_class String
-
 }
 
 model patients {
-  PatientID Int @id@default(autoincrement())
-  FirstName String
-  LastName String
+  PatientID   Int      @id @default(autoincrement())
+  FirstName   String
+  LastName    String
   DateOfBirth DateTime
-  Gender String
-  Email String
-  Password String
-  DoctorID Int
-  Job String
-
+  Gender      String
+  Email       String
+  Password    String
+  DoctorID    Int
+  Job         String
 }
 
-model prescriptions{
-  prescriptionID Int @id@default(autoincrement())
-  patientID Int
-  DoctorID Int
+model prescriptions {
+  prescriptionID    Int      @id @default(autoincrement())
+  patientID         Int
+  DoctorID          Int
   prescription_date DateTime
-  ExpiryDate DateTime
+  ExpiryDate        DateTime
 }
-model prescriptions_medication{
-  prescriptionID Int @id@default(autoincrement())
-  medicationID Int
-  dosage String
-  frequency String
-  instructions String
+
+model prescriptions_medication {
+  prescriptionID Int    @id @default(autoincrement())
+  medicationID   Int
+  dosage         String
+  frequency      String
+  instructions   String
 }

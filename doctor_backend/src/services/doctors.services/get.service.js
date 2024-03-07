@@ -8,7 +8,7 @@ const getAllDoctors = async (req, res, next) => {
         // TODO: implement me
     } catch (error) {
         console.log(error);
-        next();
+        next(error);
     }
 };
 
