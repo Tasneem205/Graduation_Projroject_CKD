@@ -1,21 +1,8 @@
 import { Router } from "express";
-import postFunctions from "../services/doctors.services/post.service.js";
+import getHomepageData from "../services/homepage.services/get.service.js"
 
 const homeRouter = new Router();
 
-homeRouter.get("/", ()=>{});  // get the data of home page
-
-homeRouter.get("/refreshToken", ()=>{});
-
-homeRouter.get("/logout", ()=>{});
-
-homeRouter.get("/profile", ()=>{});
-
-homeRouter.post("/dLogin", ()=>{}); // TODO: add authentication
-
-homeRouter.post("/aLogin", ()=>{});
-
-homeRouter.put("/edit_profile", ()=>{});
-
+homeRouter.get("/", getHomepageData);  // get the data of home page
 
 export default homeRouter;

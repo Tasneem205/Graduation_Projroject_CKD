@@ -1,4 +1,3 @@
-import { PrismaClient } from "@prisma/client";
 import responses from "../../helpers/responses.js";
+import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();

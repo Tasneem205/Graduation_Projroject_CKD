@@ -15,7 +15,10 @@ const getAllAssistants = async (req, res, next) => {
 
 const getAssistantWithId = async (req, res, next) => {
     try { // TODO: what if the id wasn't valid
-        const assistant = await prisma.assistant.findUnique({ where: { id: +req.params.id } });
+        const assistant = await prisma.assistant.findUnique(
+            { where: {
+                AssistantID: +req.params.id
+            }});
         return responses.success(res, "Assistant found!", assistant);
     } catch (error) {
         console.log(error);
