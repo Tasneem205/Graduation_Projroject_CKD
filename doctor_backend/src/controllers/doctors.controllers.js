@@ -12,8 +12,6 @@ doctorRouter.get("/:id", getFunctions.getDoctorWithId);
 
 doctorRouter.post("/", postFunctions.addDoctor); // TODO: add middleware for authorization
 
-doctorRouter.post("/", postFunctions.doctorLogin); // TODO: add authentication
-
 doctorRouter.delete("/:id", deleteDoctor);
 
 doctorRouter.put("/:id", updateDoctor);
