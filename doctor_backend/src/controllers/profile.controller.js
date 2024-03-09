@@ -1,13 +1,13 @@
 import { Router } from "express";
-import getFunctions from "../services/homepage.services/get.service.js";
+import getFunctions from "../services/profile.services/get.service.js";
 
 const profileRouter = new Router();
 
-profileRouter.get("/refreshToken", getFunctions.RefreshToken);
+profileRouter.get("/profile", getFunctions.profile);
+
+profileRouter.get("/refreshToken", getFunctions.refreshToken);
 
 profileRouter.get("/logout", getFunctions.logout);
-
-profileRouter.get("/profile", getFunctions.getProfile);
 
 profileRouter.post("/dLogin", ()=>{}); // TODO: add authentication
 

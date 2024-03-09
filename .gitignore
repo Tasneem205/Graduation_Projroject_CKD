@@ -1,4 +1,5 @@
 # the database script
+views.sql
 ckd_db script.sql
 # for doctor backend
 doctor_backend/node_modules

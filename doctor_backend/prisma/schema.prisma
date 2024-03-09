@@ -119,19 +119,20 @@ model medications {
 }
 
 model patients {
-  PatientID   Int      @id @default(autoincrement())
-  FirstName   String
-  LastName    String
-  DateOfBirth DateTime
-  Gender      String
-  Email       String
-  Password    String
-  DoctorID    Int
-  Job         String
-  bloodGroup  String
-  hieght      Float
-  weight      Float
-  assistantID Int
+  PatientID        Int      @id @default(autoincrement())
+  FirstName        String
+  LastName         String
+  DateOfBirth      DateTime
+  Gender           String
+  Email            String
+  Password         String
+  DoctorID         Int
+  Job              String
+  bloodGroup       String
+  hieght           Float
+  weight           Float
+  assistantID      Int
+  registrationDate DateTime
 
   kidney_scan   kidney_scan[]
   kidney_test   kidney_test[]
@@ -186,4 +187,17 @@ model video {
   Descript  String
   Duration  DateTime @db.Time
   Thumbnail String
+}
+
+// VIEWS
+model homepage {
+  day        DateTime @id @default(now())
+  doctors    Int
+  patients   Int
+  lab_tests  Int
+  // reports Int
+  scans      Int
+  assistants Int
+
+  @@map("name: homepageView")
 }

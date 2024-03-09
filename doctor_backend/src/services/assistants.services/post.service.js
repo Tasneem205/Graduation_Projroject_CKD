@@ -39,24 +39,27 @@ const assistantLogin = async (req, res, next) => {
     try {
         const {error, value} = userLogin.validate(req.body);
         if (error) return responses.badRequest(res, error.details[0].message);
-        const userExist = await prisma.assistant.findUnique({ where: { Email: value.Email } });
+        const userExist = await prisma.assistant.findUnique(
+            { where: {
+                Email: value.Email
+            } });
         if (!userExist) return responses.notFound(res, "email not found");
         const match = bcrypt.compareSync(value.Password, userExist.Password);
         if (!match) return responses.badRequest(res, "invalid email or password");
         const token = jwt.sign(
             {
-                id: userExist.id,
-                firstname: userExist.FirstName,
-                lastname: userExist.LastName,
+                AssistantID: userExist.AssistantID,
+                FirstName: userExist.FirstName,
+                LastName: userExist.LastName,
             },
             process.env.JWT_SECRET,
             { expiresIn: "1d", }
         );
         const refreshToken = jwt.sign(
             {
-                id: userExist.id,
-                firstname: userExist.FirstName,
-                lastname: userExist.LastName,
+                AssistantID: userExist.AssistantID,
+                FirstName: userExist.FirstName,
+                LastName: userExist.LastName,
             },
             process.env.JWT_SECRETR,
             { expiresIn: "7d", }
