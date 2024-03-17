@@ -13,11 +13,33 @@ const profile = async (req, res, next) => {
     }
 }
 const refreshToken = async (req, res, next) => {
-    try{
-        // TODO: implement me
+    try {
+        const refresh = req.headers.authorization.split(" ")[1];
+        const isBlocked = await prisma.blackList.findFirst({
+            where: { jwt: refresh },
+        });
+        if (isBlocked) return responses.unAuthorized(res, "invalid token");
+        const { exp, iat, ...payload } = jwt.verify(
+            refresh,
+            process.env.JWT_SECRETR
+        );
+        // console.log(payload);
+        if (Date.now() > exp * 1000)
+            return responses.unAuthorized(res, "token expired");
+        const accessToken = jwt.sign(payload, process.env.JWT_SECRET, {
+            expiresIn: 10 * 60,
+        });
+        const newRefreshToken = jwt.sign(payload, process.env.JWT_SECRETR, {
+            expiresIn: "7d",
+        });
+        await prisma.blackList.create({ data: { jwt: refresh, exp: exp } });
+        return responses.success(res, "token renewed", {
+            accessToken,
+            newRefreshToken,
+        });
     } catch (error) {
-        console.log(error);
-        next();
+        responses.unAuthorized(res, "Token invalid");
+        next(error);
     }
 }
 

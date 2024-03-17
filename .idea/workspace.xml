@@ -7,20 +7,12 @@
     <list default="true" id="04ead2bf-65ce-4878-a126-bc81110f5bfc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/profile.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/profile.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/assistants.services/delete.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/assistants.services/delete.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/assistants.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/assistants.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/user.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/schemas/user.schema.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/assistants.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/assistants.services/post.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/homepage.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/homepage.services/get.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/homepage.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/post.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/homepage.services/put.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/put.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/scans.services/add_scan.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/scans.services/delete.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/scans.services/delete_scan.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/scans.services/get.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/scans.services/get_scans.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/scans.services/post.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/scans.services/update_scan.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/scans.services/put.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/add_test.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/get.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/delete_test.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/delete.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/get_tests.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/post.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/update_test.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/put.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/post.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,25 +43,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/FCI/GP/Graduation_Projroject_CKD/doctor_backend/src/controllers",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "show.migrate.to.gradle.popup": "false",
-    "ts.external.directory.path": "D:\\FCI\\GP\\Graduation_Projroject_CKD\\doctor_backend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/FCI/GP/Graduation_Projroject_CKD/doctor_backend/src/controllers&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\FCI\\GP\\Graduation_Projroject_CKD\\doctor_backend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\FCI\GP\Graduation_Projroject_CKD\doctor_backend\src\controllers" />
@@ -77,6 +69,7 @@
       <recent name="D:\FCI\GP\Graduation_Projroject_CKD\user_backend\src\middleWares" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FCI\GP\Graduation_Projroject_CKD" />
       <recent name="D:\FCI\GP\Graduation_Projroject_CKD\doctor_backend\src\services\profile.services" />
       <recent name="D:\FCI\GP\Graduation_Projroject_CKD\user_backend\src" />
     </key>
@@ -98,7 +91,9 @@
       <updated>1703642959627</updated>
       <workItem from="1703642960775" duration="80000" />
       <workItem from="1709638121826" duration="1345000" />
-      <workItem from="1709649806024" duration="26302000" />
+      <workItem from="1709649806024" duration="29240000" />
+      <workItem from="1710444126889" duration="6670000" />
+      <workItem from="1710583408726" duration="5937000" />
     </task>
     <servers />
   </component>

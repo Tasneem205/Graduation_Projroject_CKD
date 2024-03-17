@@ -1,6 +1,7 @@
 # the database script
 views.sql
 ckd_db script.sql
+*.sql
 # for doctor backend
 doctor_backend/node_modules
 doctor_backend/.env
