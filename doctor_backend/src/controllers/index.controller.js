@@ -15,8 +15,6 @@ const router = new Router();
 
 router.use("/home", homeRouter);
 
-router.use("/profile", profileRouter);
-
 router.use("/doctor", doctorRouter);
 
 router.use("/assistant", assistantRouter);

@@ -17,7 +17,7 @@ model Assistant {
   Email       String     @unique
   Password    String
   patients    patients[]
-  phonenumber String
+  Phone_num   String
   // img
 }
 
@@ -29,7 +29,7 @@ model blackList {
 
 model DailyProgress {
   ProregressID Int      @id @default(autoincrement())
-  ProgressDate DateTime // TODO: 
+  ProgressDate DateTime // TODO:
   PatientID    Int
   WaterML      Int
   WalkingTime  DateTime @db.Time

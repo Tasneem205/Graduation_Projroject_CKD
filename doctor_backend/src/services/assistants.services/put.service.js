@@ -1,17 +1,18 @@
 import { PrismaClient } from "@prisma/client";
 import responses from "../../helpers/responses.js";
-import updateschema from "../../schemas/update_assistant.schema.js";
+import updateSchema from "../../schemas/update_assistant.schema.js";
+import bcrypt from "bcrypt";
 
 const prisma = new PrismaClient();
 
 const updateAssistant = async (req, res, next) => {
     try {
-        // TODO: implement me
-        const { value, error } = updateschema.validate(req.body);
+        const { value, error } = updateSchema.validate(req.body);
         if (error) {
             return responses.badRequest(res, "this data isn't valid");
         }
-        if (req.AssistantID != req.params.id) {
+        // TODO: add authorization
+        if (req.AssistantID !== req.params.id) {
             return responses.unAuthorized(res, "You are not authorized to update this account");
         }
         let hashpass;

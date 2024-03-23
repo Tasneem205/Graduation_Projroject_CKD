@@ -33,12 +33,3 @@ const getHomepageData = async (req, res, next) => {
 }
 
 export default getHomepageData;
-
-/*
-`day` datetime(3) NOT NULL DEFAULT current_timestamp(3),
-  `doctors` int(11) NOT NULL DEFAULT 0,
-  `patients` int(11) NOT NULL DEFAULT 0,
-  `lab_tests` int(11) NOT NULL DEFAULT 0,
-  `scans` int(11) NOT NULL DEFAULT 0,
-  `assistants` int(11) NOT NULL DEFAULT 0
- */

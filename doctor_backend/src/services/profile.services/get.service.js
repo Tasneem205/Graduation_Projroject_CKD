@@ -7,6 +7,23 @@ const prisma = new PrismaClient();
 const profile = async (req, res, next) => {
     try{
         // TODO: implement me
+        const role = req.body.role;
+        const id = +req.body.id;
+        if (role === "doctor") {
+            const doctor = await prisma.doctors.findUnique(
+                { where: {
+                        DoctorID: id
+                    }});
+            if (!doctor) return  responses.notFound(res, "Doctor not found");
+            return responses.success(res, "Doctor found!", doctor);
+        } else {
+            const assistant = await prisma.assistant.findUnique(
+                { where: {
+                        AssistantID: id
+                    }});
+            if (!assistant) return  responses.notFound(res, "assistant not found");
+            return responses.success(res, "Assistant found!", assistant);
+        }
     } catch (error) {
         console.log(error);
         next();

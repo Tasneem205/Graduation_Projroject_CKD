@@ -21,6 +21,7 @@ const userSchema = joi.object({
                 "Minimum eight characters, at least one upper case, one lower case, one number and one special character",
         }),
     PhoneNumber: joi.string()
+        .required()
         .min(11)
         .max(13)
         .regex(/^01[0-2][0-9]{8}$/),
