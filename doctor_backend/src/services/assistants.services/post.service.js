@@ -19,7 +19,7 @@ const addAssistant = async (req, res, next) => {
             LastName,
             Password: hashedPass,
             Email,
-            phonenumber: PhoneNumber,
+            Phone_num: PhoneNumber,
           },
         });
         const { password: hashed, ...restInfo } = user;

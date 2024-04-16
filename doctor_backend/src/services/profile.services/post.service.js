@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 
 const login = async (req, res, next) => {
     try {
-        const {error, value} = userLogin.validate(req.body);
+        const {value, error} = userLogin.validate(req.body);
         if (error) return responses.badRequest(res, error.details[0].message);
         const assisExist = await prisma.assistant.findUnique(
             { where: {
@@ -40,9 +40,9 @@ const login = async (req, res, next) => {
                 process.env.JWT_SECRETR,
                 {expiresIn: "7d",}
             );
-            const {password: hashedpassword, ...restData} = assisExist;
+            const {password: hashedPassword, ...restData} = assisExist;
             return responses.success(res, "logged successfully", {
-                "role": "assistant",
+                "role": "Assistant",
                 ...restData,
                 token,
                 refreshToken,
@@ -68,9 +68,9 @@ const login = async (req, res, next) => {
                 process.env.JWT_SECRETR,
                 {expiresIn: "7d",}
             );
-            const {password: hashedpassword, ...restData} = docExist;
+            const {password: hashedPassword, ...restData} = docExist;
             return responses.success(res, "logged successfully", {
-                "role": "doctor",
+                "role": "Doctor",
                 ...restData,
                 token,
                 refreshToken,
@@ -82,8 +82,4 @@ const login = async (req, res, next) => {
     }
 };
 
-const postFunctions = {
-    login
-}
-
-export default postFunctions;
+export default login;

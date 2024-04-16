@@ -240,7 +240,7 @@ model homepage {
   doctors    Int
   patients   Int
   lab_tests  Int
-  // reports Int
+  reports    Int
   scans      Int
   assistants Int
 

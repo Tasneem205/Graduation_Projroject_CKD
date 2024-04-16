@@ -4,11 +4,11 @@ import profileRouter from "./profile.controller.js";
 
 const homeRouter = new Router();
 // divide this to assistant, doctor, manager and profile
-homeRouter.get("/d", getHomepageData);  // get the data of home page
-
-homeRouter.get("/a", getHomepageData);  // get the data of home page
-
-homeRouter.get("/m", getHomepageData);  // get the data of home page
+// homeRouter.get("/d", getHomepageData);  // get the data of home page
+//
+// homeRouter.get("/a", getHomepageData);  // get the data of home page
+//
+// homeRouter.get("/m", getHomepageData);  // get the data of home page
 
 homeRouter.use("/profile", profileRouter);
 
