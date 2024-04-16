@@ -11,13 +11,15 @@ datasource db {
 }
 
 model Assistant {
-  AssistantID Int        @id @default(autoincrement())
-  FirstName   String
-  LastName    String
-  Email       String     @unique
-  Password    String
-  patients    patients[]
-  Phone_num   String
+  AssistantID  Int            @id @default(autoincrement())
+  FirstName    String
+  LastName     String
+  Email        String         @unique
+  Password     String
+  patients     patients[]
+  Phone_num    String
+  reports      reports[]
+  reservations reservations[]
   // img
 }
 
@@ -35,8 +37,7 @@ model DailyProgress {
   WalkingTime  DateTime @db.Time
   WalkingSteps Int
   Excercise    DateTime @db.Time
-
-  patient patients @relation(fields: [PatientID], references: [PatientID])
+  patient      patients @relation(fields: [PatientID], references: [PatientID])
 }
 
 model Diabetes {
@@ -57,6 +58,8 @@ model Doctors {
   Password      String
   prescriptions prescriptions[]
   patients      patients[]
+  reports       reports[]
+  reservations  reservations[]
 }
 
 model followup {
@@ -139,11 +142,13 @@ model patients {
   kidney_test   kidney_test[]
   DailyProgress DailyProgress[]
   prescriptions prescriptions[]
+  reports       reports[]
+  reservations  reservations[]
+  Diabetes      Diabetes[]
+  pressure      pressure[]
 
-  Doctor    Doctors    @relation(fields: [DoctorID], references: [DoctorID])
-  assistant Assistant  @relation(fields: [assistantID], references: [AssistantID])
-  Diabetes  Diabetes[]
-  pressure  pressure[]
+  Doctor    Doctors   @relation(fields: [DoctorID], references: [DoctorID])
+  assistant Assistant @relation(fields: [assistantID], references: [AssistantID])
 }
 
 model prescriptions {
@@ -153,10 +158,10 @@ model prescriptions {
   prescription_date DateTime
   ExpiryDate        DateTime
 
-  followup followup[]
-
-  patient patients @relation(fields: [PatientID], references: [PatientID])
-  doctor  Doctors  @relation(fields: [DoctorID], references: [DoctorID])
+  followup    followup[]
+  reservation reservations[]
+  patient     patients       @relation(fields: [PatientID], references: [PatientID])
+  doctor      Doctors        @relation(fields: [DoctorID], references: [DoctorID])
 }
 
 model prescriptions_medication {
@@ -179,6 +184,45 @@ model pressure {
   patient patients @relation(fields: [PatientID], references: [PatientID])
 
   @@id([PatientID, date])
+}
+
+model reports {
+  report_id         Int      @id @default(autoincrement())
+  age               Int
+  authority         String
+  examination_date  DateTime @db.Time
+  report_date       DateTime @db.Time
+  tests_scans       Boolean
+  tests_scans_notes String
+  notes             String
+  doctor_id         Int
+  patient_id        Int
+  assistant_id      Int
+
+  patient   patients  @relation(fields: [patient_id], references: [PatientID])
+  Assistant Assistant @relation(fields: [assistant_id], references: [AssistantID])
+  Doctors   Doctors   @relation(fields: [doctor_id], references: [DoctorID])
+}
+
+enum RESERVATION_TYPE {
+  First
+  FollowUP
+}
+
+model reservations {
+  reservation_id   Int              @id @default(autoincrement())
+  assistant_id     Int
+  doctor_id        Int
+  notes            String
+  patient_id       Int
+  prescription_id  Int
+  reservation_date DateTime         @db.Time
+  type             RESERVATION_TYPE
+
+  patient       patients      @relation(fields: [patient_id], references: [PatientID])
+  Assistant     Assistant     @relation(fields: [assistant_id], references: [AssistantID])
+  Doctors       Doctors       @relation(fields: [doctor_id], references: [DoctorID])
+  prescriptions prescriptions @relation(fields: [prescription_id], references: [prescriptionID])
 }
 
 model video {

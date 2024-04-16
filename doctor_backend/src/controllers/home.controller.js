@@ -1,19 +1,16 @@
 import { Router } from "express";
 import getHomepageData from "../services/homepage.services/get.service.js"
-import getFunctions from "../services/profile.services/get.service.js";
-import postFunctions from "../services/profile.services/post.service.js";
+import profileRouter from "./profile.controller.js";
 
 const homeRouter = new Router();
+// divide this to assistant, doctor, manager and profile
+homeRouter.get("/d", getHomepageData);  // get the data of home page
 
-homeRouter.get("/", getHomepageData);  // get the data of home page
+homeRouter.get("/a", getHomepageData);  // get the data of home page
 
-homeRouter.get("/profile", getFunctions.profile);
+homeRouter.get("/m", getHomepageData);  // get the data of home page
 
-homeRouter.get("/refreshToken", getFunctions.refreshToken);
-
-homeRouter.get("/logout", getFunctions.logout);
-
-homeRouter.post("/login", postFunctions.login); // TODO: add authentication
+homeRouter.use("/profile", profileRouter);
 
 homeRouter.put("/edit_profile", ()=>{});
 

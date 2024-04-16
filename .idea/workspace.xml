@@ -9,13 +9,7 @@
       <change beforePath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/home.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/home.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/index.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/index.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/update_assistant.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/schemas/update_assistant.schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/user.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/schemas/user.schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/assistants.services/put.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/assistants.services/put.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/homepage.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/homepage.services/get.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/get.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/post.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/put.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/put.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +92,8 @@
       <workItem from="1709649806024" duration="29240000" />
       <workItem from="1710444126889" duration="6670000" />
       <workItem from="1710583408726" duration="7246000" />
-      <workItem from="1710810903237" duration="9270000" />
+      <workItem from="1710810903237" duration="9972000" />
+      <workItem from="1711931910086" duration="5924000" />
     </task>
     <servers />
   </component>
