@@ -208,21 +208,22 @@ model reports {
   Doctors   Doctors   @relation(fields: [doctor_id], references: [DoctorID])
 }
 
-enum RESERVATION_TYPE {
+enum ReservationType {
   First
   FollowUP
+  RESERVATION
 }
 
 model reservations {
-  reservation_id   Int              @id @default(autoincrement())
+  reservation_id   Int             @id @default(autoincrement())
   assistant_id     Int
   doctor_id        Int
   notes            String
   patient_id       Int
   prescription_id  Int
-  reservation_date DateTime         @db.Time
+  reservation_date DateTime        @db.Time
   is_done          Boolean
-  type             RESERVATION_TYPE
+  type             ReservationType
 
   patient       patients      @relation(fields: [patient_id], references: [PatientID])
   Assistant     Assistant     @relation(fields: [assistant_id], references: [AssistantID])

@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04ead2bf-65ce-4878-a126-bc81110f5bfc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/home.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/home.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/index.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/index.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/profile.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/profile.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/homepage.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/homepage.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/archive.services/history.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/archive.services/history.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +90,7 @@
       <workItem from="1710444126889" duration="6670000" />
       <workItem from="1710583408726" duration="7246000" />
       <workItem from="1710810903237" duration="9972000" />
-      <workItem from="1711931910086" duration="24106000" />
+      <workItem from="1711931910086" duration="26502000" />
     </task>
     <servers />
   </component>
