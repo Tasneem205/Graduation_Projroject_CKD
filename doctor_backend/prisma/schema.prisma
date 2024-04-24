@@ -20,6 +20,8 @@ model Assistant {
   Phone_num    String
   reports      reports[]
   reservations reservations[]
+  kidney_test  kidney_test[]
+  // TODO: add assistant to kidney scan
   // img
 }
 
@@ -81,35 +83,37 @@ model kidney_scan {
 }
 
 model kidney_test {
-  TestID    Int      @id @default(autoincrement())
-  TestDate  DateTime
-  PatientID Int
-  pot       Float
-  hemo      Float
-  pcv       Float
-  wbc       Float
-  rbc       Float
-  pc        String
-  pcc       String
-  ba        String
-  htl       String
-  dm        String
-  cad       String
-  appet     String
-  pe        String
-  ane       String
-  age       Int
-  bp        String
-  bgr       Float
-  bu        Float
-  sc        Float
-  sod       Float
-  sg        String
-  al        String
-  su        String
-  class     String
+  TestID       Int      @id @default(autoincrement())
+  TestDate     DateTime
+  PatientID    Int
+  assistant_id Int
+  pot          Float
+  hemo         Float
+  pcv          Float
+  wbc          Float
+  rbc          Float
+  pc           String
+  pcc          String
+  ba           String
+  htl          String
+  dm           String
+  cad          String
+  appet        String
+  pe           String
+  ane          String
+  age          Int
+  bp           String
+  bgr          Float
+  bu           Float
+  sc           Float
+  sod          Float
+  sg           String
+  al           String
+  su           String
+  class        String
 
-  patient patients @relation(fields: [PatientID], references: [PatientID])
+  Assistant Assistant @relation(fields: [assistant_id], references: [AssistantID])
+  patient   patients  @relation(fields: [PatientID], references: [PatientID])
 }
 
 model medications {
@@ -152,16 +156,16 @@ model patients {
 }
 
 model prescriptions {
-  prescriptionID    Int      @id @default(autoincrement())
+  prescriptionID    Int            @id @default(autoincrement())
   PatientID         Int
   DoctorID          Int
   prescription_date DateTime
   ExpiryDate        DateTime
-
-  followup    followup[]
-  reservation reservations[]
-  patient     patients       @relation(fields: [PatientID], references: [PatientID])
-  doctor      Doctors        @relation(fields: [DoctorID], references: [DoctorID])
+  // TODO: expiry date will be in prescription-medication
+  followup          followup[]
+  reservation       reservations[]
+  patient           patients       @relation(fields: [PatientID], references: [PatientID])
+  doctor            Doctors        @relation(fields: [DoctorID], references: [DoctorID])
 }
 
 model prescriptions_medication {
@@ -217,6 +221,7 @@ model reservations {
   patient_id       Int
   prescription_id  Int
   reservation_date DateTime         @db.Time
+  is_done          Boolean
   type             RESERVATION_TYPE
 
   patient       patients      @relation(fields: [patient_id], references: [PatientID])
@@ -246,3 +251,5 @@ model homepage {
 
   @@map("name: homepageView")
 }
+
+// TODO: some edits are missing

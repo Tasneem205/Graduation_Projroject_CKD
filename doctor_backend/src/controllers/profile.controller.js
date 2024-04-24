@@ -9,10 +9,6 @@ profileRouter.get("/refreshToken", getFunctions.refreshToken);
 
 profileRouter.get("/logout", getFunctions.logout);
 
-profileRouter.post("/dLogin", ()=>{}); // TODO: add authentication
-
-profileRouter.post("/aLogin", ()=>{});
-
 profileRouter.put("/edit_profile", ()=>{});
 
 export default profileRouter;

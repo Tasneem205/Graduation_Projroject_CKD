@@ -36,6 +36,7 @@ const getHomepageManager = async (req, res, next) => {
 
 const getHomepageDoctor = async (req, res, next) => {
     try{
+        // TODO: add number of reservations for today
         // get the reservations for this doctor (first appointment, followups)
         const doctorId = +req.param.id;
         const role = req.param.role;
@@ -63,16 +64,18 @@ const getHomepageDoctor = async (req, res, next) => {
 
 const getHomepageAssistant = async (req, res, next) => {
     try{
+        // TODO: group them by doctor and date and type
         const assisId = +req.param.id;
         const role = req.param.role;
-        if (role === "Assistant") {
+        if (role === "Assistant" ) {
             const allDoctorNames = await prisma.doctors.findMany({
                 select: { DoctorID: true, FirstName: true, LastName: true }});
             const allReservations = await prisma.reservations.findMany();
             // group by doctor id then by type and send them with doctor name not id
 
-            let data = {}
+            let data = {today: []}
             for (let i of allReservations) {
+                if (i.reservation_date )
                 if (i.type === RESERVATION_TYPE.First) {
                     data.first.push(i);
                 } else if (i.type === RESERVATION_TYPE.FollowUP) {

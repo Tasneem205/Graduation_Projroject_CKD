@@ -9,10 +9,11 @@ import homeRouter from "./home.controller.js";
 import scanRouter from "./scans.controller.js";
 import testRouter from "./tests.controller.js";
 import login from "../services/profile.services/post.service.js"
+import archiveRouter from "./archive.controller.js";
 
 const router = new Router();
 
-router.post("/login", login)
+router.post("/login", login)  // TODO: add authentication
 
 router.use("/home", homeRouter);
 
@@ -36,5 +37,5 @@ router.use("/follow-up", followUpRouter);
 
 // router.use("/notification", notificationRouter);
 
-router.use("/history", ()=>{});
+router.use("/archive", archiveRouter);
 export default router;
