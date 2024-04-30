@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="04ead2bf-65ce-4878-a126-bc81110f5bfc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/archive.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/archive.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/archive.services/history.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/archive.services/history.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/archive.services/medicine.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/archive.services/medicine.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/delete.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/delete.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/put.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/put.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +97,7 @@
       <workItem from="1714125874231" duration="3198000" />
       <workItem from="1714401015849" duration="3037000" />
       <workItem from="1714418528571" duration="449000" />
-      <workItem from="1714459720137" duration="2096000" />
+      <workItem from="1714459720137" duration="11953000" />
     </task>
     <servers />
   </component>
