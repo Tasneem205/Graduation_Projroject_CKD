@@ -211,7 +211,7 @@ model reports {
 enum ReservationType {
   First
   FollowUP
-  RESERVATION
+  Reservation
 }
 
 model reservations {
