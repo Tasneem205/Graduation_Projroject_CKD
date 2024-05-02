@@ -16,6 +16,7 @@ const getAllPatients = async (req, res, next) => {
 
 // get patient profile
 const getPatientWithId = async (req, res, next) => {
+    // TODO: add medicine
     try {
         const id = +req.body.params;
         const profile = await prisma.patients.findUnique({

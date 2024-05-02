@@ -25,7 +25,7 @@ const addAssistant = async (req, res, next) => {
         const { password: hashed, ...restInfo } = user;
         return responses.success(
           res,
-          "User created successfully",
+          "Assistant created successfully",
           restInfo
         );        
     } catch (error) {

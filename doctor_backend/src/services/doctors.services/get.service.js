@@ -5,7 +5,8 @@ const prisma = new PrismaClient();
 
 const getAllDoctors = async (req, res, next) => {
     try {
-        // TODO: implement me
+        const doctors = await prisma.doctors.findMany({});
+        return responses.success(res, "All doctors fetched!", doctors);
     } catch (error) {
         console.log(error);
         next();
@@ -14,7 +15,10 @@ const getAllDoctors = async (req, res, next) => {
 
 const getDoctorWithId = async (req, res, next) => {
     try {
-        // TODO: implement me
+        const doctor = await prisma.doctors.findUnique({
+            where: { AssistantID: +req.params.id }
+        });
+        return responses.success(res, "Assistant found!", doctor);
     } catch (error) {
         console.log(error);
         next();

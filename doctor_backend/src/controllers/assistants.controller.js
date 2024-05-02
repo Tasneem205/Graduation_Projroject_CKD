@@ -11,9 +11,7 @@ assistantRouter.get("/", getFunctions.getAllAssistants);
 
 assistantRouter.get("/:id", getFunctions.getAssistantWithId);
 
-assistantRouter.post("/", postFunctions.addAssistant);
-
-// assistantRouter.post("/login", postFunctions.assistantLogin);
+assistantRouter.post("/", isAdmin, postFunctions.addAssistant);
 
 assistantRouter.delete("/:id", isAdmin, deleteAssistant);
 

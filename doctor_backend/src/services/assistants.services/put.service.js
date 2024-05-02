@@ -11,19 +11,18 @@ const updateAssistant = async (req, res, next) => {
         if (error) {
             return responses.badRequest(res, "this data isn't valid");
         }
-        // TODO: add authorization
         if (req.AssistantID !== req.params.id) {
             return responses.unAuthorized(res, "You are not authorized to update this account");
         }
-        let hashpass;
+        let hashPass;
         if (value.Password) {
-            hashpass = bcrypt.hashSync(value.Password, parseInt(process.env.SALT));
+            hashPass = bcrypt.hashSync(value.Password, parseInt(process.env.SALT));
         }
         const userUpdated = await prisma.assistant.update({
             where: {
                 AssistantID: +req.params.id,
             },
-            data: { ...value, Password: hashpass },
+            data: { ...value, Password: hashPass },
         });
         const { Password, ...rest } = userUpdated;
         return responses.success(res, "user edited successfully", rest);

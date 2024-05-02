@@ -13,7 +13,7 @@ import archiveRouter from "./archive.controller.js";
 
 const router = new Router();
 
-router.post("/login", login)  // TODO: add authentication
+router.post("/login", login)
 
 router.use("/home", homeRouter);
 
