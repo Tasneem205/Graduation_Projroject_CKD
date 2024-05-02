@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/pages/home.dart';
+import 'package:user_app/Classes/language_constants.dart';
+import 'package:user_app/pages/Walking.dart';
 
 class Diabetes extends StatefulWidget {
   const Diabetes({Key? key}) : super(key: key);
@@ -11,297 +12,279 @@ class Diabetes extends StatefulWidget {
 class _DiabetesState extends State<Diabetes> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Expanded(
+      child: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            showDialog(
+                context: context,
+                builder: (context) {
+                  return Expanded(
+                      child: Center(
+                    child: AlertDialog(
+                      title: Center(
+                        child: Text(translation(context).diabetes,
+                          style:
+                              const TextStyle(color: Color(0xFF0E725B), fontSize: 29),
+                        ),
+                      ),
+                      content: const TextField(
+                        textAlign: TextAlign.center,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          hintText: "---------------------",
+                        ),
+                      ),
+                      actions: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            TextButton(
+                                onPressed: () {},
+                                child: Text(
+                                  translation(context).save,
+                                  style: const TextStyle(
+                                      color: Color(0xFF0E725B), fontSize: 20),
+                                )),
+                            TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => const Diabetes()));
+                                },
+                                child: Text(
+                                  translation(context).cancel,
+                                  style: const TextStyle(
+                                      color: Color(0xFF0E725B), fontSize: 20),
+                                )),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ));
+                });
+          },
+          child: const Icon(
+            Icons.add,
+            size: 50,
+            color: const Color(0xFF0E725B),
+          ),
+        ),
+      appBar: AppBar(
+      title:  Text(translation(context).diabetes,
+              style: const TextStyle(
+                  color: Color(0xff0C8A7D),
+                  fontSize: 24,
+                  fontWeight: FontWeight.normal),
+              textAlign: TextAlign.start),
+        elevation: 0.0,
+          iconTheme: const IconThemeData(color: Color(0xff0C8A7D), size: 27)),
+      body:SingleChildScrollView(
+        physics: const ScrollPhysics(),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+          const  SizedBox(height: 10,),
+            //this week Container
+             ContainerCard(
+              containerWidget: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SharedText(
+                    text: translation(context).today,
+                  ),
+                  const SizedBox(height: 5,),
+                  const SharedColorText(text:"-----------",),
+                  const SizedBox(height: 5,),
+                  SharedText(text: translation(context).notyet,fontSize: 10,),
 
-      
-  floatingActionButton: FloatingActionButton(onPressed: (){},
-  child: Icon(Icons.add,size: 50,color: Color(0xFF0E725B),),
-  
-  
-  ),
+                ],
 
 
-      
-appBar: AppBar(
-  elevation: 1,
-  leading: IconButton(
-            onPressed: () {Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => Home()));},
-            icon: Icon(
-              Icons.arrow_back,
-              size: 27,
-              color: Color(0xFF0E725B),
-            )),
+              ),
+            ),
+            const    SizedBox(height: 20,),
+                  
+                    Padding(
+                      padding:  const EdgeInsets.only(bottom: 10),
+                      child:  ContainerCard(
+                        containerWidget: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                              Text(
+                                 translation(context).feb18,style: const TextStyle(
+                                  fontSize: 16,color:Color(0xff0C8A7D)
+                                ),),
+                                Text(translation(context).high,
+                                style: const TextStyle(
+                                color:Colors.red,fontSize: 14,),),
 
-  title: Text("Diabetes",style: TextStyle(color: Color(0xFF0E725B),fontSize: 27),),
-),
-
-
-body: Container(
-  
-    width: double.infinity,
-    height: double.infinity,
-    color: Color.fromARGB(55, 222, 221, 221),
-
-
-
-  
-  child: SingleChildScrollView(
-  
-    
-    child: 
-  
-    
-    Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-    
-    
-      children: [  
-      Container(  
-    
-        width:double.infinity,
-    height: 120,  
-    margin: EdgeInsets.fromLTRB(10, 7, 10, 10), 
-    alignment: Alignment.topLeft,   
-        decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadiusDirectional.circular(10)),
-        
-        
-        child: Column(children: [ 
-    Text(" TODAY",style: TextStyle(color: Color(0xFF0E725B),fontSize: 25)),
-    Text(" ------------- ",style: TextStyle(fontSize: 20)),
-    Text(" not yet",style: TextStyle(fontSize: 15)),
-    
-    
-      ],
-      ), ),
-      
-      SizedBox(height: 2,),
-    Container(
-      width:double.infinity,
-    height: 129,  
-    margin: EdgeInsets.fromLTRB(10, 7, 10, 10), 
-    alignment: Alignment.topLeft,   
-        decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadiusDirectional.circular(10)),
-        
-        child: Column(children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              
-              children: [
-
-              Container(
-                margin: EdgeInsets.fromLTRB(0, 1, 40, 9),
-      alignment: Alignment.topLeft,
-      
-                
-                child: Text(" feb 18 ",style: TextStyle(color: Color(0xFF0E725B),fontSize: 22))),
-
-    Container(
-      margin: EdgeInsets.fromLTRB(150, 44, 10, 2),
-      alignment: Alignment.bottomRight,
-      
-      child: Text(" High",style: TextStyle(fontSize: 18,color: Color.fromARGB(255, 237, 116, 108)))),
-            ],),
-      Container(
-                        margin: EdgeInsets.fromLTRB(0, 1, 5, 9),
+                              ],),
+                          
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(0, 1, 5, 9),
                         alignment: Alignment.topLeft,
-                        child: Text(
+                        child: const Text(
                           "159",
-                          style:
-                              TextStyle(color: Colors.black87, fontSize: 27),
+                          style: TextStyle(color: Colors.black87, fontSize: 21),
                         ),
                       )
-      
-      
-      
-      ],),),
-    
-      
-      SizedBox(height: 2,),
-    Container(
-      width:double.infinity,
-    height: 129,  
-    margin: EdgeInsets.fromLTRB(10, 7, 10, 10), 
-    alignment: Alignment.topLeft,   
-        decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadiusDirectional.circular(10)),
-        
-        child: Column(children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              
-              children: [
-
-              Container(
-                margin: EdgeInsets.fromLTRB(0, 1, 40, 9),
-      alignment: Alignment.topLeft,
-      
+                    ],
+                  ),
+                ),),
+                const SizedBox(
+                  height: 20,
+                ),
                 
-                child: Text(" feb 17 ",style: TextStyle(color: Color(0xFF0E725B),fontSize: 22))),
+                    Padding(
+                      padding:  const EdgeInsets.only(bottom: 10),
+                      child:  ContainerCard(
+                        containerWidget: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                              Text(
+                                 translation(context).feb17,style: const TextStyle(
+                                  fontSize: 16,color:Color(0xff0C8A7D)
+                                ),),
+                                Text(translation(context).normal,
+                                style: const TextStyle(
+                                color:Colors.red,fontSize: 14,),),
 
-    Container(
-      margin: EdgeInsets.fromLTRB(150, 44, 10, 2),
-      alignment: Alignment.bottomRight,
-      
-      child: Text(" Normal",style: TextStyle(fontSize: 18,color: Color.fromARGB(255, 237, 116, 108)))),
-            ],),
-      Container(
-                        margin: EdgeInsets.fromLTRB(0, 1, 5, 9),
+                              ],),
+                          
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(0, 1, 5, 9),
                         alignment: Alignment.topLeft,
-                        child: Text(
+                        child: const Text(
                           "115",
-                          style:
-                              TextStyle(color: Colors.black87, fontSize: 27),
+                          style: TextStyle(color: Colors.black87, fontSize: 21),
                         ),
                       )
-      
-      
-      
-      ],),),
-    
-
-  SizedBox(height: 2,),
-    Container(
-      width:double.infinity,
-    height: 129,  
-    margin: EdgeInsets.fromLTRB(10, 7, 10, 10), 
-    alignment: Alignment.topLeft,   
-        decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadiusDirectional.circular(10)),
-        
-        child: Column(children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+                    ],
+                  ),
+                ),),
+                const SizedBox(
+                  height: 20,
+                ),
               
-              children: [
+                    Padding(
+                      padding:  const EdgeInsets.only(bottom: 10),
+                      child:  ContainerCard(
+                        containerWidget: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                              Text(
+                                 translation(context).feb16,style: const TextStyle(
+                                  fontSize: 16,color:Color(0xff0C8A7D)
+                                ),),
+                                Text(translation(context).high,
+                                style: const TextStyle(
+                                color:Colors.red,fontSize: 14,),),
 
-              Container(
-                margin: EdgeInsets.fromLTRB(0, 1, 40, 9),
-      alignment: Alignment.topLeft,
-      
-                
-                child: Text(" feb 16 ",style: TextStyle(color: Color(0xFF0E725B),fontSize: 22))),
-
-    Container(
-      margin: EdgeInsets.fromLTRB(150, 44, 10, 2),
-      alignment: Alignment.bottomRight,
-      
-      child: Text(" High",style: TextStyle(fontSize: 18,color: Color.fromARGB(255, 237, 116, 108)))),
-            ],),
-      Container(
-                        margin: EdgeInsets.fromLTRB(0, 1, 5, 9),
+                              ],),
+                          
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(0, 1, 5, 9),
                         alignment: Alignment.topLeft,
-                        child: Text(
+                        child: const Text(
                           "200",
-                          style:
-                              TextStyle(color: Colors.black87, fontSize: 27),
+                          style: TextStyle(color: Colors.black87, fontSize: 21),
                         ),
                       )
-      
-      
-      
-      ],),),
-    
-  SizedBox(height: 2,),
-    Container(
-      width:double.infinity,
-    height: 129,  
-    margin: EdgeInsets.fromLTRB(10, 7, 10, 10), 
-    alignment: Alignment.topLeft,   
-        decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadiusDirectional.circular(10)),
-        
-        child: Column(children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              
-              children: [
-
-              Container(
-                margin: EdgeInsets.fromLTRB(0, 1, 40, 9),
-      alignment: Alignment.topLeft,
-      
+                    ],
+                  ),
+                ),),
+                const SizedBox(
+                  height: 20,
+                ),
                 
-                child: Text(" feb 15 ",style: TextStyle(color: Color(0xFF0E725B),fontSize: 22))),
+                    Padding(
+                      padding:  const EdgeInsets.only(bottom: 10),
+                      child:  ContainerCard(
+                        containerWidget: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                              Text(
+                                 translation(context).feb15,style: const TextStyle(
+                                  fontSize: 16,color:Color(0xff0C8A7D)
+                                ),),
+                                Text(translation(context).high,
+                                style: const TextStyle(
+                                color:Colors.red,fontSize: 14,),),
 
-    Container(
-      margin: EdgeInsets.fromLTRB(150, 44, 10, 2),
-      alignment: Alignment.bottomRight,
-      
-      child: Text(" High",style: TextStyle(fontSize: 18,color: Color.fromARGB(255, 237, 116, 108)))),
-            ],),
-      Container(
-                        margin: EdgeInsets.fromLTRB(0, 1, 5, 9),
+                              ],),
+                          
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(0, 1, 5, 9),
                         alignment: Alignment.topLeft,
-                        child: Text(
+                        child: const Text(
                           "284",
-                          style:
-                              TextStyle(color: Colors.black87, fontSize: 27),
+                          style: TextStyle(color: Colors.black87, fontSize: 21
+                          ),
                         ),
                       )
-      
-      
-      
-      ],),),
-    
-  SizedBox(height: 2,),
-    Container(
-      width:double.infinity,
-    height: 129,  
-    margin: EdgeInsets.fromLTRB(10, 7, 10, 10), 
-    alignment: Alignment.topLeft,   
-        decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadiusDirectional.circular(10)),
-        
-        child: Column(children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              
-              children: [
-
-              Container(
-                margin: EdgeInsets.fromLTRB(0, 1, 40, 9),
-      alignment: Alignment.topLeft,
-      
+                    ],
+                  ),
+                ),),
+                const SizedBox(
+                  height: 20,
+                ),
                 
-                child: Text(" feb 14 ",style: TextStyle(color: Color(0xFF0E725B),fontSize: 22))),
+                    Padding(
+                      padding:  const EdgeInsets.only(bottom: 10),
+                      child:  ContainerCard(
+                        containerWidget: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                              Text(
+                                 translation(context).feb14,style: const TextStyle(
+                                  fontSize: 16,color:Color(0xff0C8A7D)
+                                ),),
+                                Text(translation(context).low,
+                                style: const TextStyle(
+                                color:Colors.red,fontSize: 14,),),
 
-    Container(
-      margin: EdgeInsets.fromLTRB(150, 44, 10, 2),
-      alignment: Alignment.bottomRight,
-      
-      child: Text(" Low",style: TextStyle(fontSize: 18,color: Color.fromARGB(255, 237, 116, 108)))),
-            ],),
-      Container(
-                        margin: EdgeInsets.fromLTRB(0, 1, 5, 9),
-                        alignment: Alignment.topLeft,
-                        child: Text(
+                              ],),
+                          
+                  
+                        // margin: EdgeInsets.fromLTRB(0, 1, 5, 9),
+                        // alignment: Alignment.topLeft,
+                         const Text(
                           " 81",
-                          style:
-                              TextStyle(color: Colors.black87, fontSize: 28),
+                          style: TextStyle(color: Colors.black87, fontSize: 22
+                          ,),
                         ),
-                      )
-      
-      
-      
-      ],),),
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ],),),),
-
-
-
-
-        
+                      
+                    ],
+                  ),
+                ),
+              
+            ),
+        ],  ),
+        ),
+      ),
     );
   }
 }

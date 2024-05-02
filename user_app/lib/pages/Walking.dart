@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:user_app/Classes/language_constants.dart';
 
 class Walking extends StatefulWidget {
   const Walking({Key? key}) : super(key: key);
@@ -11,9 +12,6 @@ class _WalkingState extends State<Walking> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-  
-
-
 // class WalkingScreen extends StatelessWidget {
 //   const WalkingScreen({super.key});
 
@@ -21,35 +19,48 @@ class _WalkingState extends State<Walking> {
 //   Widget build(BuildContext context) {
 //     return  Scaffold(
       appBar: AppBar(
-        title: const SharedColorText(text:  "Walking",),
+        title: SharedColorText(text: translation(context).walking),
+        iconTheme: const IconThemeData(
+          color: const Color(0xff0C8A7D),
+        ),
       ),
-      body:SingleChildScrollView(
+      body: SingleChildScrollView(
         physics: const ScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-          const  SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             //this week Container
-            const ContainerCard(
+            ContainerCard(
               containerWidget: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SharedText(
-                    text: 'This Day',
+                    text: translation(context).thisday,
                   ),
-                  SizedBox(height: 5,),
-                  SharedColorText(text:  "00:00:00",),
-                  SizedBox(height: 5,),
-                  SharedText(text: "no workouts",fontSize: 10,),
-
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  const SharedColorText(
+                    text: "00:00:00",
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  SharedText(
+                    text: translation(context).noworkouts,
+                    fontSize: 10,
+                  ),
                 ],
-
-
               ),
             ),
-            const    SizedBox(height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
             //this week Container
 
             Column(
@@ -57,11 +68,11 @@ class _WalkingState extends State<Walking> {
                 ListView.builder(
                   itemCount: 4,
                   shrinkWrap: true,
-                  physics:const NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
-                    return const Padding(
-                      padding:  EdgeInsets.only(bottom: 10),
-                      child:  ContainerCard(
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 10),
+                      child: ContainerCard(
                         containerWidget: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -70,56 +81,61 @@ class _WalkingState extends State<Walking> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 SharedText(
-                                  text: 'Dec 17',
+                                  text: translation(context).dec17,
                                   fontSize: 16,
                                 ),
-                                SharedColorText(text:  "(0.85Km)",fontSize: 14,),
-
+                                const SharedColorText(
+                                  text: "(0.85Km)",
+                                  fontSize: 14,
+                                ),
                               ],
                             ),
-                            SizedBox(height: 7,),
+                            const SizedBox(
+                              height: 7,
+                            ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                 children: [
-                                   SharedTitleAndValue(
-                                     titleText: 'Workout durtion',
-                                     valueText: '00:11:00',
-                                   ),
-                                   SizedBox(height: 7,),
-                                   SharedTitleAndValue(
-                                     titleText: 'Workout calories',
-                                     valueText:  '46 cal',
-                                   ),
-
-
-                                 ],
-                              ),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SharedTitleAndValue(
-                                    titleText: 'Avg.Speed',
-                                    valueText: '4.2 km/h',
-                                  ),
-                                  SizedBox(height: 7,),
-                        SharedTitleAndValue(
-                                  titleText: 'Steps',
-                                  valueText: '1.164',
-                      )
-
-                                ],
-                              )
-                            ],)
-
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SharedTitleAndValue(
+                                      titleText:
+                                          translation(context).workoutdurtion,
+                                      valueText: '00:11:00',
+                                    ),
+                                    const SizedBox(
+                                      height: 7,
+                                    ),
+                                    SharedTitleAndValue(
+                                      titleText:
+                                          translation(context).workoutcalories,
+                                      valueText: translation(context).cal,
+                                    ),
+                                  ],
+                                ),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SharedTitleAndValue(
+                                      titleText: translation(context).avgspeed,
+                                      valueText: '4.2 km/h',
+                                    ),
+                                    const SizedBox(
+                                      height: 7,
+                                    ),
+                                    SharedTitleAndValue(
+                                      titleText: translation(context).steps,
+                                      valueText: '1.164',
+                                    )
+                                  ],
+                                )
+                              ],
+                            )
                           ],
-
-
                         ),
                       ),
                     );
@@ -128,20 +144,20 @@ class _WalkingState extends State<Walking> {
               ],
             ),
             // ListView.builder(itemBuilder: itemBuilder)
-
           ],
         ),
       ),
     );
   }
 }
+
 class ContainerCard extends StatelessWidget {
   final Widget containerWidget;
 
-  const ContainerCard(
-      {super.key,
-        required this.containerWidget,
-       });
+  const ContainerCard({
+    super.key,
+    required this.containerWidget,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -150,14 +166,14 @@ class ContainerCard extends StatelessWidget {
       child: Container(
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-          color:  Colors.white,
+          color: Colors.white,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(.1),
               spreadRadius: 1,
               blurRadius: 3,
-              offset:const Offset(0, 3), // changes position of shadow
+              offset: const Offset(0, 3), // changes position of shadow
             ),
           ],
         ),
@@ -169,55 +185,63 @@ class ContainerCard extends StatelessWidget {
     );
   }
 }
+
 class SharedColorText extends StatelessWidget {
   final String text;
   final double fontSize;
-  const SharedColorText({super.key,required this.text,this.fontSize=24});
+  const SharedColorText({super.key, required this.text, this.fontSize = 24});
 
   @override
   Widget build(BuildContext context) {
-    return  Text(
+    return Text(
       text,
-      style: TextStyle(color: const Color.fromRGBO(12, 138, 125, 1),fontSize: fontSize),
+      style: TextStyle(
+          color: const Color.fromRGBO(12, 138, 125, 1), fontSize: fontSize),
     );
   }
 }
+
 class SharedText extends StatelessWidget {
   final String text;
   final double fontSize;
-  const SharedText({super.key,required this.text,this.fontSize=16});
+  const SharedText({super.key, required this.text, this.fontSize = 16});
 
   @override
   Widget build(BuildContext context) {
-    return  Text(
+    return Text(
       text,
       style: TextStyle(fontSize: fontSize),
     );
   }
 }
+
 class SharedTitleAndValue extends StatelessWidget {
   final String titleText;
   final String valueText;
 
-  const SharedTitleAndValue({super.key,
+  const SharedTitleAndValue({
+    super.key,
     required this.titleText,
     required this.valueText,
   });
 
   @override
   Widget build(BuildContext context) {
-    return   Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SharedText(
           text: titleText,
         ),
-        const  SizedBox(height: 5,),
-        SharedColorText(text:  valueText,fontSize: 16,),
-
+        const SizedBox(
+          height: 5,
+        ),
+        SharedColorText(
+          text: valueText,
+          fontSize: 16,
+        ),
       ],
     );
   }
 }
-

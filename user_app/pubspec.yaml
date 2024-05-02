@@ -1,4 +1,4 @@
-name: graduation_project
+name: user_app
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.2.6 <4.0.0'
+  sdk: '>=3.3.3 <4.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -34,33 +34,34 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  flutter_charts: ^0.5.2
-  image_picker: ^1.0.7
-  path_provider: ^2.1.2
+  cupertino_icons: ^1.0.6
   shared_preferences: ^2.2.2
   http: ^1.2.1
-  numberpicker: ^2.1.2
-  basic_utils: ^5.7.0
-  syncfusion_flutter_charts: ^24.2.9
-
+  syncfusion_flutter_charts: ^25.1.37
+  easy_date_timeline: ^1.0.3
+  image_picker: ^1.0.7
+  flutter_slidable: ^3.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.18.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^3.0.1
+  flutter_lints: ^3.0.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
 flutter:
+  generate: true
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -79,7 +80,6 @@ flutter:
     - images/target.png
     - images/One.jpg
     - images/Two.jpg
-    - assets/img/
     - images/person2.jpg
     - images/Tonometer.png
     - images/heart.png
@@ -92,9 +92,15 @@ flutter:
     - images/pills (4).png
     - images/medical pill.png
     - images/profile.png
-
-
+    - assets/img/
+    - assets/img/1109-drinking-water2.png
+    - assets/img/bridge.png
+    - assets/img/exersice_bar.png
+    - assets/img/sports-woman-doing-crunches-exercise-uaypxflc7uj1yt5x.gif
+    - assets/img/Group 73.png
     
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

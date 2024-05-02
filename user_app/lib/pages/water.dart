@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:user_app/Classes/language_constants.dart';
 
 class Water extends StatefulWidget {
   const Water({super.key});
@@ -54,7 +55,7 @@ class WaterState extends State<Water> with TickerProviderStateMixin{
           title: Row(
             children: [
               Image.asset("images/target.png", width: 24),
-              Text("Target: 2000 ml",
+              Text(translation(context).target,
                   style: TextStyle(
                       color: Color(0xff0593FC),
                       fontWeight: FontWeight.bold,
@@ -146,7 +147,7 @@ class WaterState extends State<Water> with TickerProviderStateMixin{
                         width: double.infinity,
                         child: Column(children: [
                           Image.asset("images/water.png", height: 140),
-                          const Text("water",
+                           Text(translation(context).water,
                               style: TextStyle(
                                   color: Color(0xff000000),
                                   fontSize: 20,

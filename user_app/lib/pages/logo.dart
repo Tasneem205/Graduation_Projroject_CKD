@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:graduation_project/pages/login.dart';
-//import 'package:graduation_project/pages/water.dart';
+import 'package:user_app/Classes/language_constants.dart';
+import 'package:user_app/pages/login.dart';
+
 
 class Logo extends StatefulWidget {
   const Logo({super.key});
@@ -38,11 +39,11 @@ class _Logo extends State<Logo> with SingleTickerProviderStateMixin {
           body: Expanded(
             child: Stack(children: [
               Container(color: const Color(0xff0C8A7D)),
-              const Positioned(
+              Positioned(
                 left: 102,
                 top: 610,
-                child: Text("KIDNEY LAB",
-                style: TextStyle(
+                child: Text(translation(context).logo,
+                style: const TextStyle(
                   color: Color(0xffffffff),
                   fontWeight: FontWeight.bold,
                   fontSize: 26)),),
@@ -56,8 +57,6 @@ class _Logo extends State<Logo> with SingleTickerProviderStateMixin {
                     child: Image.asset(
                       "images/happy kidney day.jpg",
                       alignment: Alignment.center ),
-                  //width: 289,
-                  //height: 303,
                   ),
                   )
         ]),
@@ -66,3 +65,5 @@ class _Logo extends State<Logo> with SingleTickerProviderStateMixin {
         );
   }
 }
+
+

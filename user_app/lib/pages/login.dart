@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:graduation_project/pages/home.dart';
+import 'package:user_app/Classes/language_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
+import 'package:user_app/pages/home.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -34,9 +34,9 @@ class _Login extends State<Login> {
             Container(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
-                child: const Text(
-                  'SING IN',
-                  style: TextStyle(
+                child: Text(
+                  translation(context).sign,
+                  style: const TextStyle(
                       color: Color.fromRGBO(12, 138, 125, 1),
                       fontWeight: FontWeight.w500,
                       fontSize: 35),
@@ -44,9 +44,9 @@ class _Login extends State<Login> {
             Container(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
-                child: const Text(
-                  'Welcome! Nice to see you:-)',
-                  style: TextStyle(
+                child: Text(
+                  translation(context).hello,
+                  style: const TextStyle(
                       color: Color.fromRGBO(12, 138, 125, 1), fontSize: 20),
                 )),
             Container(
@@ -54,30 +54,30 @@ class _Login extends State<Login> {
               child: Form(
                 key: formstate1,
                 child: TextFormField(
-                  validator: (value) {
+                  /*validator: (value) {
                     if (value!.isEmpty) {
-                      return "Required";
+                      return translation(context).required;
                     }
-                  },
-                  cursorColor: Color(0xff0C8A7D),
+                  },*/
+                  cursorColor: const Color(0xff0C8A7D),
                   keyboardType: TextInputType.name,
                   controller: nameController,
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      focusedBorder: OutlineInputBorder(
+                  decoration: InputDecoration(
+                      border: const OutlineInputBorder(),
+                      focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(color: Color(0xff0C8A7D)),
                           borderRadius: BorderRadius.all(Radius.circular(14))),
-                      enabledBorder: OutlineInputBorder(
+                      enabledBorder: const OutlineInputBorder(
                           borderSide: BorderSide(color: Color(0xff0C8A7D)),
                           borderRadius: BorderRadius.all(Radius.circular(14))),
-                      hintText: "User name",
-                      hintStyle: TextStyle(
+                      hintText: translation(context).namehint,
+                      hintStyle: const TextStyle(
                           color: Color(0xff67B6AE),
                           fontSize: 12,
                           fontWeight: FontWeight.w200),
-                      labelText: 'User Name',
+                      labelText: translation(context).namehint,
                       labelStyle:
-                          TextStyle(color: Color(0xff0C8A7D), fontSize: 18)),
+                          const TextStyle(color: Color(0xff0C8A7D), fontSize: 18)),
                 ),
               ),
             ),
@@ -86,30 +86,30 @@ class _Login extends State<Login> {
               child: Form(
                 key: formstate2,
                 child: TextFormField(
-                  validator: (value) {
+                  /*validator: (value) {
                     if (value!.isEmpty) {
-                      return "Required";
+                      return translation(context).required;
                     }
-                  },
-                  cursorColor: Color(0xff0C8A7D),
+                  },*/
+                  cursorColor: const Color(0xff0C8A7D),
                   obscureText: true,
                   controller: passwordController,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    focusedBorder: OutlineInputBorder(
+                  decoration: InputDecoration(
+                    border: const OutlineInputBorder(),
+                    focusedBorder: const OutlineInputBorder(
                         borderSide: BorderSide(color: Color(0xff0C8A7D)),
                         borderRadius: BorderRadius.all(Radius.circular(14))),
-                    enabledBorder: OutlineInputBorder(
+                    enabledBorder: const OutlineInputBorder(
                         borderSide: BorderSide(color: Color(0xff0C8A7D)),
                         borderRadius: BorderRadius.all(Radius.circular(14))),
-                    hintText: "ID",
-                    hintStyle: TextStyle(
+                    hintText: translation(context).id,
+                    hintStyle: const TextStyle(
                         color: Color(0xff67B6AE),
                         fontSize: 12,
                         fontWeight: FontWeight.w200),
-                    labelText: 'ID',
+                    labelText: translation(context).id,
                     labelStyle:
-                        TextStyle(color: Color(0xff0C8A7D), fontSize: 18),
+                        const TextStyle(color: Color(0xff0C8A7D), fontSize: 18),
                   ),
                 ),
               ),
@@ -119,33 +119,33 @@ class _Login extends State<Login> {
                 padding: const EdgeInsets.fromLTRB(120, 10, 120, 0),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xff0C8A7D),
+                      backgroundColor: const Color(0xff0C8A7D),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10))),
                   onPressed: () async {
-                    if (formstate1.currentState!.validate()) {
-                      print("valid");
+                    /*if (formstate1.currentState!.validate()) {
+                      print(translation(context).valid);
                     } else {
-                      print("not valid");
+                      print(translation(context).notvalid);
                     }
                     if (formstate2.currentState!.validate()) {
-                      print("valid");
+                      print(translation(context).valid);
                     } else {
-                      print("not valid");
+                      print(translation(context).notvalid);
                     }
 
                     await saveprefs();
 
                     if (formstate1.currentState!.validate() &
-                    formstate2.currentState!.validate()) {
-                    Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => Home()));
-                    }
+                        formstate2.currentState!.validate()) {*/
+                      Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => const Home()));
+                    //}
                     print(nameController.text);
                     print(passwordController.text);
                   },
-                  child: const Text('Login',
-                      style: TextStyle(color: Color(0xffFFFFFF), fontSize: 24)),
+                  child: Text(translation(context).login,
+                      style: const TextStyle(color: Color(0xffFFFFFF), fontSize: 24)),
                 )),
             Expanded(
               child: Image.asset(
@@ -160,3 +160,4 @@ class _Login extends State<Login> {
     );
   }
 }
+
