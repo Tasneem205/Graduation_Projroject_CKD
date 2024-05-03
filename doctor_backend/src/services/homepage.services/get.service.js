@@ -65,6 +65,7 @@ const getHomepageDoctor = async (req, res, next) => {
 const getHomepageAssistant = async (req, res, next) => {
     try{
         // TODO: group them by doctor and date and type
+        // TODO: there is no reservation it's only either followup or first
         const assisId = +req.param.id;
         const role = req.param.role;
         if (role === "Assistant" ) {

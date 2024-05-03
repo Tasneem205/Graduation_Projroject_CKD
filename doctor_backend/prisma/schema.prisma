@@ -156,24 +156,24 @@ model patients {
 }
 
 model prescriptions {
-  prescriptionID    Int            @id @default(autoincrement())
+  prescriptionID    Int      @id @default(autoincrement())
   PatientID         Int
   DoctorID          Int
   prescription_date DateTime
-  ExpiryDate        DateTime
-  // TODO: expiry date will be in prescription-medication
-  followup          followup[]
-  reservation       reservations[]
-  patient           patients       @relation(fields: [PatientID], references: [PatientID])
-  doctor            Doctors        @relation(fields: [DoctorID], references: [DoctorID])
+
+  followup followup[]
+
+  patient patients @relation(fields: [PatientID], references: [PatientID])
+  doctor  Doctors  @relation(fields: [DoctorID], references: [DoctorID])
 }
 
 model prescriptions_medication {
-  prescriptionID Int    @id @default(autoincrement())
+  prescriptionID Int      @id @default(autoincrement())
   medicationID   Int
   dosage         String
   frequency      String
   instructions   String
+  ExpiryDate     DateTime
 
   mediaction medications @relation(fields: [medicationID], references: [medicationID])
 }
@@ -211,7 +211,6 @@ model reports {
 enum ReservationType {
   First
   FollowUP
-  Reservation
 }
 
 model reservations {
@@ -225,10 +224,9 @@ model reservations {
   is_done          Boolean
   type             ReservationType
 
-  patient       patients      @relation(fields: [patient_id], references: [PatientID])
-  Assistant     Assistant     @relation(fields: [assistant_id], references: [AssistantID])
-  Doctors       Doctors       @relation(fields: [doctor_id], references: [DoctorID])
-  prescriptions prescriptions @relation(fields: [prescription_id], references: [prescriptionID])
+  patient   patients  @relation(fields: [patient_id], references: [PatientID])
+  Assistant Assistant @relation(fields: [assistant_id], references: [AssistantID])
+  Doctors   Doctors   @relation(fields: [doctor_id], references: [DoctorID])
 }
 
 model video {
