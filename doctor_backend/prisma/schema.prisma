@@ -10,18 +10,28 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Assistant_Schedule {
+  id          Int       @id @default(autoincrement())
+  assistantId Int
+  day         String // Day of the week (e.g., "Monday", "Tuesday")
+  startTime   String // Start time of the schedule (e.g., "09:00 AM")
+  endTime     String // End time of the schedule (e.g., "05:00 PM")
+  assistant   Assistant @relation(fields: [assistantId], references: [AssistantID])
+}
+
 model Assistant {
-  AssistantID  Int            @id @default(autoincrement())
+  AssistantID  Int                  @id @default(autoincrement())
   FirstName    String
   LastName     String
-  Email        String         @unique
+  Email        String               @unique
   Password     String
-  patients     patients[]
   Phone_num    String
+  patients     patients[]
   reports      reports[]
   reservations reservations[]
   kidney_test  kidney_test[]
-  // TODO: add assistant to kidney scan
+  kidney_scan  kidney_scan[]
+  schedule     Assistant_Schedule[]
   // img
 }
 
@@ -51,42 +61,54 @@ model Diabetes {
   @@id([PatientID, date])
 }
 
-model Doctors {
-  DoctorID      Int             @id @default(autoincrement())
-  FirstName     String
-  LastName      String
-  Phone_num     String
-  Email         String          @unique
-  Password      String
-  prescriptions prescriptions[]
-  patients      patients[]
-  reports       reports[]
-  reservations  reservations[]
+model Doctor_Schedule {
+  id        Int     @id @default(autoincrement())
+  doctorId  Int
+  day       String // Day of the week (e.g., "Monday", "Tuesday")
+  startTime String // Start time of the schedule (e.g., "09:00 AM")
+  endTime   String // End time of the schedule (e.g., "05:00 PM")
+  doctor    Doctors @relation(fields: [doctorId], references: [DoctorID])
 }
 
-model followup {
-  followupID     Int      @id @default(autoincrement())
-  prescriptionID Int
-  followup_date  DateTime
-  followup_notes String
+model Doctors {
+  DoctorID  Int    @id @default(autoincrement())
+  FirstName String
+  LastName  String
+  Phone_num String
+  Email     String @unique
+  Password  String
 
-  prescription prescriptions @relation(fields: [prescriptionID], references: [prescriptionID])
+  patients        patients[]
+  reports         reports[]
+  reservations    reservations[]
+  kideny_scan     kidney_scan[]
+  kideny_test     kidney_test[]
+  Doctor_Schedule Doctor_Schedule[]
+  general_notes   general_notes[]
 }
 
 model kidney_scan {
-  Scan_ID   Int      @id @default(autoincrement())
-  PatientID Int
-  ScanDate  DateTime
-  img       String
-  class     String
-  patient   patients @relation(fields: [PatientID], references: [PatientID])
+  Scan_ID     Int      @id @default(autoincrement())
+  scan_name   String
+  PatientID   Int
+  DoctorID    Int
+  AssistantID Int
+  ScanDate    DateTime
+  img         String
+  class       String
+
+  patient    patients  @relation(fields: [PatientID], references: [PatientID])
+  doctors    Doctors   @relation(fields: [DoctorID], references: [DoctorID])
+  assistants Assistant @relation(fields: [AssistantID], references: [AssistantID])
 }
 
 model kidney_test {
-  TestID       Int      @id @default(autoincrement())
+  TestID       Int       @id @default(autoincrement())
+  test_name    String
   TestDate     DateTime
   PatientID    Int
   assistant_id Int
+  DoctorID     Int
   pot          Float
   hemo         Float
   pcv          Float
@@ -111,18 +133,20 @@ model kidney_test {
   al           String
   su           String
   class        String
-
-  Assistant Assistant @relation(fields: [assistant_id], references: [AssistantID])
-  patient   patients  @relation(fields: [PatientID], references: [PatientID])
+  // the model requires age and id so we have to send them
+  Assistant    Assistant @relation(fields: [assistant_id], references: [AssistantID])
+  patient      patients  @relation(fields: [PatientID], references: [PatientID])
+  doctors      Doctors   @relation(fields: [DoctorID], references: [DoctorID])
 }
 
 model medications {
-  medicationID             Int                        @id @default(autoincrement())
-  medication_name          String
-  dosage_form              String
-  manufacturer             String
-  generic_name             String
-  therapeutic_class        String
+  medicationID      Int    @id @default(autoincrement())
+  medication_name   String
+  dosage_form       String
+  manufacturer      String
+  generic_name      String
+  therapeutic_class String
+
   prescriptions_medication prescriptions_medication[]
 }
 
@@ -141,41 +165,62 @@ model patients {
   weight           Float
   assistantID      Int
   registrationDate DateTime
+  Phone            String
 
   kidney_scan   kidney_scan[]
   kidney_test   kidney_test[]
   DailyProgress DailyProgress[]
-  prescriptions prescriptions[]
   reports       reports[]
   reservations  reservations[]
   Diabetes      Diabetes[]
   pressure      pressure[]
+  alarmmedicine alarmmedicine[]
+  notes         general_notes[]
 
   Doctor    Doctors   @relation(fields: [DoctorID], references: [DoctorID])
   assistant Assistant @relation(fields: [assistantID], references: [AssistantID])
 }
 
+model general_notes {
+  noteId    Int      @id @default(autoincrement())
+  patientid Int
+  doctorid  Int
+  time      DateTime @db.Time()
+  note      String
+
+  patient patients @relation(fields: [patientid], references: [PatientID])
+  doctor  Doctors  @relation(fields: [doctorid], references: [DoctorID])
+}
+
+model followup {
+  followupId Int @id
+  firstId    Int
+
+  first_reservation  reservations @relation("first", fields: [firstId], references: [reservation_id])
+  follow_reservation reservations @relation("followup", fields: [followupId], references: [reservation_id])
+}
+
 model prescriptions {
   prescriptionID    Int      @id @default(autoincrement())
-  PatientID         Int
-  DoctorID          Int
   prescription_date DateTime
+  reservation_id    Int
 
-  followup followup[]
+  reservations reservations @relation(fields: [reservation_id], references: [reservation_id])
 
-  patient patients @relation(fields: [PatientID], references: [PatientID])
-  doctor  Doctors  @relation(fields: [DoctorID], references: [DoctorID])
+  prescription_medication prescriptions_medication[]
 }
 
 model prescriptions_medication {
-  prescriptionID Int      @id @default(autoincrement())
-  medicationID   Int
-  dosage         String
-  frequency      String
-  instructions   String
-  ExpiryDate     DateTime
+  prescription_medicationID Int      @id @default(autoincrement())
+  prescriptionID            Int
+  medicationID              Int
+  dosage                    String
+  frequency                 String
+  ExpiryDate                DateTime
+  instructions              String
 
-  mediaction medications @relation(fields: [medicationID], references: [medicationID])
+  prescriptions prescriptions @relation(fields: [prescriptionID], references: [prescriptionID])
+  mediaction    medications   @relation(fields: [medicationID], references: [medicationID])
 }
 
 model pressure {
@@ -217,9 +262,8 @@ model reservations {
   reservation_id   Int             @id @default(autoincrement())
   assistant_id     Int
   doctor_id        Int
-  notes            String
   patient_id       Int
-  prescription_id  Int
+  notes            String
   reservation_date DateTime        @db.Time
   is_done          Boolean
   type             ReservationType
@@ -227,6 +271,10 @@ model reservations {
   patient   patients  @relation(fields: [patient_id], references: [PatientID])
   Assistant Assistant @relation(fields: [assistant_id], references: [AssistantID])
   Doctors   Doctors   @relation(fields: [doctor_id], references: [DoctorID])
+
+  prescription prescriptions[]
+  followup     followup[]      @relation("followup")
+  first        followup[]      @relation("first")
 }
 
 model video {
@@ -236,6 +284,17 @@ model video {
   Descript  String
   Duration  DateTime @db.Time
   Thumbnail String
+}
+
+model alarmmedicine {
+  ID            Int
+  PatientID     Int
+  time          DateTime
+  medicine_name String
+  dosage        String
+  patient       patients @relation(fields: [PatientID], references: [PatientID])
+
+  @@id([PatientID, time])
 }
 
 // VIEWS

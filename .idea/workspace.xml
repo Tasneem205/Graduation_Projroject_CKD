@@ -6,20 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="04ead2bf-65ce-4878-a126-bc81110f5bfc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/assistants.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/assistants.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/doctors.controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/doctors.controllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/index.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/index.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/profile.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/profile.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/reports.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/reports.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/assistants.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/assistants.services/post.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/assistants.services/put.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/assistants.services/put.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/delete.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/delete.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/get.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/post.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/put.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/put.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/get.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/put.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/put.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/reports.service/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/reports.service/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/tests.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/tests.controller.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +96,9 @@
       <workItem from="1714401015849" duration="3037000" />
       <workItem from="1714418528571" duration="449000" />
       <workItem from="1714459720137" duration="17183000" />
-      <workItem from="1714592350242" duration="2149000" />
+      <workItem from="1714592350242" duration="8940000" />
+      <workItem from="1714751494317" duration="366000" />
+      <workItem from="1714752820993" duration="20508000" />
     </task>
     <servers />
   </component>
