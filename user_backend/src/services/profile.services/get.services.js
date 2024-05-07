@@ -6,17 +6,12 @@ const prisma = new PrismaClient();
 
 const profile = async (req, res, next) => {
     try{
-        // TODO: implement me
-        const role = req.body.role;
         const id = +req.body.id;
-        if (role === "patient") {
-            const patient = await prisma.patients.findUnique(
-                { where: {
-                        PatientID: id
-                    }});
-            if (!patient) return  responses.notFound(res, "patient not found");
-            return responses.success(res, "patient found!", patient);
-        } 
+        const patient = await prisma.patients.findUnique[ {
+            where: { PatientID: id }
+        }];
+        if (!patient) return  responses.notFound(res, "User not found");
+        return responses.success(res, "User found!", patient);
     } catch (error) {
         console.log(error);
         next();
@@ -42,7 +37,7 @@ const refreshToken = async (req, res, next) => {
         const newRefreshToken = jwt.sign(payload, process.env.JWT_SECRETR, {
             expiresIn: "7d",
         });
-        await prisma.blackList.create({ data: { jwt: refresh, exp: exp } });
+        await prisma.blackList.create[{ data: { jwt: refresh, exp: exp } }];
         return responses.success(res, "token renewed", {
             accessToken,
             newRefreshToken,
