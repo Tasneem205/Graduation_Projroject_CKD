@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="04ead2bf-65ce-4878-a126-bc81110f5bfc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/Services.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/home.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/src/controllers/home.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/index.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/src/controllers/index.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/get_users_service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/homepage.get.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/src/services/homepage.get.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +102,7 @@
       <workItem from="1714459720137" duration="17183000" />
       <workItem from="1714592350242" duration="8940000" />
       <workItem from="1714751494317" duration="366000" />
-      <workItem from="1714752820993" duration="27288000" />
+      <workItem from="1714752820993" duration="30350000" />
     </task>
     <servers />
   </component>
