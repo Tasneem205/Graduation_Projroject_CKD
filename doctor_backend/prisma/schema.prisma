@@ -103,7 +103,7 @@ model kidney_scan {
   DoctorID    Int
   AssistantID Int
   ScanDate    DateTime
-  class       String
+  scan_class  String
 
   img img[]
 
@@ -150,7 +150,7 @@ model kidney_test {
   sg           String
   al           String
   su           String
-  class        String
+  test_class   String
   // the model requires age and id so we have to send them
   Assistant    Assistant @relation(fields: [assistant_id], references: [AssistantID])
   patient      patients  @relation(fields: [PatientID], references: [PatientID])

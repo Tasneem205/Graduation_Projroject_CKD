@@ -6,7 +6,7 @@ function validateDate(value, helpers) {
     } else {
         return value;
     }
-}
+};
 
 const createSchema = joi.object({
     FirstName: joi.string().min(3).max(20).required(),

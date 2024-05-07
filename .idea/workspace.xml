@@ -6,6 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="04ead2bf-65ce-4878-a126-bc81110f5bfc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/reports.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/reports.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/tests.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/tests.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/patients.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/schemas/patients.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/reports.service/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/reports.service/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/delete.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/delete.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/put.service.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +105,7 @@
       <workItem from="1714459720137" duration="17183000" />
       <workItem from="1714592350242" duration="8940000" />
       <workItem from="1714751494317" duration="366000" />
-      <workItem from="1714752820993" duration="31417000" />
+      <workItem from="1714752820993" duration="37257000" />
     </task>
     <servers />
   </component>

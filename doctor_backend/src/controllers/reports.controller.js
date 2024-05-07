@@ -1,17 +1,17 @@
 import { Router } from "express";
-import functions from "../services/reports.service/get.service.js";
+import getFunctions from "../services/reports.service/get.service.js";
 import addReport from "../services/reports.service/post.service.js";
 import deleteReport from "../services/reports.service/delete.service.js";
 
 const reportRouter = new Router();
 
-reportRouter.get("/", functions.getAllReports);
+reportRouter.get("/", getFunctions.getAllReports);
 
-reportRouter.get("/:id", functions.getReportById);
+reportRouter.get("/:id", getFunctions.getReportById);
 
 reportRouter.post("/", addReport);
 
-reportRouter.put("/:id", ()=>{});
+// reportRouter.put("/:id", ()=>{});
 
 reportRouter.delete("/:id", deleteReport);
 

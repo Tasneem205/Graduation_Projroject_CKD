@@ -26,8 +26,8 @@ const getReportById = async (req, res, next) => {
     }
 }
 
-const functions = {
+const getFunctions = {
     getAllReports,
     getReportById
 }
-export default functions;
+export default getFunctions;
