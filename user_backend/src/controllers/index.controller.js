@@ -1,27 +1,20 @@
-import { Router } from "express";
+import { Router } from 'express'; 
+import waterRouter from './water.controller.js';
+import pressureRouter from './pressure.controller.js';
+import diabetesRouter from './diabetes.controller.js';
+import medicineRouter from './medicine.controller.js';
+import exerciseRouter from './exercise.controller.js';
 
-const router = new Router();
+const indexrouter = new Router();
 
-router.use("/homepage", ()=>{});
 
-router.use("/water", ()=>{});
+indexrouter.use("/water", waterRouter);
+indexrouter.use("/registration",()=>{});
+indexrouter.use("/homepage",()=>{});
+indexrouter.use("/diabetes", diabetesRouter);
+indexrouter.use("/pressure", pressureRouter);
+indexrouter.use("/exercise",exerciseRouter);
+indexrouter.use("/medicine",medicineRouter);
+// indexrouter.use("/",()=>{});
 
-router.use("/walking", ()=>{});
-
-router.use("/diabetes", ()=>{});
-
-router.use("/pressure", ()=>{});
-
-router.use("/exercise", ()=>{});
-
-router.use("/medicine", ()=>{});
-
-router.use("/history", ()=>{});
-
-router.use("/registration", ()=>{});
-
-router.use("/notifications", ()=>{});
-
-router.use("/messages", ()=>{});
-
-export default router;
+export default indexrouter;

@@ -7,7 +7,6 @@
     <list default="true" id="04ead2bf-65ce-4878-a126-bc81110f5bfc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/tests.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/tests.controller.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +97,7 @@
       <workItem from="1714459720137" duration="17183000" />
       <workItem from="1714592350242" duration="8940000" />
       <workItem from="1714751494317" duration="366000" />
-      <workItem from="1714752820993" duration="20508000" />
+      <workItem from="1714752820993" duration="27288000" />
     </task>
     <servers />
   </component>
