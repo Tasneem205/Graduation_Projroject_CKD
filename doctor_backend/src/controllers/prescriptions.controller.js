@@ -6,7 +6,7 @@ import updatePrescription from "../services/prescriptions.services/put.service.j
 
 const prescriptionRouter = new Router();
 
-prescriptionRouter.get("/", getFunctions.getAllPrescriptions);
+// prescriptionRouter.get("/", getFunctions.getAllPrescriptions);
 
 prescriptionRouter.get("/:patient_id", getFunctions.getPrescriptionWithPatientId);
 
