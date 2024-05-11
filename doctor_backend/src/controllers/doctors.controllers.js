@@ -14,14 +14,14 @@ doctorRouter.get("/:id", getFunctions.getDoctorWithId);
 
 doctorRouter.post(
     "/",
-    isAdmin,
-    upload('../../../assets/profile_images').single("image"),
+     isAdmin,
+    upload('../assets/profile_images').single("file"),
     postFunctions.addDoctor);
 
 doctorRouter.delete("/:id", isAdmin, deleteDoctor);
 
 doctorRouter.put("/:id",
-    upload('../../../assets/profile_images').single("image"),
+    upload('../assets/profile_images').single('file'),
     updateDoctor);
 
 export default doctorRouter;

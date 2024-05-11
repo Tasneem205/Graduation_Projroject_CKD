@@ -5,15 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04ead2bf-65ce-4878-a126-bc81110f5bfc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/doctors.controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/doctors.controllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/index.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/index.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/prescriptions.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/prescriptions.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/middleWares/isAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/middleWares/isAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/middleWares/uploader.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/middleWares/uploader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/patients.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/schemas/patients.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/report.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/schemas/report.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/update_assistant.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/schemas/update_assistant.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/get.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/put.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/put.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/homepage.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/homepage.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/get.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/prescriptions.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/prescriptions.services/get.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabular_model/CDK.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tabular_model/CDK.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/post.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,28 +50,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "19.9.0",
-    "javascript.nodejs.core.library.typings.version": "20.12.11",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/FCI/GP/Graduation_Projroject_CKD/doctor_backend/src/controllers",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "show.migrate.to.gradle.popup": "false",
-    "ts.external.directory.path": "D:\\FCI\\GP\\Graduation_Projroject_CKD\\doctor_backend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;19.9.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.12.11&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/FCI/GP/Graduation_Projroject_CKD/doctor_backend/src/controllers&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\FCI\\GP\\Graduation_Projroject_CKD\\doctor_backend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\FCI\GP\Graduation_Projroject_CKD\doctor_backend\src\controllers" />
@@ -108,6 +114,7 @@
       <workItem from="1714751494317" duration="366000" />
       <workItem from="1714752820993" duration="37451000" />
       <workItem from="1715201727936" duration="7707000" />
+      <workItem from="1715378802937" duration="11630000" />
     </task>
     <servers />
   </component>

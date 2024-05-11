@@ -1,11 +1,9 @@
 import { PrismaClient } from "@prisma/client";
-import multer from "multer";
 import responses from "../../helpers/responses.js";
 import userSchema from "../../schemas/user.schema.js";
 import bcrypt from "bcrypt";
 
 const prisma = new PrismaClient();
-const upload = multer({dest: '../../../../assets/profile_images'});
 const addDoctor = async (req, res, next) => {
     try {
         const { error, value } = userSchema.validate(req.body);
@@ -23,9 +21,10 @@ const addDoctor = async (req, res, next) => {
                 Password: hashedPass,
                 Email,
                 Phone_num: PhoneNumber,
+                image_path: req.file ? req.file.path : null
             },
         });
-        const { password: hashed, ...restInfo } = user;
+        const { Password: hashed, ...restInfo } = user;
         return responses.success(
             res,
             "Doctor created successfully",

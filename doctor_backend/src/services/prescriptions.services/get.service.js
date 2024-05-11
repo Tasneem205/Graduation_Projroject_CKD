@@ -26,7 +26,6 @@ const getPrescriptionWithDoctorId = async (req, res, next) => {
     }
 }
 const functions = {
-    getAllPrescriptions,
     getPrescriptionWithDoctorId,
     getPrescriptionWithPatientId
 }

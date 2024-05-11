@@ -6,6 +6,7 @@ const prisma = new PrismaClient();
 const getAllDoctors = async (req, res, next) => {
     try {
         const doctors = await prisma.doctors.findMany({});
+        res.download('');
         return responses.success(res, "All doctors fetched!", doctors);
     } catch (error) {
         console.log(error);

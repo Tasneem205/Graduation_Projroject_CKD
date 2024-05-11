@@ -9,7 +9,7 @@ const updateSchema = joi.object({
         .min(3)
         .max(40)
         .regex(/^[a-z ,.']+$/i),
-    Email: joi.string().email().required(),
+    Email: joi.string().email(),
     Password: joi.string()
         .min(8)
         .regex(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/)
@@ -21,6 +21,7 @@ const updateSchema = joi.object({
         .min(11)
         .max(13)
         .regex(/^01[0-2][0-9]{8}$/),
+    DoctorID: joi.number(),
 });
 
 export default updateSchema;

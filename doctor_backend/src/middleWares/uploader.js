@@ -6,7 +6,7 @@ const disk = (folder) => multer.diskStorage({
         callback(null, folder);},
     filename: (req, file, callback)=>{
         const ext = path.extname(file.originalname);
-        const filename = `${Date.now()}${ext}`; // Use current timestamp
+        const filename = `${Date.now()}${ext}`;
         callback(null, filename);
     }
 });

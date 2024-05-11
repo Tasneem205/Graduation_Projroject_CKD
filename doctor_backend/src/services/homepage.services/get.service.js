@@ -1,4 +1,4 @@
-import {PrismaClient, RESERVATION_TYPE} from "@prisma/client";
+import {PrismaClient} from "@prisma/client";
 import responses from "../../helpers/responses.js";
 
 const prisma = new PrismaClient();
@@ -46,9 +46,9 @@ const getHomepageDoctor = async (req, res, next) => {
             });
             let data = {first: [], followup: []}
             for (let i of reservations) {
-                if (i.type === RESERVATION_TYPE.First) {
+                if (i.type === 'First') {
                     data.first.push(i);
-                } else if (i.type === RESERVATION_TYPE.FollowUP) {
+                } else if (i.type === 'FollowUP') {
                     data.followup.push(i);
                 }
             }

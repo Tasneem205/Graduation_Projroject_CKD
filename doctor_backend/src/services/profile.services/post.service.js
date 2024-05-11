@@ -24,7 +24,7 @@ const login = async (req, res, next) => {
             if (!match) return responses.badRequest(res, "invalid email or password");
             const token = jwt.sign(
                 {
-                    AssistantID: assisExist.AssistantID,
+                    id: assisExist.AssistantID,
                     FirstName: assisExist.FirstName,
                     LastName: assisExist.LastName,
                 },
@@ -33,7 +33,7 @@ const login = async (req, res, next) => {
             );
             const refreshToken = jwt.sign(
                 {
-                    AssistantID: assisExist.AssistantID,
+                    id: assisExist.AssistantID,
                     FirstName: assisExist.FirstName,
                     LastName: assisExist.LastName,
                 },
@@ -41,6 +41,7 @@ const login = async (req, res, next) => {
                 {expiresIn: "7d",}
             );
             const {password: hashedPassword, ...restData} = assisExist;
+            res.download(assisExist.image_path);
             return responses.success(res, "logged successfully", {
                 "role": "Assistant",
                 ...restData,
@@ -69,6 +70,16 @@ const login = async (req, res, next) => {
                 {expiresIn: "7d",}
             );
             const {password: hashedPassword, ...restData} = docExist;
+            res.download(docExist.image_path, function(err){
+                if (err) {
+                    // Handle error
+                    console.error('Error downloading file:', err);
+                    res.status(500).send('Internal Server Error');
+                } else {
+                    // File has been sent successfully
+                    console.log('File sent successfully');
+                }
+            });
             return responses.success(res, "logged successfully", {
                 "role": "Doctor",
                 ...restData,
