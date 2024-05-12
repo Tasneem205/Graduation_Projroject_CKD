@@ -1,12 +1,21 @@
 import { PrismaClient } from "@prisma/client";
 import responses from "../../helpers/responses.js";
+import fs from "fs";
 
 const prisma = new PrismaClient();
 
 const getAllAssistants = async (req, res, next) => {
     try {
         const assistants = await prisma.assistant.findMany({});
-        return responses.success(res, "All assistants fetched!", assistants);
+        const dataWithImages = assistants.map(doctor => {
+            const imagePath = doctor.image_path;
+            const imageData = fs.readFileSync(imagePath, 'base64');
+            return {
+                ...doctor,
+                image_base64: imageData,
+            };
+        });
+        return responses.success(res, "All assistants fetched!", dataWithImages);
     } catch (error) {
         console.log(error);
         next();
@@ -19,7 +28,9 @@ const getAssistantWithId = async (req, res, next) => {
             { where: {
                 AssistantID: +req.params.id
             }});
-        return responses.success(res, "Assistant found!", assistant);
+        const imageData = fs.readFileSync(assistant.imagePath, 'base64');
+        const dataWithImage = {assistant, imageData};
+        return responses.success(res, "Assistant found!", dataWithImage);
     } catch (error) {
         console.log(error);
         next();

@@ -8,15 +8,12 @@ const prisma = new PrismaClient();
 const updateDoctor = async (req, res, next) => {
     try {
         const {value, error} = updateSchema.validate(req.body);
-        console.log(value);
         if (error) {
             return responses.badRequest(res, "this data isn't valid due to : ", error);
         }
-        console.log("after validation");
-        if (+value.DoctorID !== +req.params.id) {
+        if (+value.id !== +req.params.id) {
             return responses.unAuthorized(res, "You are not authorized to update this account");
         }
-        console.log("after authorization");
         if (req.file) {
             const userUpdated = await prisma.doctors.update({
                 where: {
@@ -25,7 +22,6 @@ const updateDoctor = async (req, res, next) => {
                 data: {image_path: req.file.path},
             });
         }
-        console.log("after updating in database");
         let hashPass;
         if (value.Password) {
             hashPass = bcrypt.hashSync(value.Password, parseInt(process.env.SALT));
