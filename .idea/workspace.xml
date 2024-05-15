@@ -6,10 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="04ead2bf-65ce-4878-a126-bc81110f5bfc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/assistants.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/assistants.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/doctors.controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/doctors.controllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/delete.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/delete.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/patients.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/controllers/patients.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/patients.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/schemas/patients.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/test.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/schemas/test.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/post.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +110,8 @@
       <workItem from="1714752820993" duration="37451000" />
       <workItem from="1715201727936" duration="7707000" />
       <workItem from="1715378802937" duration="12201000" />
-      <workItem from="1715460769844" duration="3063000" />
+      <workItem from="1715460769844" duration="13192000" />
+      <workItem from="1715606765917" duration="9354000" />
     </task>
     <servers />
   </component>

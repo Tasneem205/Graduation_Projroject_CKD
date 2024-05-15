@@ -1,16 +1,19 @@
 import joi from "joi";
 
-function validateDate(value, helpers) {
-    if (!value.match(/^\d{4}-\d{2}-\d{2}$/)) {
-        return helpers.error('date invalid');
-    } else {
-        return value;
-    }
-}
+// function validateDate(value, helpers) {
+//     if (!value.match(/^\d{4}-\d{2}-\d{2}$/)) {
+//         return helpers.error('date invalid');
+//     } else {
+//         return value;
+//     }
+// }
 
 const createSchema = joi.object({
     test_name: joi.string().required(),
-    TestDate: joi.date().custom(validateDate).required().required(),
+    TestDate: joi.string().regex(/^\d{4}-\d{2}-\d{2}$/).required(),
+    DoctorID: joi.number().required(),
+    AssistantID: joi.number().required(),
+    patientID: joi.number().required(),
     pot: joi.number().precision(4).required(),
     hemo: joi.number().precision(4).required(),
     pcv: joi.number().precision(4).required(),

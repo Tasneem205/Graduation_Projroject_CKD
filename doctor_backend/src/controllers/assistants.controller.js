@@ -15,7 +15,7 @@ assistantRouter.get("/:id", getFunctions.getAssistantWithId);
 
 assistantRouter.post(
     "/",
-    isAdmin,
+    // isAdmin,
     upload('../assets/profile_images').single("file"),
     postFunctions.addAssistant
 );
