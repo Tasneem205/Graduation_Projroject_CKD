@@ -122,36 +122,36 @@ model img {
 
 model kidney_test {
   TestID       Int       @id @default(autoincrement())
-  test_name    String
+  test_name    String?
   TestDate     DateTime
   PatientID    Int
   assistant_id Int
   DoctorID     Int
-  pot          Float
-  hemo         Float
-  pcv          Float
-  wbc          Float
-  rbc          Float
-  pc           String
-  pcc          String
-  ba           String
-  htl          String
-  dm           String
-  cad          String
-  appet        String
-  pe           String
-  ane          String
-  age          Int
-  bp           String
-  bgr          Float
-  bu           Float
-  sc           Float
-  sod          Float
-  sg           String
-  al           String
-  su           String
-  rc           Float
-  test_class   String
+  pot          Float?
+  hemo         Float?
+  pcv          Float?
+  wbc          Float?
+  rbc          String?
+  pc           String?
+  pcc          String?
+  ba           String?
+  htn          String?
+  dm           String?
+  cad          String?
+  appet        String?
+  pe           String?
+  ane          String?
+  age          Int?
+  bp           Float?
+  bgr          Float?
+  bu           Float?
+  sc           Float?
+  sod          Float?
+  sg           Float?
+  al           Int?
+  su           Float?
+  rc           Float?
+  test_class   Int?
   // the model requires age and id so we have to send them
   Assistant    Assistant @relation(fields: [assistant_id], references: [AssistantID])
   patient      patients  @relation(fields: [PatientID], references: [PatientID])

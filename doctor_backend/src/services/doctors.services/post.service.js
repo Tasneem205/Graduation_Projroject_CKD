@@ -21,7 +21,7 @@ const addDoctor = async (req, res, next) => {
                 Password: hashedPass,
                 Email,
                 Phone_num: PhoneNumber,
-                image_path: req.file ? req.file.path : null
+                image_path: req.file ? req.file.path : "undefined image"
             },
         });
         const { Password: hashed, ...restInfo } = user;
