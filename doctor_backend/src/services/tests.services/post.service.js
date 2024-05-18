@@ -29,10 +29,9 @@ const addTest = async (req, res, next) => {
         const new_test = await prisma.kidney_test.create({
             data: {
                 test_name, TestDate: date.toISOString() , PatientID,
-                assistant_id, DoctorID, pot, hemo, pcv, wbc, rbc: String(rbc),
-                pc: String(pc), pcc: String(pcc), ba: String(ba), htn: String(htn),
-                dm: String(dm), cad: String(cad), appet: String(appet), pe: String(pe), ane: String(ane), age,
-                bp, bgr, bu, sc, sod, sg, al, su, rc, test_class: (Math.round(parseFloat(flaskResponse.data.prediction)))
+                assistant_id, DoctorID, pot, hemo, pcv, wbc, rbc,
+                pc, pcc, ba, htn, dm, cad, appet, pe, ane, age,
+                bp, bgr, bu, sc, sod, sg, al, su, rc, test_class: parseFloat(flaskResponse.data.prediction)
             },
         });
         return responses.success(res, "test done successfully", new_test);

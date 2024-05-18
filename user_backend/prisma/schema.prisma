@@ -131,16 +131,16 @@ model kidney_test {
   hemo         Float?
   pcv          Float?
   wbc          Float?
-  rbc          String?
-  pc           String?
-  pcc          String?
-  ba           String?
-  htn          String?
-  dm           String?
-  cad          String?
-  appet        String?
-  pe           String?
-  ane          String?
+  rbc          Float?
+  pc           Float?
+  pcc          Float?
+  ba           Float?
+  htn          Float?
+  dm           Float?
+  cad          Float?
+  appet        Float?
+  pe           Float?
+  ane          Float?
   age          Int?
   bp           Float?
   bgr          Float?
@@ -151,7 +151,7 @@ model kidney_test {
   al           Int?
   su           Float?
   rc           Float?
-  test_class   Int?
+  test_class   Float?
   // the model requires age and id so we have to send them
   Assistant    Assistant @relation(fields: [assistant_id], references: [AssistantID])
   patient      patients  @relation(fields: [PatientID], references: [PatientID])
