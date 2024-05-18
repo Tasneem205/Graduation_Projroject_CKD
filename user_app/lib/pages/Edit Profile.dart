@@ -1,8 +1,6 @@
 import 'dart:io' as io;
-import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:user_app/Classes/language_constants.dart';
@@ -172,6 +170,7 @@ class _EditProfile extends State<EditProfile> {
                         if (value!.isEmpty) {
                           return translation(context).required;
                         }
+                        return null;
                       },
                       onSaved: (Val) {
                         FirstName = Val;
@@ -208,6 +207,7 @@ class _EditProfile extends State<EditProfile> {
                         if (value!.isEmpty) {
                           return translation(context).required;
                         }
+                        return null;
                       },
                       onSaved: (Val) {
                         LastName = Val;
@@ -244,6 +244,7 @@ class _EditProfile extends State<EditProfile> {
                         if (value!.isEmpty) {
                           return translation(context).required;
                         }
+                        return null;
                       },
                       onSaved: (Val) {
                         phone = Val;
@@ -270,16 +271,18 @@ class _EditProfile extends State<EditProfile> {
                     ),
                   ),
                 ),
-                // E-mail input field
+                // password input field
                 Container(
                   padding: const EdgeInsets.all(10),
                   child: Form(
                     key: formstate4,
                     child: TextFormField(
+                      
                       validator: (value) {
                         if (value!.isEmpty) {
                           return translation(context).required;
                         }
+                        return null;
                       },
                       onSaved: (Val) {
                         password = Val;
@@ -315,6 +318,7 @@ class _EditProfile extends State<EditProfile> {
                         if (value!.isEmpty) {
                           return translation(context).required;
                         }
+                        return null;
                       },
                       onSaved: (Val) {
                         height = Val;
@@ -351,6 +355,7 @@ class _EditProfile extends State<EditProfile> {
                         if (value!.isEmpty) {
                           return translation(context).required;
                         }
+                        return null;
                       },
                       onSaved: (Val) {
                         weight = Val;

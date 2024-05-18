@@ -12,7 +12,9 @@ class _Profile extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffF2F7FD),
       appBar: AppBar(
+        backgroundColor: Color(0xffF2F7FD),
           title: Text(translation(context).profile,
               style: const TextStyle(
                   color: Color(0xff0C8A7D),
@@ -37,7 +39,7 @@ class _Profile extends State<Profile> {
       body: SingleChildScrollView(
         child: Column(children: [
           ListTile(
-            leading: Container(child: Image.asset("images/person2.jpg")),
+            leading: Container(child: Image.asset("images/profile.png")),
             title: Text(translation(context).namehint,
                 style: const TextStyle(
                     color: Color(0xff0C8A7D),
@@ -52,161 +54,112 @@ class _Profile extends State<Profile> {
           Card(
             color: Colors.white,
             child: Column(children: [
-              ListTile(
-                leading: Text(translation(context).id,
-                    style: const TextStyle(
-                        color: Color(0xff0C8A7D),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal)),
-                trailing: const Text("2000900",
-                    style: TextStyle(
-                        color: Color(0xff000000),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal)),
-              ),
-              ListTile(
-                leading: Text(translation(context).gen,
-                    style: const TextStyle(
-                        color: Color(0xff0C8A7D),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal)),
-                trailing: Text(translation(context).female,
-                    style: const TextStyle(
-                        color: Color(0xff000000),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal)),
-              ),
-              ListTile(
-                leading: Text(translation(context).ph,
-                    style: const TextStyle(
-                        color: Color(0xff0C8A7D),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal)),
-                trailing: const Text("+2011195252",
-                    style: TextStyle(
-                        color: Color(0xff000000),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal)),
-              ),
-              ListTile(
-                leading: Text(translation(context).phh,
-                    style: const TextStyle(
-                        color: Color(0xff0C8A7D),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal)),
-                trailing: const Text("+2011195002",
-                    style: TextStyle(
-                        color: Color(0xff000000),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal)),
-              ),
-              ListTile(
-                leading: Text(translation(context).email,
-                    style: const TextStyle(
-                        color: Color(0xff0C8A7D),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal)),
-                trailing: const Text("username@gmail.con",
-                    style: TextStyle(
-                        color: Color(0xff000000),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal)),
-              ),
-              ListTile(
-                leading: Text(translation(context).bloodgroup,
-                    style: const TextStyle(
-                        color: Color(0xff0C8A7D),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal)),
-                trailing: const Text("A+",
-                    style: TextStyle(
-                        color: Color(0xff000000),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal)),
-              ),
-              ListTile(
-                leading: Text(translation(context).hight,
-                    style: const TextStyle(
-                        color: Color(0xff0C8A7D),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal)),
-                trailing: const Text("169",
-                    style: TextStyle(
-                        color: Color(0xff000000),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal)),
-              ),
-              ListTile(
-                leading: Text(translation(context).weight,
-                    style: const TextStyle(
-                        color: Color(0xff0C8A7D),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal)),
-                trailing: const Text("65",
-                    style: TextStyle(
-                        color: Color(0xff000000),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal)),
-              ),
+              ProfileInfo(
+                  leadingtitle: translation(context).pass,
+                  trailingtitle: "2000900"),
+              ProfileInfo(
+                  leadingtitle: translation(context).gen,
+                  trailingtitle: translation(context).female),
+              ProfileInfo(
+                  leadingtitle: translation(context).ph,
+                  trailingtitle: "+2011195252"),
+              ProfileInfo(
+                  leadingtitle: translation(context).phh,
+                  trailingtitle: "+2011195002"),
+              ProfileInfo(
+                  leadingtitle: translation(context).email,
+                  trailingtitle: "username@gmail.con"),
+              ProfileInfo(
+                  leadingtitle: translation(context).bloodgroup,
+                  trailingtitle: "A+"),
+              ProfileInfo(
+                  leadingtitle: translation(context).hight,
+                  trailingtitle: "169"),
+              ProfileInfo(
+                  leadingtitle: translation(context).weight,
+                  trailingtitle: "65"),
             ]),
           ),
           Container(
-            decoration: BoxDecoration(
-                color: const Color(0xffFDDDE5),
-                borderRadius: BorderRadius.circular(20)),
-            margin: const EdgeInsets.all(10),
-            child: ListTile(
-              leading: Image.asset("images/heart.png"),
-              title: Text(translation(context).heartrate,
-                  style: const TextStyle(
-                      color: Color(0xff000000),
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold)),
-              subtitle: const Text("72 bpm",
-                  style: TextStyle(
-                      color: Color(0xff000000),
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal)),
-            ),
-          ),
+              decoration: BoxDecoration(
+                  color: const Color(0xffFDDDE5),
+                  borderRadius: BorderRadius.circular(20)),
+              margin: const EdgeInsets.all(10),
+              child: Tile(
+                  img: "images/heart.png",
+                  title: translation(context).heartrate,
+                  subtitle: "72 bpm")),
           Container(
-            decoration: BoxDecoration(
-                color: const Color(0xffDBEBF9),
-                borderRadius: BorderRadius.circular(20)),
-            margin: const EdgeInsets.all(10),
-            child: ListTile(
-                leading: Image.asset("images/Tonometer.png"),
-                title: Text(translation(context).blood,
-                    style: const TextStyle(
-                        color: Color(0xff000000),
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold)),
-                subtitle: const Text("120/60",
-                    style: TextStyle(
-                        color: Color(0xff000000),
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal))),
-          ),
+              decoration: BoxDecoration(
+                  color: const Color(0xffDBEBF9),
+                  borderRadius: BorderRadius.circular(20)),
+              margin: const EdgeInsets.all(10),
+              child: Tile(
+                img: "images/Tonometer.png",
+                title: translation(context).blood,
+                subtitle: "120/60",
+              )),
           Container(
-            decoration: BoxDecoration(
-                color: const Color(0xffFEE7E1),
-                borderRadius: BorderRadius.circular(20)),
-            margin: const EdgeInsets.all(10),
-            child: ListTile(
-                leading: Image.asset("images/Glucometer.png"),
-                title: Text(translation(context).diabetes,
-                    style: const TextStyle(
-                        color: Color(0xff000000),
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold)),
-                subtitle: const Text("113",
-                    style: TextStyle(
-                        color: Color(0xff000000),
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal))),
-          ),
+              decoration: BoxDecoration(
+                  color: const Color(0xffFEE7E1),
+                  borderRadius: BorderRadius.circular(20)),
+              margin: const EdgeInsets.all(10),
+              child: Tile(
+                  img: "images/Glucometer.png",
+                  title: translation(context).diabetes,
+                  subtitle: "113")),
         ]),
       ),
+    );
+  }
+}
+
+class ProfileInfo extends StatelessWidget {
+  const ProfileInfo(
+      {super.key, required this.leadingtitle, required this.trailingtitle});
+
+  final String leadingtitle, trailingtitle;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Text(leadingtitle,
+          style: const TextStyle(
+              color: Color(0xff0C8A7D),
+              fontSize: 18,
+              fontWeight: FontWeight.normal)),
+      trailing: Text(trailingtitle,
+          style: const TextStyle(
+              color: Color(0xff000000),
+              fontSize: 18,
+              fontWeight: FontWeight.normal)),
+    );
+  }
+}
+
+class Tile extends StatelessWidget {
+  const Tile(
+      {super.key,
+      required this.title,
+      required this.img,
+      required this.subtitle});
+
+  final String title, img, subtitle;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Image.asset(img),
+      title: Text(title,
+          style: const TextStyle(
+              color: Color(0xff000000),
+              fontSize: 20,
+              fontWeight: FontWeight.bold)),
+      subtitle: Text(subtitle,
+          style: const TextStyle(
+              color: Color(0xff000000),
+              fontSize: 20,
+              fontWeight: FontWeight.normal)),
     );
   }
 }

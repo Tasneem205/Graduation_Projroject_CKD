@@ -56,7 +56,7 @@ class WaterState extends State<Water> with TickerProviderStateMixin{
             children: [
               Image.asset("images/target.png", width: 24),
               Text(translation(context).target,
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Color(0xff0593FC),
                       fontWeight: FontWeight.bold,
                       fontSize: 26,
@@ -68,7 +68,7 @@ class WaterState extends State<Water> with TickerProviderStateMixin{
           elevation: 0.0,
           iconTheme: const IconThemeData(color: Color(0xff0593FC))),
       body: Stack(children: [
-        Expanded(child: Container(color: Color(0xffF2F7FD))),
+        Expanded(child: Container(color: const Color(0xffF2F7FD))),
         Expanded(
           child: Positioned(
             top: 20,
@@ -83,7 +83,7 @@ class WaterState extends State<Water> with TickerProviderStateMixin{
           top: 233,
           child: Text(
             "$i ml",
-            style: TextStyle(
+            style: const TextStyle(
                 color: Color(0xffFFFFFF),
                 fontSize: 28,
                 fontWeight: FontWeight.normal,
@@ -107,7 +107,7 @@ class WaterState extends State<Water> with TickerProviderStateMixin{
                           dataSource: chartData,
                           xValueMapper: (Chartdata data, _) => data.x,
                           yValueMapper: (Chartdata data, _) => data.y,
-                          color: Color(0xffB3DAFE)),
+                          color: const Color(0xffB3DAFE)),
                     ],
                   ),
                 );
@@ -123,7 +123,7 @@ class WaterState extends State<Water> with TickerProviderStateMixin{
                 height: 105,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(55),
-                    color: Color(0xffFFFFFF)))),
+                    color: const Color(0xffFFFFFF)))),
         Positioned(
           top: 78,
           left: 178,
@@ -143,12 +143,12 @@ class WaterState extends State<Water> with TickerProviderStateMixin{
                     height: 300,
                     child: Column(children: [
                       Container(
-                        padding: EdgeInsets.only(bottom: 18),
+                        padding: const EdgeInsets.only(bottom: 18),
                         width: double.infinity,
                         child: Column(children: [
                           Image.asset("images/water.png", height: 140),
                            Text(translation(context).water,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Color(0xff000000),
                                   fontSize: 20,
                                   letterSpacing: -0.45)),
@@ -158,7 +158,7 @@ class WaterState extends State<Water> with TickerProviderStateMixin{
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             MaterialButton(
-                                color: Color(0xffB9DFFF),
+                                color: const Color(0xffB9DFFF),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5)),
                                 child: const Text("50ml",
@@ -176,7 +176,7 @@ class WaterState extends State<Water> with TickerProviderStateMixin{
                                   });
                                 }),
                             MaterialButton(
-                                color: Color(0xffB9DFFF),
+                                color: const Color(0xffB9DFFF),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5)),
                                 child: const Text("100ml",
@@ -194,7 +194,7 @@ class WaterState extends State<Water> with TickerProviderStateMixin{
                                   });
                                 }),
                             MaterialButton(
-                                color: Color(0xffB9DFFF),
+                                color: const Color(0xffB9DFFF),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5)),
                                 child: const Text("150ml",
@@ -212,9 +212,14 @@ class WaterState extends State<Water> with TickerProviderStateMixin{
                                   });
                                 }),
                           ]),
-                      IconButton(
-                        icon: Icon(Icons.restart_alt_rounded),
-                        iconSize: 30,
+                      MaterialButton(
+                        color: const Color(0xffB9DFFF),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                        child: const Icon(
+                          Icons.restart_alt_rounded, 
+                          size: 30, 
+                          color: Color(0xffFFFFFF)),
                         onPressed: () {
                           setState(() {
                             i = 0;

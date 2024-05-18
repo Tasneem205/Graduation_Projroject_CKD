@@ -49,8 +49,10 @@ class _HomeState extends State<Home> {
     // ChartData('Steps', 1000, Color.fromARGB(217, 72, 203, 140)),
     // ];
     return Scaffold(
+      backgroundColor: Color(0xffF2F7FD),
       appBar: AppBar(
-        elevation: 1,
+        elevation: 2,
+        backgroundColor: Color(0xffFFFFFF),
         actions: <Widget>[
           DropdownButton<Language>(
             underline: const SizedBox(),
@@ -155,7 +157,7 @@ class _HomeState extends State<Home> {
             const SizedBox(
               height: 24,
             ),
-            ElevatedButton(
+            MaterialButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
@@ -170,7 +172,7 @@ class _HomeState extends State<Home> {
             const SizedBox(
               height: 10,
             ),
-            ElevatedButton(
+            MaterialButton(
               onPressed: () {
                 Navigator.of(context).push(
                     MaterialPageRoute(builder: (context) => const Hist()));
@@ -189,7 +191,7 @@ class _HomeState extends State<Home> {
             const SizedBox(
               height: 10,
             ),
-            ElevatedButton(
+            MaterialButton(
               onPressed: () {
                 showDialog(
                     context: context,
@@ -486,7 +488,7 @@ class _HomeState extends State<Home> {
                             pointColorMapper: (ChartData data, _) => data.Color,
                             dataLabelMapper: (ChartData data, _) => data.text,
                             dataLabelSettings:
-                                const DataLabelSettings(isVisible: true),
+                                const DataLabelSettings(isVisible: false),
                           )
                         ]))),
                   ],

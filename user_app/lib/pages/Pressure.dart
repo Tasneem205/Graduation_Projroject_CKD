@@ -14,7 +14,9 @@ class _PressureState extends State<Pressure> {
   Widget build(BuildContext context) {
     return Expanded(
       child: Scaffold(
+        backgroundColor: Color(0xffF2F7FD),
         floatingActionButton: FloatingActionButton(
+          backgroundColor: Color(0xffFFFFFF),
           onPressed: () {
             showDialog(
                 context: context,
@@ -139,6 +141,7 @@ class _PressureState extends State<Pressure> {
           ),
         ),
         appBar: AppBar(
+          backgroundColor: Color(0xffF2F7FD),
             title: Text(translation(context).pressure,
                 style: const TextStyle(
                     color: Color(0xff0C8A7D),

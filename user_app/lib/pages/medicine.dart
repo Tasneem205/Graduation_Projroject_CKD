@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:user_app/Classes/language_constants.dart';
 
 class Medicine extends StatefulWidget {
@@ -9,13 +10,84 @@ class Medicine extends StatefulWidget {
 }
 
 class _Medicine extends State<Medicine> {
-  bool omega1 = false;
-  bool vitamin = false;
-  bool aspirin = false;
-  bool vitaminD = false;
-  bool omega2 = false;
-  bool vitaminC = false;
-  bool status = true;
+  List<MedicineTime> Times1 = [
+    MedicineTime(title: "today", subtitle: "07:00 am")
+  ];
+  List<MedicineTime> Times2 = [
+    MedicineTime(title: "", subtitle: "10:00 pm")
+  ];
+  List<MedicineTime> Times3 = [
+    MedicineTime(title: "Monday", subtitle: "09:00 am")
+  ];
+  List MList1 = [
+    ["images/Pills.png", "Omega", false],
+    ["images/Pills (1).png", "Vitamin", false],
+  ];
+  List MList2 = [
+    ["images/Pills (2).png", "Aspirin", false],
+    ["images/Pills (1).png", "Vitamin D", false],
+  ];
+  List MList3 = [
+    ["images/Pills (3).png", "Omega", false],
+    ["images/Pills (1).png", "Vitamin C", false]
+  ];
+
+  //Checked was tapped
+  void checkBoxChanged1(bool? value, int index) {
+    setState(() {
+      MList1[index][2] = !MList1[index][2];
+    });
+  }
+
+  void checkBoxChanged2(bool? value, int index) {
+    setState(() {
+      MList2[index][2] = !MList2[index][2];
+    });
+  }
+
+  void checkBoxChanged3(bool? value, int index) {
+    setState(() {
+      MList3[index][2] = !MList3[index][2];
+    });
+  }
+
+  saveNewTask() {
+    setState(() {
+      MList3.add([nameController.text, false]);
+      nameController.clear();
+    });
+    Navigator.of(context).pop();
+  }
+
+  //delete task
+  deleteTask1(int index) {
+    setState(() {
+      MList1.removeAt(index);
+      if (MList1.isEmpty) {
+        Times1.removeAt(index);
+      }
+    });
+  }
+
+  deleteTask2(int index) {
+    setState(() {
+      MList2.removeAt(index);
+      if (MList2.isEmpty) {
+        Times2.removeAt(index);
+      }
+    });
+  }
+
+  deleteTask3(int index) {
+    setState(() {
+      MList3.removeAt(index);
+      if (MList3.isEmpty) {
+        Times3.removeAt(index);
+      }
+    });
+  }
+
+  bool status = false;
 
   TextEditingController nameController = TextEditingController();
   TextEditingController dosageController = TextEditingController();
@@ -241,6 +313,18 @@ class _Medicine extends State<Medicine> {
                                       onPressed: () {}),
                                   const Spacer(),
                                   Switch(
+                                    activeColor: const Color(0xff0C8A7D),
+                                    activeTrackColor: const Color(0xffB0E3DC),
+                                    inactiveThumbColor: const Color(0xffD9D9D9),
+                                    inactiveTrackColor: const Color(0xffB0E3DC),
+                                    value: status,
+                                    onChanged: (value) {
+                                      setState(() {
+                                        status = value;
+                                      });
+                                    },
+                                  ),
+                                  /*Switch(
                                       activeColor: const Color(0xff0C8A7D),
                                       activeTrackColor: const Color.fromARGB(
                                           255, 38, 171, 158),
@@ -253,7 +337,7 @@ class _Medicine extends State<Medicine> {
                                         setState(() {
                                           status = value;
                                         });
-                                      }),
+                                      }),*/
                                   const Icon(
                                     Icons.notifications_active,
                                     color: Color(0xff0C8A7D),
@@ -266,86 +350,78 @@ class _Medicine extends State<Medicine> {
           ],
           elevation: 0.0,
           iconTheme: const IconThemeData(color: Color(0xff0C8A7D), size: 28)),
-      body: ListView(
-        children: 
-        [
-          //MedicineList(), MedicineList(), MedicineList()
-        ],
-      ),
-      /*body: Expanded(
-          child: SingleChildScrollView(
-            child: Column(children: [
-               ListTile(
-                title: Text(translation(context).today,
+      body: SingleChildScrollView(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 10,
+              ),
+              ...Times1.map((item) => ListTile(
+                    title: Text(item.title,
+                        style: const TextStyle(
+                            color: Color(0xff0C8A7D),
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: -0.45)),
+                    subtitle: Text(item.subtitle,
+                        style: const TextStyle(
+                            color: Color(0xff000000),
+                            fontSize: 16,
+                            fontWeight: FontWeight.normal,
+                            letterSpacing: -0.45)),
+                  )),
+              /*Container(
+                padding: EdgeInsets.only(left: 13),
+                child: Text(translation(context).today,
                     style: const TextStyle(
                         color: Color(0xff0C8A7D),
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         letterSpacing: -0.45)),
-                subtitle: Text(translation(context).am,
+              ),
+              Container(
+                padding: EdgeInsets.only(left: 12, bottom: 10),
+                child: Text(translation(context).am,
                     style: const TextStyle(
                         color: Color(0xff000000),
                         fontSize: 16,
                         fontWeight: FontWeight.normal,
                         letterSpacing: -0.45),
                     textAlign: TextAlign.start),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    color: const Color(0xffB0E3DC),
-                    borderRadius: BorderRadius.circular(20)),
-                padding:
-                    const EdgeInsets.only(top: 5, bottom: 5, right: 3, left: 5),
-                margin: const EdgeInsets.only(left: 5, right: 5, bottom: 4),
-                child: ListTile(
-                  leading:
-                      Image.asset("images/Pills.png", width: 59, height: 59),
-                  title: Text(translation(context).omega,
-                      style: const TextStyle(
-                          color: Color(0xff000000),
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold)),
-                  trailing:Checkbox(
-                        activeColor: const Color(0xff72CEBF),
-                        shape: const CircleBorder(
-                            side: BorderSide(style: BorderStyle.none)),
-                        value: omega1,
-                        onChanged: (val) {
-                          setState(() {
-                            omega1 = val!;
-                          });
-                        }),
-                  
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    color: const Color(0xffB0E3DC),
-                    borderRadius: BorderRadius.circular(20)),
-                padding:
-                    const EdgeInsets.only(top: 5, bottom: 5, right: 3, left: 5),
-                margin: const EdgeInsets.only(left: 5, right: 5, bottom: 20),
-                child: ListTile(
-                  leading: Image.asset("images/Pills (1).png",
-                      width: 59, height: 59),
-                  title: Text(translation(context).vitamin,
-                      style: const TextStyle(
-                          color: Color(0xff000000),
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold)),
-                  trailing: Checkbox(
-                      activeColor: const Color(0xff72CEBF),
-                      shape: const CircleBorder(
-                          side: BorderSide(style: BorderStyle.none)),
-                      value: vitamin,
-                      onChanged: (val) {
-                        setState(() {
-                          vitamin = val!;
-                        });
-                      }),
-                ),
-              ),
-              Container(
+              ),*/
+
+              Column(children: [
+                ListView.builder(
+                    itemCount: MList1.length,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, index) {
+                      return MedicineList(
+                        img: MList1[index][0],
+                        medicineName: MList1[index][1],
+                        taskCompleted: MList1[index][2],
+                        onChanged: (val) => checkBoxChanged1(val, index),
+                        deleteFunction: (context) => deleteTask1(index),
+                      );
+                    }),
+              ]),
+              ...Times2.map((item) => ListTile(
+                    title: Text(item.title,
+                        style: const TextStyle(
+                            color: Color(0xff0C8A7D),
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: -0.45)),
+                    subtitle: Text(item.subtitle,
+                        style: const TextStyle(
+                            color: Color(0xff000000),
+                            fontSize: 16,
+                            fontWeight: FontWeight.normal,
+                            letterSpacing: -0.45)),
+                  )),
+              /*Container(
                 alignment: Alignment.centerLeft,
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(translation(context).pm,
@@ -354,174 +430,153 @@ class _Medicine extends State<Medicine> {
                         fontSize: 16,
                         fontWeight: FontWeight.normal,
                         letterSpacing: -0.45)),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    color: const Color(0xffB0E3DC),
-                    borderRadius: BorderRadius.circular(20)),
-                padding:
-                    const EdgeInsets.only(top: 5, bottom: 5, right: 3, left: 5),
-                margin: const EdgeInsets.only(left: 5, right: 5, bottom: 4),
+              ),*/
+              Column(children: [
+                ListView.builder(
+                    itemCount: MList2.length,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemBuilder: (BuildContext context, int index) {
+                      return MedicineList(
+                        img: MList2[index][0],
+                        medicineName: MList2[index][1],
+                        taskCompleted: MList2[index][2],
+                        onChanged: (val) => checkBoxChanged2(val, index),
+                        deleteFunction: (context) => deleteTask2(index),
+                      );
+                    }),
+              ]),
+
+              ...Times3.map((item) => ListTile(
+                    title: Text(item.title,
+                        style: const TextStyle(
+                            color: Color(0xff0C8A7D),
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: -0.45)),
+                    subtitle: Text(item.subtitle,
+                        style: const TextStyle(
+                            color: Color(0xff000000),
+                            fontSize: 16,
+                            fontWeight: FontWeight.normal,
+                            letterSpacing: -0.45)),
+                  )),
+
+              /*Container(
                 child: ListTile(
-                  leading: Image.asset("images/Pills (2).png",
-                      width: 59, height: 59),
-                  title: Text(translation(context).aspirin,
+                  title: Text(translation(context).monday,
+                      style: const TextStyle(
+                          color: Color(0xff0C8A7D),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: -0.45)),
+                  subtitle: Text(translation(context).am9,
                       style: const TextStyle(
                           color: Color(0xff000000),
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold)),
-                  trailing: Checkbox(
-                      activeColor: const Color(0xff72CEBF),
-                      shape: const CircleBorder(
-                          side: BorderSide(style: BorderStyle.none)),
-                      value: aspirin,
-                      onChanged: (val) {
-                        setState(() {
-                          aspirin = val!;
-                        });
-                      }),
+                          fontSize: 16,
+                          fontWeight: FontWeight.normal,
+                          letterSpacing: -0.45),
+                      textAlign: TextAlign.start),
                 ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    color: const Color(0xffB0E3DC),
-                    borderRadius: BorderRadius.circular(20)),
-                padding:
-                    const EdgeInsets.only(top: 5, bottom: 5, right: 3, left: 5),
-                margin: const EdgeInsets.only(left: 5, right: 5, bottom: 8),
-                child: ListTile(
-                  leading: Image.asset("images/Pills (1).png",
-                      width: 59, height: 59),
-                  title: Text(translation(context).vitamind,
-                      style: const TextStyle(
-                          color: Color(0xff000000),
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold)),
-                  trailing: Checkbox(
-                      activeColor: const Color(0xff72CEBF),
-                      shape: const CircleBorder(
-                          side: BorderSide(style: BorderStyle.none)),
-                      value: vitaminD,
-                      onChanged: (val) {
-                        setState(() {
-                          vitaminD = val!;
-                        });
-                      }),
-                ),
-              ),
-               ListTile(
-                title: Text(translation(context).monday,
-                    style: const TextStyle(
-                        color: Color(0xff0C8A7D),
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: -0.45)),
-                subtitle: Text(translation(context).am9,
-                    style: const TextStyle(
-                        color: Color(0xff000000),
-                        fontSize: 16,
-                        fontWeight: FontWeight.normal,
-                        letterSpacing: -0.45),
-                    textAlign: TextAlign.start),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    color: const Color(0xffB0E3DC),
-                    borderRadius: BorderRadius.circular(20)),
-                padding:
-                    const EdgeInsets.only(top: 5, bottom: 5, right: 3, left: 5),
-                margin: const EdgeInsets.only(left: 5, right: 5, bottom: 4),
-                child: ListTile(
-                  leading: Image.asset("images/Pills (3).png",
-                      width: 59, height: 59),
-                  title: Text(translation(context).omega,
-                      style: const TextStyle(
-                          color: Color(0xff000000),
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold)),
-                  trailing: Checkbox(
-                      activeColor: const Color(0xff72CEBF),
-                      shape: const CircleBorder(
-                          side: BorderSide(style: BorderStyle.none)),
-                      value: omega2,
-                      onChanged: (val) {
-                        setState(() {
-                          omega2 = val!;
-                        });
-                      }),
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    color: const Color(0xffB0E3DC),
-                    borderRadius: BorderRadius.circular(20)),
-                padding:
-                    const EdgeInsets.only(top: 5, bottom: 5, right: 3, left: 5),
-                margin: const EdgeInsets.only(left: 5, right: 5, bottom: 10),
-                child: ListTile(
-                  leading: Image.asset("images/Pills (1).png",
-                      width: 59, height: 59),
-                  title: Text(translation(context).vitaminc,
-                      style: const TextStyle(
-                          color: Color(0xff000000),
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold)),
-                  trailing: Checkbox(
-                      activeColor: const Color(0xff72CEBF),
-                      shape: const CircleBorder(
-                          side: BorderSide(style: BorderStyle.none)),
-                      value: vitaminC,
-                      onChanged: (val) {
-                        setState(() {
-                          vitaminC = val!;
-                        });
-                      }),
-                ),
-              )
+              ),*/
+              Column(children: [
+                ListView.builder(
+                    itemCount: MList3.length,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemBuilder: (BuildContext context, int index) {
+                      return MedicineList(
+                        img: MList3[index][0],
+                        medicineName: MList3[index][1],
+                        taskCompleted: MList3[index][2],
+                        onChanged: (val) => checkBoxChanged3(val, index),
+                        deleteFunction: (context) => deleteTask3(index),
+                      );
+                    }),
+              ]),
+
+              //const SizedBox(height: 10),
             ]),
-          ),
-        )*/
+      ),
     );
   }
 }
 
-/*class MedicineList extends StatelessWidget {
+class MedicineTime {
+  const MedicineTime({required this.title, required this.subtitle});
+
+  final String title, subtitle;
+
+  /*@override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: Text(title,
+          style: const TextStyle(
+              color: Color(0xff0C8A7D),
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              letterSpacing: -0.45)),
+      subtitle: Text(subtitle,
+          style: const TextStyle(
+              color: Color(0xff000000),
+              fontSize: 16,
+              fontWeight: FontWeight.normal,
+              letterSpacing: -0.45)),
+    );
+  }*/
+}
+
+class MedicineList extends StatelessWidget {
+  var img;
   final String medicineName;
   final bool taskCompleted;
   Function(bool?)? onChanged;
+  Function(BuildContext)? deleteFunction;
 
-   MedicineList({
-    super.key, 
-    required this.medicineName, 
-    required this.taskCompleted,
-    required this.onChanged});
+  MedicineList(
+      {super.key,
+      required this.medicineName,
+      required this.taskCompleted,
+      required this.onChanged,
+      required this.img,
+      required this.deleteFunction});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          color: const Color(0xffB0E3DC),
-          borderRadius: BorderRadius.circular(20)),
-      padding: const EdgeInsets.only(top: 5, bottom: 5, right: 3, left: 5),
-      margin: const EdgeInsets.only(left: 5, right: 5, bottom: 4),
-      child: ListTile(
-        leading: Image.asset("images/Pills.png", width: 59, height: 59),
-        title: Text(medicineName,
-            style: const TextStyle(
-                color: Color(0xff000000),
-                fontSize: 20,
-                fontWeight: FontWeight.bold)),
-        trailing: Checkbox(
+    return Slidable(
+      endActionPane: ActionPane(motion: StretchMotion(), children: [
+        SlidableAction(
+          onPressed: deleteFunction,
+          icon: Icons.delete,
+          backgroundColor: Colors.red.shade300,
+          borderRadius: BorderRadius.circular(20),
+        )
+      ]),
+      child: Container(
+        decoration: BoxDecoration(
+            color: const Color(0xffB0E3DC),
+            borderRadius: BorderRadius.circular(20)),
+        padding: const EdgeInsets.only(top: 5, bottom: 5, right: 3, left: 5),
+        margin: const EdgeInsets.only(left: 5, right: 5, bottom: 4),
+        child: ListTile(
+          leading: Image.asset(img, width: 59, height: 59),
+          title: Text(medicineName,
+              style: TextStyle(
+                  color: Color(0xff000000),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  decoration: taskCompleted
+                      ? TextDecoration.lineThrough
+                      : TextDecoration.none)),
+          trailing: Checkbox(
             activeColor: const Color(0xff72CEBF),
             shape:
                 const CircleBorder(side: BorderSide(style: BorderStyle.none)),
-            value: omega1,
-            onChanged: (val) {
-              setState(() {
-                omega1 = val!;
-              });
-            }),
+            value: taskCompleted,
+            onChanged: onChanged,
+          ),
+        ),
       ),
     );
   }
-}*/
+}

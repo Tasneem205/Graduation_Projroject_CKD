@@ -19,12 +19,13 @@ class _Login extends State<Login> {
   saveprefs() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setString("name", nameController.text);
-    sharedPreferences.setString("id", passwordController.text);
+    sharedPreferences.setString("password", passwordController.text);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffFFFFFF),
       body: Expanded(
         child: ListView(
           children: [
@@ -102,12 +103,12 @@ class _Login extends State<Login> {
                     enabledBorder: const OutlineInputBorder(
                         borderSide: BorderSide(color: Color(0xff0C8A7D)),
                         borderRadius: BorderRadius.all(Radius.circular(14))),
-                    hintText: translation(context).id,
+                    hintText: translation(context).pass,
                     hintStyle: const TextStyle(
                         color: Color(0xff67B6AE),
                         fontSize: 12,
                         fontWeight: FontWeight.w200),
-                    labelText: translation(context).id,
+                    labelText: translation(context).pass,
                     labelStyle:
                         const TextStyle(color: Color(0xff0C8A7D), fontSize: 18),
                   ),

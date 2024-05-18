@@ -12,6 +12,7 @@ class _WalkingState extends State<Walking> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffF2F7FD),
 // class WalkingScreen extends StatelessWidget {
 //   const WalkingScreen({super.key});
 
@@ -19,6 +20,7 @@ class _WalkingState extends State<Walking> {
 //   Widget build(BuildContext context) {
 //     return  Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xffF2F7FD),
         title: SharedColorText(text: translation(context).walking),
         iconTheme: const IconThemeData(
           color: const Color(0xff0C8A7D),

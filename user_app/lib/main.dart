@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:user_app/Classes/language_constants.dart';
-import 'package:user_app/chat.dart';
 import 'package:user_app/module/exercise-screen.dart';
 import 'package:user_app/pages/Diabetes.dart';
 import 'package:user_app/pages/Edit%20Profile.dart';
@@ -67,7 +66,6 @@ class MyAppState extends State<MyApp> {
         '/Notifications': (context) => const Notifications(),
         '/Hist': (context) => const Hist(),
         '/ExerciseScreen': (context) => const ExerciseScreen(),
-      
       },
     );
   }
