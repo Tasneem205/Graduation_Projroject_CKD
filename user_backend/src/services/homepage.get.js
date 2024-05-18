@@ -11,6 +11,7 @@ const homepage = async (req, res, next) => {
             },
             select:{ WalkingSteps:true, WalkingTime:true}
         });
+        console.log(walking);
         const water = await prisma.dailyProgress.findMany({
             where: {
                 PatientID: +req.params.id,

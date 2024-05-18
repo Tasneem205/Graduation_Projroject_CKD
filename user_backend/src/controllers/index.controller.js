@@ -1,13 +1,13 @@
 import { Router } from 'express'; 
 
-import historyRouter from 'history.controller.js';
-import diabetesRouter from 'diabetes.controller.js';
-import pressureRouter from 'pressure.controller.js';
-import medicineRouter from 'medicine.controller.js';
-import waterRouter from 'water.controller.js';
-import exerciseRouter from 'exercise.controller.js';
-import homeRouter from 'home.controller.js';
-import registrationRouter from 'registration.controller.js';
+import historyRouter from './history.controller.js';
+import diabetesRouter from './diabetes.controller.js';
+import pressureRouter from './pressure.controller.js';
+import medicineRouter from './medicine.controller.js';
+import waterRouter from './water.controller.js';
+import exerciseRouter from './exercise.controller.js';
+import homeRouter from './home.controller.js';
+import registrationRouter from './registration.controller.js';
 
 const indexRouter = new Router();
 

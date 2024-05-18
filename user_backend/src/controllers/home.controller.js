@@ -1,11 +1,10 @@
 import { Router } from "express";
 import homepage from "../services/homepage.get.js"
-import getFunctions from "../services/profile.services/get.service.js";
-import postFunctions from "../services/profile.services/post.service.js";
+import getFunctions from "../services/profile.services/get.services.js";
 
 const homeRouter = new Router();
 
-homeRouter.get("/", homepage);  // get the data of home page
+homeRouter.get("/:id", homepage);  // get the data of home page
 
 homeRouter.get("/profile", getFunctions.profile);
 

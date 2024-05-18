@@ -103,7 +103,7 @@ model kidney_scan {
   DoctorID    Int
   AssistantID Int
   ScanDate    DateTime
-  class       String
+  scan_class  String
 
   img img[]
 
@@ -122,35 +122,36 @@ model img {
 
 model kidney_test {
   TestID       Int       @id @default(autoincrement())
-  test_name    String
+  test_name    String?
   TestDate     DateTime
   PatientID    Int
   assistant_id Int
   DoctorID     Int
-  pot          Float
-  hemo         Float
-  pcv          Float
-  wbc          Float
-  rbc          Float
-  pc           String
-  pcc          String
-  ba           String
-  htl          String
-  dm           String
-  cad          String
-  appet        String
-  pe           String
-  ane          String
-  age          Int
-  bp           String
-  bgr          Float
-  bu           Float
-  sc           Float
-  sod          Float
-  sg           String
-  al           String
-  su           String
-  class        String
+  pot          Float?
+  hemo         Float?
+  pcv          Float?
+  wbc          Float?
+  rbc          String?
+  pc           String?
+  pcc          String?
+  ba           String?
+  htn          String?
+  dm           String?
+  cad          String?
+  appet        String?
+  pe           String?
+  ane          String?
+  age          Int?
+  bp           Float?
+  bgr          Float?
+  bu           Float?
+  sc           Float?
+  sod          Float?
+  sg           Float?
+  al           Int?
+  su           Float?
+  rc           Float?
+  test_class   Int?
   // the model requires age and id so we have to send them
   Assistant    Assistant @relation(fields: [assistant_id], references: [AssistantID])
   patient      patients  @relation(fields: [PatientID], references: [PatientID])
@@ -172,19 +173,19 @@ model patients {
   PatientID        Int      @id @default(autoincrement())
   FirstName        String
   LastName         String
-  DateOfBirth      DateTime
+  DateOfBirth      DateTime @db.Time()
   Gender           String
   Email            String
   Password         String
   DoctorID         Int
-  Job              String
-  bloodGroup       String
-  hieght           Float
-  weight           Float
+  Job              String?
+  bloodGroup       String?
+  hieght           Float?
+  weight           Float?
   assistantID      Int
-  registrationDate DateTime
-  Phone            String
-  image_path       String
+  registrationDate DateTime @db.Time
+  Phone            String?
+  image_path       String?
 
   kidney_scan   kidney_scan[]
   kidney_test   kidney_test[]

@@ -9,10 +9,12 @@ const prisma = new PrismaClient();
 const login = async (req, res, next) => {
     try {
         const {value, error} = userLogin.validate(req.body);
+        console.log(value);
         if (error) return responses.badRequest(res, error.details[0].message);
-        const userExist = await prisma.patients.findUnique[{
+        const userExist = await prisma.patients.findUnique({
             where: { Email: value.Email }
-        }];
+        });
+        console.log(userExist);
         if (!userExist) return responses.notFound(res, "email not found");
         const match = bcrypt.compareSync(value.Password, userExist.Password);
         if (!match) return responses.badRequest(res, "invalid email or password");

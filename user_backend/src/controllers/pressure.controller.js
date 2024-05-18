@@ -1,10 +1,10 @@
 import { Router} from 'express'; 
 const pressureRouter = Router(); 
 
-import addPressure from '../services/pressure.services/post.service';
-import getPressure from '../services/pressure.services/get.service';
+import addPressure from '../services/pressure.services/post.service.js';
+import getPressure from '../services/pressure.services/get.service.js';
 
-pressureRouter.get("/", getPressure);
+pressureRouter.get("/", getPressure.getAllPressure);
 pressureRouter.post("/", addPressure);
 //pressureRouter.put("/", ()=>{});
 

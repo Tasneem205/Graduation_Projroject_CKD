@@ -3,6 +3,9 @@ views.sql
 ckd_db script.sql
 *.sql
 
+# flask api for ai
+flaskAPI for AI/.idea
+
 # for assets
 assets
 
