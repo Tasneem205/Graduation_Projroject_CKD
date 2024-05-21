@@ -1,7 +1,8 @@
 import Express from 'express';
-import router from "./src/controllers/index.controller.js";
+import router from "./clinic_src/controllers/index.controller.js";
+import indexRouter from "./user_src/controllers/index.controller.js";
 import dotenv from "dotenv";
-import errorHandler from "./src/middleWares/errorHandler.js";
+import errorHandler from "./clinic_src/middleWares/errorHandler.js";
 import morgan from "morgan";
 
 const app = Express();
@@ -13,6 +14,8 @@ app.use(Express.json());  // parser
 app.use(morgan("dev"));
 
 app.use("/clinic", router);
+app.use("/user", indexRouter);
+
 
 app.use(errorHandler);
 

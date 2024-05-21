@@ -1,7 +1,7 @@
 import Express from 'express';
-import indexRouter from "./src/controllers/index.controller.js";
+import { default as userIndex } from "./user_src/controllers/index.controller.js";
 import dotenv from "dotenv";
-import errorHandler from "./src/middleWares/errorHandler.js";
+import errorHandler from "./user_src/middleWares/errorHandler.js";
 import morgan from "morgan";
 
 const app = Express();
@@ -12,7 +12,7 @@ app.use(Express.json());  // parser
 
 app.use(morgan("dev"));
 
-app.use("/user", indexRouter);
+app.use("/user", userIndex);
 
 app.use(errorHandler);
 

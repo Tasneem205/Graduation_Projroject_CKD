@@ -6,23 +6,125 @@
   <component name="ChangeListManager">
     <list default="true" id="04ead2bf-65ce-4878-a126-bc81110f5bfc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/test.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/schemas/test.schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/post.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabular_model/CDK.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tabular_model/CDK.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_backend/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/diabetes.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/src/controllers/diabetes.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/exercise.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/src/controllers/exercise.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/history.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/src/controllers/history.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/home.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/src/controllers/home.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/index.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/src/controllers/index.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/medicine.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/src/controllers/medicine.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/pressure.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/src/controllers/pressure.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_backend/src/schemas/login.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/src/schemas/login.schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_backend/src/services/History.get.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/src/services/History.get.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_backend/src/services/homepage.get.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/src/services/homepage.get.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_backend/src/services/login.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/src/services/login.services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_app/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_app/android/app/src/main/res/drawable-v21/launch_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_app/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_app/android/app/src/main/res/drawable/launch_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/archive.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/controllers/archive.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/assistants.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/controllers/assistants.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/buttons.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/controllers/buttons.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/doctors.controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/controllers/doctors.controllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/follow-ups.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/controllers/follow-ups.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/home.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/controllers/home.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/index.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/controllers/index.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/patients.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/controllers/patients.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/prescriptions.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/controllers/prescriptions.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/profile.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/controllers/profile.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/reports.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/controllers/reports.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/scans.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/controllers/scans.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/controllers/tests.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/controllers/tests.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/helpers/responses.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/helpers/responses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/middleWares/errorHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/middleWares/errorHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/middleWares/isAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/middleWares/isAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/middleWares/uploader.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/middleWares/uploader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/login.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/schemas/login.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/medication.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/schemas/medication.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/patients.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/schemas/patients.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/report.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/schemas/report.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/test.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/schemas/test.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/update_assistant.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/schemas/update_assistant.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/schemas/user.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/schemas/user.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/archive.services/history.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/archive.services/history.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/archive.services/medicine.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/archive.services/medicine.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/assistants.services/delete.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/assistants.services/delete.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/assistants.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/assistants.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/assistants.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/assistants.services/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/assistants.services/put.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/assistants.services/put.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/delete.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/doctors.services/delete.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/doctors.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/doctors.services/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/doctors.services/put.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/doctors.services/put.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/follow-ups.services/delete.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/follow-ups.services/delete.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/follow-ups.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/follow-ups.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/follow-ups.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/follow-ups.services/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/follow-ups.services/put.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/follow-ups.services/put.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/homepage.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/homepage.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/delete.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/patients.services/delete.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/patients.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/patients.services/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/patients.services/put.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/patients.services/put.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/prescriptions.services/delete.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/prescriptions.services/delete.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/prescriptions.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/prescriptions.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/prescriptions.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/prescriptions.services/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/prescriptions.services/put.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/prescriptions.services/put.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/profile.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/profile.services/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/profile.services/put.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/profile.services/put.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/reports.service/delete.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/reports.service/delete.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/reports.service/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/reports.service/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/reports.service/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/reports.service/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/scans.services/delete.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/scans.services/delete.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/scans.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/scans.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/scans.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/scans.services/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/scans.services/put.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/scans.services/put.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/ckd.h5" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/tests.services/ckd.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/delete.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/tests.services/delete.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/tests.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/model.json" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/tests.services/model.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/src/services/tests.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/tests.services/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskAPI for AI/tabular model/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskAPI for AI/tabular model/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskAPI for AI/tabular model/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskAPI for AI/tabular model/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskAPI for AI/tabular model/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskAPI for AI/tabular model/.idea/tabular model.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskAPI for AI/tabular model/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskAPI for AI/tabular model/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskAPI for AI/tabular model/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskAPI for AI/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskAPI for AI/tabular model/model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/flaskAPI for AI/model.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskAPI for AI/tabular model/scaler.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/flaskAPI for AI/scaler.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_app/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user_app/android/app/src/main/res/drawable-v21/launch_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_app/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user_app/android/app/src/main/res/drawable/launch_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/diabetes.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/controllers/diabetes.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/exercise.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/controllers/exercise.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/history.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/controllers/history.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/home.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/controllers/home.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/index.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/controllers/index.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/medicine.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/controllers/medicine.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/pressure.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/controllers/pressure.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/registration.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/controllers/registration.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/controllers/water.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/controllers/water.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/helpers/responses.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/helpers/responses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/middleWares/errorHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/middleWares/errorHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/schemas/dailyservice.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/schemas/dailyservice.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/schemas/diabetes.shcema.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/schemas/diabetes.shcema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/schemas/exercise.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/schemas/exercise.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/schemas/login.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/schemas/login.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/schemas/medicine.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/schemas/medicine.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/schemas/pressure.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/schemas/pressure.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/schemas/profile.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/schemas/profile.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/schemas/user.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/schemas/user.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/schemas/walking.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/schemas/walking.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/schemas/water.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/schemas/water.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/History.get.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/History.get.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/dailyservices/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/dailyservices/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/diabetes.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/diabetes.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/diabetes.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/diabetes.services/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/exercise.services/get.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/exercise.services/get.services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/exercise.services/put.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/exercise.services/put.services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/homepage.get.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/homepage.get.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/login.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/login.services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/medicine.services/delete.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/medicine.services/delete.services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/medicine.services/get.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/medicine.services/get.services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/medicine.services/post.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/medicine.services/post.services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/pressure.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/pressure.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/pressure.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/pressure.services/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/profile.services/get.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/profile.services/get.services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/profile.services/put.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/profile.services/put.services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/walking.services/get.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/walking.services/get.services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/walking.services/put.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/walking.services/put.services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/water.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/water.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_backend/src/services/water.services/put.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/user_backend/user_src/services/water.services/put.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,28 +155,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;19.9.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.12.11&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/FCI/GP/Graduation_Projroject_CKD/doctor_backend/src/services/tests.services&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\FCI\\GP\\Graduation_Projroject_CKD\\doctor_backend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "19.9.0",
+    "javascript.nodejs.core.library.typings.version": "20.12.11",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/FCI/GP/Graduation_Projroject_CKD/doctor_backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "show.migrate.to.gradle.popup": "false",
+    "ts.external.directory.path": "D:\\FCI\\GP\\Graduation_Projroject_CKD\\doctor_backend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\FCI\GP\Graduation_Projroject_CKD\doctor_backend\src\services\tests.services" />
@@ -128,7 +230,11 @@
       <workItem from="1715874438590" duration="2187000" />
       <workItem from="1715884791392" duration="5908000" />
       <workItem from="1715948584774" duration="2487000" />
-      <workItem from="1716035598151" duration="3957000" />
+      <workItem from="1716035598151" duration="5854000" />
+      <workItem from="1716142034688" duration="2872000" />
+      <workItem from="1716250788191" duration="674000" />
+      <workItem from="1716309846604" duration="181000" />
+      <workItem from="1716323914182" duration="1226000" />
     </task>
     <servers />
   </component>
