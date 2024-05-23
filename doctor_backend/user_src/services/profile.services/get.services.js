@@ -6,10 +6,10 @@ const prisma = new PrismaClient();
 
 const profile = async (req, res, next) => {
     try{
-        const id = +req.body.id;
-        const patient = await prisma.patients.findUnique[ {
+        const id = +req.params.id;
+        const patient = await prisma.patients.findUnique({
             where: { PatientID: id }
-        }];
+        });
         if (!patient) return  responses.notFound(res, "User not found");
         return responses.success(res, "User found!", patient);
     } catch (error) {
