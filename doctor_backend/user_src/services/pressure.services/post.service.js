@@ -9,14 +9,12 @@ const addPressure = async (req, res, next) => {
         const { error, value } = pressureSchema.validate(req.body);
         if (error) return responses.badRequest(res, error);
         const { pressureHigh, pressureLow, heart_rate} = value;
-
+        const now = new Date();
+        const formattedDate = now.toISOString();
         const entry = await prisma.pressure.create({
-          where: {
-            PatientID: +req.params.id
-            },
             data: {
-              PatientID,
-              date: Date.now(),
+              PatientID: +req.params.id,
+              date: formattedDate,
               pressureHigh,
               pressureLow,
               heart_rate

@@ -5,10 +5,9 @@ const prisma = new PrismaClient();
 
 const getAllPressure = async (req, res, next) => {
     try {
+        console.log(req.params.id);
         const Pressure = await prisma.pressure.findMany({
-            where: {
-                PatientID: +req.params.id
-                }
+            where: { PatientID: +req.params.id }
         });
         return responses.success(res, "All pressure of the day!", Pressure);
     } catch (error) {
@@ -18,14 +17,11 @@ const getAllPressure = async (req, res, next) => {
 };
 
 const getLastPressure = async (req, res, next) => {
-    try { // TODO: what if the id wasn't valid
+    try {
         const onePressure = await prisma.pressure.findFirst({
-            orderBy: {
-                date: 'desc' // Assuming you have a createdAt field for ordering
-            }, take: 1,
-            where: {
-            PatientID: +req.params.id
-            }});
+            orderBy: { date: 'desc' },
+            where: { PatientID: +req.params.id }
+        });
         return responses.success(res, "Here is the last pressure", onePressure);
     } catch (error) {
         console.log(error);

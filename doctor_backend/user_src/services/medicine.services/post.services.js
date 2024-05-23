@@ -8,20 +8,18 @@ const addMedicine = async (req, res, next) => {
     try {
         const { error, value } = medicineSchema.validate(req.body);
         if (error) return responses.badRequest(res, error);
-        const { medicine_name, dosage} = value;
-
+        const { medicine_name, time, dosage} = value;
         const entry = await prisma.alarmmedicine.create({
-          where: {
-            PatientID: +req.params.id
-            },
             data: {
-              PatientID,
-              time: Date.now(),
+              PatientID: +req.params.id,
+              time,
               medicine_name,
               dosage,
             }
           });
-          return responses.success(res, "medicine added successfully, Waiting for doctor to confirm", entry);
+          return responses.success(res,
+              "medicine added successfully, Waiting for doctor to confirm",
+              entry);
     } catch (error) {
         console.log(error);
         next();

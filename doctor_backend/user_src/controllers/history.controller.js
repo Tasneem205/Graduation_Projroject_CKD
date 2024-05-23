@@ -1,7 +1,8 @@
 import { Router} from 'express'; 
-const historyRouter = Router(); 
+import history from '../services/history.get.js';
 
-import History from '../services/History.get.js';
-historyRouter.get("/", History);
+const historyRouter = Router();
+
+historyRouter.get("/:id", history);
 
 export default historyRouter;

@@ -9,17 +9,16 @@ const addDiabetes = async (req, res, next) => {
     try {
         const { error, value } = diabetesSchema.validate(req.body);
         if (error) return responses.badRequest(res, error.details[0].message);
-        const diabetes_value = value;
-
+        console.log("id = ", req.params.id);
+        const { diabetes_value } = value;
+        const now = new Date();
+        const formattedDate = now.toISOString();
         const entry = await prisma.diabetes.create({
-          where: {
-            patientID: +req.params.id,
-        },
           data: {
-            PatientID,
-            date: Date.now(),
-            diabetes_value
-          },
+              PatientID: +req.params.id,
+              date: formattedDate,
+              diabetes_value
+          }
         });
         return responses.success(res,"Diabetes added successfully",entry);        
     }

@@ -300,14 +300,12 @@ model video {
 }
 
 model alarmmedicine {
-  ID            Int
+  ID            Int      @id @default(autoincrement())
   PatientID     Int
-  time          DateTime
+  time          String
   medicine_name String
   dosage        String
   patient       patients @relation(fields: [PatientID], references: [PatientID])
-
-  @@id([PatientID, time])
 }
 
 // VIEWS

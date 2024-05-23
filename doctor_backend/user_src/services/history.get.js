@@ -3,33 +3,25 @@ import responses from "../helpers/responses.js";
 
 const prisma = new PrismaClient();
 
-const History = async (req, res, next) => {
+const history = async (req, res, next) => {
     try {
-        const Diabetes = await prisma.diabetes.findMany({where: {
-            patientID: +req.params.id,
-        }});
+        const Diabetes = await prisma.diabetes.findMany({
+            where: { PatientID: +req.params.id }
+        });
         const Pressure = await prisma.pressure.findMany({
-            where: {
-                PatientID: +req.params.id
-                }
+            where: { PatientID: +req.params.id }
         });
         const exercise = await prisma.dailyProgress.findMany({
-            where: {
-                PatientID: +req.params.id,
-            },
+            where: { PatientID: +req.params.id },
             select: { Excercise:true }
         });
         const water = await prisma.dailyProgress.findMany({
-            where: {
-                PatientID: +req.params.id,
-            },
+            where: { PatientID: +req.params.id },
             select:{ WaterML:true}
         });
         const walking = await prisma.dailyProgress.findMany({
-            where: {
-                PatientID: +req.params.id,
-            },
-            select:{ WalkingSteps:true}
+            where: { PatientID: +req.params.id },
+            select:{ WalkingSteps:true }
         });
 
         const data = {
@@ -48,4 +40,4 @@ const History = async (req, res, next) => {
 };
 
 
-export default History;
+export default history;

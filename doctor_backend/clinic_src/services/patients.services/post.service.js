@@ -12,7 +12,6 @@ const addPatient = async (req, res, next) => {
             console.log(error);
             return responses.badRequest(res, `data isn't valid`);
         }
-        console.log(value);
         const { FirstName, LastName, DateOfBirth, Gender, Email, DoctorID,
             Job, bloodGroup, height ,weight, assistantID, Phone} = value;
         const hashedPass = bcrypt.hashSync((value.FirstName + "_" + value.LastName), parseInt(process.env.SALT));
