@@ -175,7 +175,7 @@ model patients {
   LastName         String
   DateOfBirth      DateTime @db.Time()
   Gender           String
-  Email            String
+  Email            String   @unique
   Password         String
   DoctorID         Int
   Job              String?

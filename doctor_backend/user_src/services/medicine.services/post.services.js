@@ -11,10 +11,10 @@ const addMedicine = async (req, res, next) => {
         const { medicine_name, time, dosage} = value;
         const entry = await prisma.alarmmedicine.create({
             data: {
-              PatientID: +req.params.id,
-              time,
-              medicine_name,
-              dosage,
+                time,
+                medicine_name,
+                dosage,
+                PatientID: +req.params.id,
             }
           });
           return responses.success(res,

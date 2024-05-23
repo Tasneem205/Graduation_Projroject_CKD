@@ -6,7 +6,7 @@ import addMedicine from '../services/medicine.services/post.services.js';
 import getMedicine from '../services/medicine.services/get.services.js';
 
 medicineRouter.get("/:id",getMedicine);
-medicineRouter.delete("/:id", deleteMedicine);
+medicineRouter.delete("/:id/:medId", deleteMedicine);
 medicineRouter.post("/:id", addMedicine);
 
 export default medicineRouter;

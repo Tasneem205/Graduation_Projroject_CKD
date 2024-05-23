@@ -5,10 +5,12 @@ const prisma = new PrismaClient();
 
 const deleteMedicine = async (req, res, next) => {
     try {
-        const medicine = await prisma.alarmmedicine.delete(
-            { where: {
-                PatientID : +req.params.id
-            } });
+        console.log(req.params);
+        const medicine = await prisma.alarmmedicine.delete({
+            where: {
+                ID: +req.params.medId
+            }
+        });
         return responses.success(res, "Medicine deleted successfully", medicine);
     } catch (error) {
         console.log(error);
