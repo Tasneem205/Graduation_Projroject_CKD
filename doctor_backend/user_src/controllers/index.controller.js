@@ -9,9 +9,11 @@ import walkingRouter from './walking.controller.js';
 import exerciseRouter from './exercise.controller.js';
 import homeRouter from './home.controller.js';
 import registrationRouter from './registration.controller.js';
+import dailyProgress from "../services/dailyservices/post.service.js";
 
 const indexRouter = new Router();
 
+indexRouter.post("/newDay/:id", dailyProgress);
 
 indexRouter.use("/history", historyRouter);
 

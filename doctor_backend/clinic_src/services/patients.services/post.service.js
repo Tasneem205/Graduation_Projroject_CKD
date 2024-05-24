@@ -16,11 +16,12 @@ const addPatient = async (req, res, next) => {
             Job, bloodGroup, height ,weight, assistantID, Phone} = value;
         const hashedPass = bcrypt.hashSync((value.FirstName + "_" + value.LastName), parseInt(process.env.SALT));
         const date = new Date()
+        const dateOfBirth = new Date(DateOfBirth).setHours(0, 0, 0, 0);
         const newPatient = await prisma.patients.create({
             data: {
                 FirstName: FirstName,
                 LastName: LastName,
-                DateOfBirth: DateOfBirth + 'T00:00:00.335Z',
+                DateOfBirth: dateOfBirth.toISOString(),
                 Gender: Gender,
                 Email: Email,
                 DoctorID: DoctorID,

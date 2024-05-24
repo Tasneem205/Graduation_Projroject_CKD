@@ -10,6 +10,7 @@ const profile = async (req, res, next) => {
         const patient = await prisma.patients.findUnique({
             where: { PatientID: id }
         });
+        // TODO: add heart rate, diabetes and pressure
         if (!patient) return  responses.notFound(res, "User not found");
         return responses.success(res, "User found!", patient);
     } catch (error) {
