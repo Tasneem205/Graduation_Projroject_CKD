@@ -20,7 +20,7 @@ const addAssistant = async (req, res, next) => {
             Password: hashedPass,
             Email,
             Phone_num: PhoneNumber,
-            image_path: req.file ? req.file.path : "undefined images"
+            image_path: req.file ? req.file.path : "undefined image"
           },
         });
         const { password: hashed, ...restInfo } = user;

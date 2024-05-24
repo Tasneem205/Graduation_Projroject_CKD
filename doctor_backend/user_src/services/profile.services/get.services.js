@@ -1,6 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import responses from "../../helpers/responses.js";
 import jwt from "jsonwebtoken";
+import fs from "fs";
 
 const prisma = new PrismaClient();
 
@@ -10,9 +11,34 @@ const profile = async (req, res, next) => {
         const patient = await prisma.patients.findUnique({
             where: { PatientID: id }
         });
-        // TODO: add heart rate, diabetes and pressure
         if (!patient) return  responses.notFound(res, "User not found");
-        return responses.success(res, "User found!", patient);
+        const image = fs.readFileSync(patient.imagePath, 'base64');
+        const pressure = await prisma.pressure.findFirst({
+            where: { PatientID: id }
+        });
+        const diabetes = await prisma.diabetes.findFirst({
+            where: {PatientID: id}
+        });
+        let pres = "";
+        let heartRate = ""
+        if (pressure) {
+            pres = pressure.pressureHigh + "/" + pressure.pressureLow;
+            heartRate = pressure.heart_rate;
+        } else {
+            pres = "0/0";
+            heartRate = "0";
+        }
+        let d;
+        if (diabetes)
+            d = diabetes.diabetes_value;
+        else
+            d = 0;
+        const response = {"profile data": patient,
+                               "image": image,
+                               "pressure": pres,
+                               "heart rate": heartRate,
+                               "diabetes": d};
+        return responses.success(res, "User found!", response);
     } catch (error) {
         console.log(error);
         next();

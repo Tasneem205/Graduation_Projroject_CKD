@@ -8,14 +8,15 @@ const deleteDoctor = async (req, res, next) => {
         const user = await prisma.doctors.delete({
             where: { DoctorID : +req.params.id }
         });
-        // delete the image associated with this doctor
-        fs.unlink(user.image_path, (err) => {
-            if (err) {
-                console.error('Error deleting file:', err);
-                return;
-            }
-            console.log('File deleted successfully');
-        });
+        if (user.image_path !== "undefined images") {
+            fs.unlink(user.image_path, (err) => {
+                if (err) {
+                    console.error('Error deleting file:', err);
+                    return;
+                }
+                console.log('File deleted successfully');
+            });
+        }
         return responses.success(res, "Doctor deleted successfully", user);
     } catch (error) {
         console.log(error);

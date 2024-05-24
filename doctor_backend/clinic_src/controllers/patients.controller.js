@@ -9,7 +9,7 @@ const patientRouter = new Router();
 
 patientRouter.get("/", getFunctions.getAllPatients);
 
-patientRouter.get("/:id", getFunctions.getPatientWithId);
+patientRouter.get("/:id", getFunctions.getPatientProfile);
 
 patientRouter.post(
     "/",

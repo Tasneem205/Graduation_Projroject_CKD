@@ -33,7 +33,7 @@ const addPatient = async (req, res, next) => {
                 Phone: Phone,
                 Password: hashedPass,
                 registrationDate: date.toISOString(),
-                image_path: req.file? req.file.path : ""
+                image_path: req.file ? req.file.path : "undefined image"
             }
         });
         return responses.success(res, "patient added successfully", newPatient);

@@ -10,13 +10,15 @@ const deleteAssistant = async (req, res, next) => {
             { where: {
                 AssistantID : +req.params.id
             } });
-        fs.unlink(user.image_path, (err) => {
-            if (err) {
-                console.error('Error deleting file:', err);
-                return;
-            }
-            console.log('File deleted successfully');
-        });
+        if (user.image_path !== "undefined images") {
+            fs.unlink(user.image_path, (err) => {
+                if (err) {
+                    console.error('Error deleting file:', err);
+                    return;
+                }
+                console.log('File deleted successfully');
+            });
+        }
         return responses.success(res, "Assistant deleted successfully", user);
     } catch (error) {
         console.log(error);

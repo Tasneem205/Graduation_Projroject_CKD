@@ -22,7 +22,7 @@ assistantRouter.post(
 
 assistantRouter.delete(
     "/:id",
-    isAdmin,
+    // isAdmin,
     deleteAssistant);
 
 assistantRouter.put(

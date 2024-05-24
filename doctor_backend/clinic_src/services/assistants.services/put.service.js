@@ -2,6 +2,7 @@ import { PrismaClient } from "@prisma/client";
 import responses from "../../helpers/responses.js";
 import updateSchema from "../../schemas/update_assistant.schema.js";
 import bcrypt from "bcrypt";
+import fs from "fs";
 
 const prisma = new PrismaClient();
 

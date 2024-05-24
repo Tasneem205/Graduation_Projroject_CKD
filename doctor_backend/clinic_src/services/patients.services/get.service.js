@@ -1,12 +1,21 @@
 import { PrismaClient } from "@prisma/client";
 import responses from "../../helpers/responses.js";
+import fs from "fs";
 
 const prisma = new PrismaClient();
 
 const getAllPatients = async (req, res, next) => {
     try {
         const allPatients = await prisma.patients.findMany();
-        return responses.success(res, "All patients fetched", allPatients);
+        const dataWithImages = allPatients.map(patient => {
+            const imagePath = patient.image_path;
+            const imageData = fs.readFileSync(imagePath, 'base64');
+            return {
+                ...patient,
+                image_base64: imageData,
+            };
+        });
+        return responses.success(res, "All patients fetched", dataWithImages);
     } catch (error) {
         console.log(error);
         next();
@@ -14,13 +23,14 @@ const getAllPatients = async (req, res, next) => {
 };
 
 // get patient profile
-const getPatientWithId = async (req, res, next) => {
+const getPatientProfile = async (req, res, next) => {
     // TODO: add medicine
     try {
         const id = +req.body.params;
         const profile = await prisma.patients.findUnique({
             where: { patientID: id }
         });
+        const image = fs.readFileSync(profile.imagePath, 'base64');
         const dailyProgress = await prisma.dailyProgress.findMany({
             where: { patientID: id }
         });
@@ -38,6 +48,7 @@ const getPatientWithId = async (req, res, next) => {
         });
         let profileData = {
             profile,
+            image,
             dailyProgress,
             diabetes,
             pressure, // destruct to pressure and heart rate
@@ -52,6 +63,6 @@ const getPatientWithId = async (req, res, next) => {
 };
 const getFunctions = {
     getAllPatients,
-    getPatientWithId
+    getPatientProfile
 }
 export default getFunctions;
