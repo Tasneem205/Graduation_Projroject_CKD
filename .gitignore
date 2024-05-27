@@ -1,8 +1,23 @@
 # the database script
+views.sql
 ckd_db script.sql
+*.sql
+
+# flask api for ai
+flaskAPI for AI/.idea
+flaskAPI for AI/uploads
+flaskAPI for AI/imgmodel.h5
+
+# for assets
+assets
+
 # for doctor backend
 doctor_backend/node_modules
 doctor_backend/.env
+
+# for user backend
+user_backend/node_modules
+user_backend/.env
 
 # for models
 images_model/.ipynb_checkpoints

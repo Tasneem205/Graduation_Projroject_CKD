@@ -1,36 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="04ead2bf-65ce-4878-a126-bc81110f5bfc" name="Changes" comment="" />
+    <list default="true" id="04ead2bf-65ce-4878-a126-bc81110f5bfc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/clinic_src/services/patients.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/clinic_src/services/patients.services/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/user_src/controllers/diabetes.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/user_src/controllers/diabetes.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/user_src/controllers/history.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/user_src/controllers/history.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/user_src/controllers/medicine.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/user_src/controllers/medicine.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/user_src/controllers/pressure.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/user_src/controllers/pressure.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/user_src/schemas/medicine.schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/user_src/schemas/medicine.schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/user_src/services/History.get.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/user_src/services/history.get.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/user_src/services/diabetes.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/user_src/services/diabetes.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/user_src/services/diabetes.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/user_src/services/diabetes.services/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/user_src/services/medicine.services/post.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/user_src/services/medicine.services/post.services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/user_src/services/pressure.services/get.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/user_src/services/pressure.services/get.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_backend/user_src/services/pressure.services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_backend/user_src/services/pressure.services/post.service.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2a6dS2u13h6d4dNcFSNJjCdyjJZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "19.9.0",
+    "javascript.nodejs.core.library.typings.version": "20.12.11",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/FCI/GP/Graduation_Projroject_CKD",
+    "last_opened_file_path": "D:/FCI/GP/Graduation_Projroject_CKD/doctor_backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "show.migrate.to.gradle.popup": "false",
+    "ts.external.directory.path": "D:\\FCI\\GP\\Graduation_Projroject_CKD\\doctor_backend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\FCI\GP\Graduation_Projroject_CKD\doctor_backend" />
+      <recent name="D:\FCI\GP\Graduation_Projroject_CKD\doctor_backend\src\services\tests.services" />
+      <recent name="D:\FCI\GP\Graduation_Projroject_CKD\doctor_backend\src\controllers" />
+      <recent name="D:\FCI\GP\Graduation_Projroject_CKD\user_backend" />
+      <recent name="D:\FCI\GP\Graduation_Projroject_CKD\user_backend\src\middleWares" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FCI\GP\Graduation_Projroject_CKD\doctor_backend\src\services\tests.services" />
+      <recent name="D:\FCI\GP\Graduation_Projroject_CKD" />
+      <recent name="D:\FCI\GP\Graduation_Projroject_CKD\doctor_backend\src\services\profile.services" />
+      <recent name="D:\FCI\GP\Graduation_Projroject_CKD\user_backend\src" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -47,10 +102,40 @@
       <option name="presentableId" value="Default" />
       <updated>1703642959627</updated>
       <workItem from="1703642960775" duration="80000" />
+      <workItem from="1709638121826" duration="1345000" />
+      <workItem from="1709649806024" duration="29240000" />
+      <workItem from="1710444126889" duration="6670000" />
+      <workItem from="1710583408726" duration="7246000" />
+      <workItem from="1710810903237" duration="9972000" />
+      <workItem from="1711931910086" duration="27053000" />
+      <workItem from="1714125874231" duration="3198000" />
+      <workItem from="1714401015849" duration="3037000" />
+      <workItem from="1714418528571" duration="449000" />
+      <workItem from="1714459720137" duration="17183000" />
+      <workItem from="1714592350242" duration="8940000" />
+      <workItem from="1714751494317" duration="366000" />
+      <workItem from="1714752820993" duration="37451000" />
+      <workItem from="1715201727936" duration="7707000" />
+      <workItem from="1715378802937" duration="12201000" />
+      <workItem from="1715460769844" duration="13192000" />
+      <workItem from="1715606765917" duration="9988000" />
+      <workItem from="1715790703219" duration="10329000" />
+      <workItem from="1715814158633" duration="5703000" />
+      <workItem from="1715874438590" duration="2187000" />
+      <workItem from="1715884791392" duration="5908000" />
+      <workItem from="1715948584774" duration="2487000" />
+      <workItem from="1716035598151" duration="5854000" />
+      <workItem from="1716142034688" duration="2872000" />
+      <workItem from="1716250788191" duration="674000" />
+      <workItem from="1716309846604" duration="181000" />
+      <workItem from="1716323914182" duration="9649000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sql" />
   </component>
 </project>
