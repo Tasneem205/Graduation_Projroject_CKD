@@ -21,7 +21,7 @@ class _NotificationsState extends State<Notifications> {
                 child: Text(translation(context).notification,
                     style: const TextStyle(
                         color: Color(0xff0C8A7D),
-                        fontSize: 33,
+                        fontSize: 30,
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.start),
               ),
@@ -40,7 +40,7 @@ class _NotificationsState extends State<Notifications> {
                         translation(context).allnotification,
                         style: const TextStyle(
                           color: Color(0xff0C8A7D),
-                          fontSize: 24,
+                          fontSize: 20,
                         ),
                       ),
                     ),
@@ -49,7 +49,7 @@ class _NotificationsState extends State<Notifications> {
                         translation(context).unread,
                         style: const TextStyle(
                           color: Color(0xff0C8A7D),
-                          fontSize: 24,
+                          fontSize: 20,
                         ),
                       ),
                     ),
@@ -70,21 +70,17 @@ class _NotificationsState extends State<Notifications> {
                     Text(translation(context).today,
                         style: const TextStyle(
                           color: Color(0xFF0E725B),
-                          fontSize: 24,
+                          fontSize: 20,
                         )),
-                    const SizedBox(
-                      height: 10,
-                    ),
+                    
                     const NotificationList(),
-                    const SizedBox(
-                      height: 10,
-                    ),
+                  
                     Container(
-                      margin: const EdgeInsets.only(left: 10, bottom: 10),
+                      margin: const EdgeInsets.only(left: 10, bottom: 5),
                       child: Text(translation(context).yesterday,
                           style: const TextStyle(
                             color: Color(0xFF0E725B),
-                            fontSize: 24,
+                            fontSize: 20,
                           )),
                     ),
                     const NotificationList(),
@@ -97,17 +93,13 @@ class _NotificationsState extends State<Notifications> {
                         translation(context).past,
                         style: const TextStyle(
                           color: Color(0xFF0E725B),
-                          fontSize: 24,
+                          fontSize: 20,
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      height: 10,
-                    ),
+                  
                     const NotificationList(),
-                    const SizedBox(
-                      height: 10,
-                    ),
+                  
                   ],
                 ),
               ),
@@ -154,10 +146,11 @@ class NotificationList extends StatelessWidget {
         physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (BuildContext context, int index) {
           return Padding(
-              padding: const EdgeInsets.only(bottom: 20),
+              padding: const EdgeInsets.only(bottom: 10),
               child: MaterialButton(
                 onPressed: () {},
-                child: ContainerCard(
+                child: ContainerCard( 
+                  
                   containerWidget: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,

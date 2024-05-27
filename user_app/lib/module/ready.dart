@@ -38,38 +38,40 @@ class _GradientCircularProgressIndicatorState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          AppBar(
-            title: const Text(""),
-          ),
-          Container(
-            padding: const EdgeInsets.only(top: 70, bottom: 30),
-            child: Image.asset("assets/img/bridge.png"),
-          ),
-          Container(
-            padding: const EdgeInsets.only(top: 20, bottom: 20),
-            child: const Text(
-              "READY TO GO!",
-              style: TextStyle(
-                color: Color.fromRGBO(12, 138, 125, 1),
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            AppBar(
+              title: const Text(""),
+            ),
+            Container(
+              padding:  EdgeInsets.only(top: 70, bottom: 30),
+              child: Image.asset("assets/img/bridge.png"),
+            ),
+            Container(
+              padding: const EdgeInsets.only(top: 20, bottom: 20),
+              child: const Text(
+                "READY TO GO!",
+                style: TextStyle(
+                  color: Color.fromRGBO(12, 138, 125, 1),
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-          ),
-          Container(
-            padding: const EdgeInsets.only(bottom: 35),
-            child: const Text(
-              "BRIDGE",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w700,
+            Container(
+              padding: const EdgeInsets.only(bottom: 35),
+              child: const Text(
+                "BRIDGE",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
-          ),
-          Center(child: progressIndicatorWidget()),
-        ],
+            Center(child: progressIndicatorWidget()),
+          ],
+        ),
       ),
     );
   }

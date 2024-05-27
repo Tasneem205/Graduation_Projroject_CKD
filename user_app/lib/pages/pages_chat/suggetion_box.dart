@@ -1,5 +1,5 @@
-/*import 'package:flutter/material.dart';
-
+import 'package:flutter/material.dart';
+import 'package:user_app/Classes/language_constants.dart';
 class SuggetionBox extends StatelessWidget {
   final String header;
   final String body;
@@ -40,4 +40,3 @@ class SuggetionBox extends StatelessWidget {
     );
   }
 }
-*/

@@ -26,7 +26,7 @@ class ExerciseScreen extends StatelessWidget {
                  margin: const EdgeInsets.only(top: 10),
                 child:
                  Text(translation(context).exercises,
-                style: const TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 20),
               ), 
               ),
                
@@ -62,7 +62,7 @@ class ExerciseScreen extends StatelessWidget {
                               fontSize: 24,
                               fontWeight: FontWeight.w500,
                             ),
-                            const SizedBox(height: 6),
+                            SizedBox(height: 6),
                             Row(
                               
                               children: [
@@ -71,7 +71,7 @@ class ExerciseScreen extends StatelessWidget {
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
                             ),
-                            const SizedBox(width: 15),
+                            SizedBox(width: 15),
                             SharedColorText(
                               text: translation(context).nminutes,
                               fontSize: 16,
@@ -80,8 +80,8 @@ class ExerciseScreen extends StatelessWidget {
                               ],
                             ),
                         
-                        const Text(
-                          'Wake up with energy, make your body primed for the day.',
+                        Text(
+                          translation(context).text,
                           style: TextStyle(fontSize: 12, color: Color.fromARGB(185, 0, 0, 0),fontWeight: FontWeight.w100),
                         ),
                       ],
@@ -131,10 +131,10 @@ class ExerciseScreen extends StatelessWidget {
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
                             ),
-                            const SizedBox(
+                            SizedBox(
                               height: 7,
                             ),
-                            const SharedColorText(
+                            SharedColorText(
                               text: '00:30',
                               fontSize: 14,
                               fontWeight: FontWeight.w300,
@@ -164,7 +164,7 @@ class ExerciseScreen extends StatelessWidget {
           child: MaterialButton(
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => const Ready()));
+              builder: (context) => Ready()));
             },
             color: const Color(0XFF0C8A7D),
             height: 54,
@@ -172,7 +172,7 @@ class ExerciseScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(25),
             ),
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(10.0),
               child: Align(
                 alignment: AlignmentDirectional.center,
                 child:

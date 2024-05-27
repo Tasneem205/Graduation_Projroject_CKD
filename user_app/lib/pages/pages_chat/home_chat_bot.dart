@@ -1,16 +1,17 @@
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:user_app/pages/chat_bot/chat_screen.dart';
+import 'package:user_app/Classes/language_constants.dart';
+import 'package:user_app/pages/pages_chat/chat_screen.dart';
 
-class HomeScreen extends StatefulWidget {
+class Home_chat_bot extends StatefulWidget {
   static const String routeName = 'home';
-  const HomeScreen({super.key});
+  const Home_chat_bot({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<Home_chat_bot> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<Home_chat_bot> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -36,23 +37,23 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Container(
                   alignment: Alignment.center,
-                  width: 290,
-                  height: 200,
+                  width: 250,
+                  height: 150,
                   child: Stack(
                     fit: StackFit.expand,
                     children: [
                       Image.asset(
                         "assets/img/message (1) 1.png",
-                        width: 290,
-                        height: 200,
+                        width: 240,
+                        height: 150,
                         fit: BoxFit.fill,
                       ),
-                      const Positioned.fill(
+                       Positioned.fill(
                         child: Align(
                           alignment: Alignment.center,
                           child: Text(
-                            "Welcome!",
-                            style: TextStyle(
+                            translation(context).welcome,
+                            style: const TextStyle(
                                 color: Colors.black,
                                 fontFamily: "Cera Pro",
                                 fontSize: 40),
@@ -67,64 +68,65 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 SizedBox(
                   width: double.infinity,
-                  height: 150,
-                  child: CircleAvatar(
-                    child: Image.asset(
-                      "assets/img/chatbottt.png",
-                      fit: BoxFit.contain,
-                    ),
+                  height: 170,
+                  child: Image.asset(
+                    "assets/img/donation-streaming-media-streamlabs-open-broadcaster-software-twitch-photoshop-software-interface-30fc4d2de67ced50f09661f68036ac91.png",
+                    fit: BoxFit.contain,
                   ),
                 ),
                 Container(
                   padding: const EdgeInsets.all(0),
                   margin: const EdgeInsets.symmetric(vertical: 30),
-                  child: const Text(
-                    "Bot",
-                    style: TextStyle(
+                  child:  Text(
+                    translation(context).bot,
+                    style: const TextStyle(
                         fontFamily: "Cera Pro",
-                        fontSize: 40,
+                        fontSize: 45,
                         fontWeight: FontWeight.bold,
                         color: Colors.black),
                   ),
                 ),
-                Container(
-                  padding: const EdgeInsets.all(0),
-                  margin: const EdgeInsets.symmetric(vertical: 30),
-                  child: AnimatedTextKit(
-                      displayFullTextOnTap: true,
-                      isRepeatingAnimation: false,
-                      repeatForever: false,
-                      animatedTexts: [
-                        TyperAnimatedText(
-                          "How may i help you today?",
-                          speed: const Duration(milliseconds: 50),
-                          textStyle: const TextStyle(
-                              fontFamily: "Cera Pro",
-                              fontSize: 28,
-                              color: Colors.black),
-                        )
-                      ]),
+                Center(
+                  child: Container(
+                    padding: const EdgeInsets.all(0),
+                    margin: const EdgeInsets.symmetric(vertical: 30),
+                    child: AnimatedTextKit(
+                        displayFullTextOnTap: true,
+                        isRepeatingAnimation: false,
+                        repeatForever: false,
+                        animatedTexts: [
+                          TyperAnimatedText(
+                            translation(context).howmayihelpyou,
+                            speed: const Duration(milliseconds: 50),
+                            textStyle: const TextStyle(
+                                fontFamily: "Cera Pro",
+                                fontSize: 28,
+                                color: Colors.black),
+                          )
+                        ]),
+                  ),
                 ),
               ],
             ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
-            onPressed: () async {
+             onPressed: () 
+            async {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return const ChatScreen();
+                return  const ChatScreen();
               }));
             },
-            elevation: 20,
-            // backgroundColor: Colors.white,
-            tooltip: "Bot",
+          
+             backgroundColor: Colors.white,
+            tooltip: translation(context).bot,
             child: Image.asset(
-              "assets/img/chatbottt.png",
-              scale: Checkbox.width,
+              "assets/img/donation-streaming-media-streamlabs-open-broadcaster-software-twitch-photoshop-software-interface-30fc4d2de67ced50f09661f68036ac91.png",
+              // scale: Checkbox.width,
+            
             )),
       ),
     );
   }
 }
 
-*/

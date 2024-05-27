@@ -13,6 +13,7 @@ import 'package:user_app/pages/Walking.dart';
 import 'package:user_app/pages/hist.dart';
 import 'package:user_app/pages/login.dart';
 import 'package:user_app/pages/medicine.dart';
+import 'package:user_app/pages/pages_chat/home_chat_bot.dart';
 import 'package:user_app/pages/profile.dart';
 import 'package:user_app/pages/water.dart';
 
@@ -50,13 +51,21 @@ class _HomeState extends State<Home> {
     // ];
     return Scaffold(
       backgroundColor: Color(0xffF2F7FD),
-      /*floatingActionButton: MaterialButton(onPressed: (){
+      floatingActionButton: 
+      MaterialButton(onPressed: (){
 
           Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const HomeScreen()));
+                    builder: (context) => const Home_chat_bot ()));
       },
-      child: Image.asset("assets/img/homechat.png"),
-      ),*/
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: Colors.white,
+        ),
+        
+        child: Image.asset("assets/img/robot.png")),
+    
+      ),
       appBar: AppBar(
         elevation: 2,
         backgroundColor: Color(0xffFFFFFF),
