@@ -14,9 +14,9 @@ class _DiabetesState extends State<Diabetes> {
   Widget build(BuildContext context) {
     return Expanded(
       child: Scaffold(
-        backgroundColor: Color(0xffF2F7FD),
+        backgroundColor: const Color(0xffF2F7FD),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Color(0xffFFFFFF),
+          backgroundColor: const Color(0xffFFFFFF),
           onPressed: () {
             showDialog(
                 context: context,
@@ -73,7 +73,7 @@ class _DiabetesState extends State<Diabetes> {
           ),
         ),
       appBar: AppBar(
-        backgroundColor: Color(0xffF2F7FD),
+        backgroundColor: const Color(0xffF2F7FD),
       title:  Text(translation(context).diabetes,
               style: const TextStyle(
                   color: Color(0xff0C8A7D),

@@ -42,8 +42,9 @@ dependencies:
   image_picker: ^1.0.7
   flutter_slidable: ^3.1.0
   google_generative_ai: ^0.4.0
-  #dash_chat_2: ^0.0.20
   animated_text_kit: ^4.2.2
+  #dash_chat_2: ^0.0.20
+  date_format: ^2.0.7
 
 dev_dependencies:
   flutter_test:
@@ -51,6 +52,7 @@ dev_dependencies:
   flutter_localizations:
     sdk: flutter
   intl: ^0.19.0
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -96,6 +98,7 @@ flutter:
     - images/medical pill.png
     - images/profile.png
     - assets/img/
+    - assets/img
     - assets/img/1109-drinking-water2.png
     - assets/img/bridge.png
     - assets/img/exersice_bar.png

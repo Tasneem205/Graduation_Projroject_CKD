@@ -12,12 +12,14 @@ class doing_exercise extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LinearProgressBarPage(),
+      home: const LinearProgressBarPage(),
     );
   }
 }
 
 class LinearProgressBarPage extends StatefulWidget {
+  const LinearProgressBarPage({super.key});
+
   @override
   _LinearProgressBarPageState createState() => _LinearProgressBarPageState();
 }
@@ -71,7 +73,7 @@ class _LinearProgressBarPageState extends State<LinearProgressBarPage> {
   void _skipToAnotherPage() {
     // Navigate to another page
       Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => Rest()));
+              builder: (context) => const Rest()));
   }
 
   @override

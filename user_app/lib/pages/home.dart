@@ -50,6 +50,13 @@ class _HomeState extends State<Home> {
     // ];
     return Scaffold(
       backgroundColor: Color(0xffF2F7FD),
+      /*floatingActionButton: MaterialButton(onPressed: (){
+
+          Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const HomeScreen()));
+      },
+      child: Image.asset("assets/img/homechat.png"),
+      ),*/
       appBar: AppBar(
         elevation: 2,
         backgroundColor: Color(0xffFFFFFF),
@@ -390,7 +397,7 @@ class _HomeState extends State<Home> {
                                     color: Color.fromARGB(217, 72, 203, 140)),
                                 width: 60,
                                 height: 50,
-                                child: Image.asset("assets/img/Sneakers.png",
+                                child: Image.asset("assets/img/Water Glass2.png",
                                     width: 40, height: 40, fit: BoxFit.contain),
                               ),
                               Container(
@@ -418,7 +425,7 @@ class _HomeState extends State<Home> {
                                     color: Color.fromARGB(219, 255, 138, 194)),
                                 width: 60,
                                 height: 50,
-                                child: Image.asset("assets/img/Time Span.png",
+                                child: Image.asset("assets/img/Time Span2.png",
                                     width: 60, height: 50, fit: BoxFit.contain),
                               ),
                               Container(
@@ -446,7 +453,7 @@ class _HomeState extends State<Home> {
                                     color: Color.fromARGB(255, 158, 202, 237)),
                                 width: 60,
                                 height: 50,
-                                child: Image.asset("assets/img/Water Glass.png",
+                                child: Image.asset("assets/img/Water Glass2.png",
                                     width: 50, height: 50, fit: BoxFit.contain),
                               ),
                               Container(

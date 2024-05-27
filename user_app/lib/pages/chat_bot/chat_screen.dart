@@ -1,7 +1,7 @@
 /*import 'package:dash_chat_2/dash_chat_2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
-
+import 'package:intl/intl.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -11,6 +11,7 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
+
   final TextEditingController _userMessage = TextEditingController();
 
   static const apiKey = "AIzaSyCP0VrBiNURCrEeghFrCT2F9tjC8MUhJm4";
@@ -22,7 +23,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   Future<void> sendMessage() async {
     final message = _userMessage.text;
-
+  
     _userMessage.clear();
 
     setState(() {
@@ -32,7 +33,7 @@ class _ChatScreenState extends State<ChatScreen> {
     });
 
     // Send the user message to the bot and wait for the response
-    final content = [context.text(message)];
+    final content = [Content.text(message)];
     final response = await model.generateContent(content);
     setState(() {
       // Add bot's response to the chat
@@ -46,7 +47,7 @@ class _ChatScreenState extends State<ChatScreen> {
     return Scaffold(
         appBar: AppBar(
           title:
-              const Center(child: Text('Bot', style: TextStyle(fontSize: 40))),
+              Center(child: const Text('Bot', style: TextStyle(fontSize: 40))),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -60,6 +61,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     isUser: message.isUser,
                     message: message.message,
                     date: DateFormat('HH:mm').format(message.date),
+                    
                   );
                 },
               ),
@@ -72,7 +74,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   Expanded(
                     flex: 15,
                     child: TextFormField(
-                      cursorColor: const Color(0xff0C8A7D),
+                      cursorColor: Color(0xff0C8A7D),
                       controller: _userMessage,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -90,7 +92,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     iconSize: 30,
                     style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0xff0C8A7D)),
+                          MaterialStateProperty.all(Color(0xff0C8A7D)),
                       foregroundColor: MaterialStateProperty.all(Colors.white),
                       shape: MaterialStateProperty.all(
                         const CircleBorder(),
@@ -121,8 +123,11 @@ class Messages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return  
+    
+    SingleChildScrollView(
       child: Container(
+        
         padding: const EdgeInsets.all(15),
         margin: const EdgeInsets.symmetric(vertical: 20).copyWith(
           left: isUser ? 100 : 10,
@@ -137,9 +142,12 @@ class Messages extends StatelessWidget {
             bottomRight: isUser ? Radius.zero : const Radius.circular(25),
           ),
         ),
-        child: Column(
+        child: 
+        
+        Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+          
             Text(
               message,
               style: TextStyle(
@@ -167,5 +175,5 @@ class Message {
     required this.message,
     required this.date,
   });
-}
-*/
+  
+}*/

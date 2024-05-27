@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:user_app/Classes/language_constants.dart';
 import 'package:user_app/module/exercise-screen.dart';
@@ -47,6 +48,31 @@ class MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        textSelectionTheme: const TextSelectionThemeData(
+          cursorColor: Color(0xff0C8A7D),
+          selectionColor: Color(0xff0C8A7D),
+          selectionHandleColor: Color(0xff0C8A7D)),
+        timePickerTheme: const TimePickerThemeData(
+          dialHandColor: Color(0xff0C8A7D),
+          dialBackgroundColor: Color(0xffFAFAFA),
+          entryModeIconColor: Color(0xff0C8A7D),
+          hourMinuteColor: Color(0xffFAFAFA),
+          hourMinuteTextColor: Color(0xff000000),
+          backgroundColor: Color(0xffFFFFFF),
+          cancelButtonStyle: ButtonStyle(
+            foregroundColor: WidgetStatePropertyAll(Color(0xff0C8A7D))),
+          confirmButtonStyle: ButtonStyle(
+            foregroundColor: WidgetStatePropertyAll(Color(0xff0C8A7D))
+          ),
+          dayPeriodColor: Color(0xff72CEBF),
+          timeSelectorSeparatorColor: WidgetStatePropertyAll(Color(0xff0C8A7D)),
+          inputDecorationTheme: InputDecorationTheme(
+            focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Color(0xff0C8A7D))),
+            enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Color(0xff0C8A7D))),
+            ),
+        )
+      ),
       debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,

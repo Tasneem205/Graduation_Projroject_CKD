@@ -55,11 +55,12 @@ class _Login extends State<Login> {
               child: Form(
                 key: formstate1,
                 child: TextFormField(
-                  /*validator: (value) {
+                  validator: (value) {
                     if (value!.isEmpty) {
                       return translation(context).required;
                     }
-                  },*/
+                    return null;
+                  },
                   cursorColor: const Color(0xff0C8A7D),
                   keyboardType: TextInputType.name,
                   controller: nameController,
@@ -87,11 +88,13 @@ class _Login extends State<Login> {
               child: Form(
                 key: formstate2,
                 child: TextFormField(
-                  /*validator: (value) {
+                  
+                  validator: (value) {
                     if (value!.isEmpty) {
                       return translation(context).required;
                     }
-                  },*/
+                    return null;
+                  },
                   cursorColor: const Color(0xff0C8A7D),
                   obscureText: true,
                   controller: passwordController,
@@ -124,7 +127,7 @@ class _Login extends State<Login> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10))),
                   onPressed: () async {
-                    /*if (formstate1.currentState!.validate()) {
+                    if (formstate1.currentState!.validate()) {
                       print(translation(context).valid);
                     } else {
                       print(translation(context).notvalid);
@@ -138,10 +141,11 @@ class _Login extends State<Login> {
                     await saveprefs();
 
                     if (formstate1.currentState!.validate() &
-                        formstate2.currentState!.validate()) {*/
+                        formstate2.currentState!.validate()) {
                       Navigator.of(context).pushReplacement(
                           MaterialPageRoute(builder: (context) => const Home()));
-                    //}
+                    
+                    }
                     print(nameController.text);
                     print(passwordController.text);
                   },

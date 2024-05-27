@@ -101,7 +101,7 @@ class ExerciseDetailsScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(3),
               ),
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30,vertical: 5),
+                padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 5),
                 child: Align(
                   alignment: AlignmentDirectional.center,
                   child: SharedColorText(
