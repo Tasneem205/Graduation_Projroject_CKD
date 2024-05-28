@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/services.dart';
 import 'package:user_app/Classes/language_constants.dart';
 import 'package:user_app/pages/pages_chat/chat_screen.dart';
 
@@ -12,6 +13,24 @@ class Home_chat_bot extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<Home_chat_bot> {
+  @override
+  void initState() {
+    super.initState();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (_) => const ChatScreen(),
+        ));
+    });
+  }
+
+  @override
+  void dispose() {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+        overlays: SystemUiOverlay.values);
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -70,7 +89,7 @@ class _HomeScreenState extends State<Home_chat_bot> {
                   width: double.infinity,
                   height: 170,
                   child: Image.asset(
-                    "assets/img/donation-streaming-media-streamlabs-open-broadcaster-software-twitch-photoshop-software-interface-30fc4d2de67ced50f09661f68036ac91.png",
+                    "assets/img/chatbottt.png",
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -100,7 +119,7 @@ class _HomeScreenState extends State<Home_chat_bot> {
                             speed: const Duration(milliseconds: 50),
                             textStyle: const TextStyle(
                                 fontFamily: "Cera Pro",
-                                fontSize: 28,
+                                fontSize: 18,
                                 color: Colors.black),
                           )
                         ]),
@@ -110,23 +129,8 @@ class _HomeScreenState extends State<Home_chat_bot> {
             ),
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-             onPressed: () 
-            async {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return  const ChatScreen();
-              }));
-            },
-          
-             backgroundColor: Colors.white,
-            tooltip: translation(context).bot,
-            child: Image.asset(
-              "assets/img/donation-streaming-media-streamlabs-open-broadcaster-software-twitch-photoshop-software-interface-30fc4d2de67ced50f09661f68036ac91.png",
-              // scale: Checkbox.width,
-            
-            )),
+        
       ),
     );
   }
 }
-

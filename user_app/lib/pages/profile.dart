@@ -1,6 +1,8 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:user_app/Classes/language_constants.dart';
 import 'package:user_app/pages/Edit%20Profile.dart';
+import 'package:http/http.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -12,9 +14,9 @@ class _Profile extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF2F7FD),
+      backgroundColor: const Color(0xffF2F7FD),
       appBar: AppBar(
-        backgroundColor: Color(0xffF2F7FD),
+          backgroundColor: const Color(0xffF2F7FD),
           title: Text(translation(context).profile,
               style: const TextStyle(
                   color: Color(0xff0C8A7D),

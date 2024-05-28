@@ -57,10 +57,10 @@ class _Medicine extends State<Medicine> {
                         decoration:  InputDecoration(
                           labelText: translation(context).medicinename,
                           labelStyle:
-                              TextStyle(color: Color(0xff0C8A7D), fontSize: 16),
-                          enabledBorder: UnderlineInputBorder(
+                              const TextStyle(color: Color(0xff0C8A7D), fontSize: 16),
+                          enabledBorder: const UnderlineInputBorder(
                               borderSide: BorderSide(color: Color(0xff0C8A7D))),
-                          focusedBorder: UnderlineInputBorder(
+                          focusedBorder: const UnderlineInputBorder(
                               borderSide: BorderSide(color: Color(0xff0C8A7D))),
                         ),
                         cursorColor: const Color(0xff0C8A7D),
@@ -86,7 +86,7 @@ class _Medicine extends State<Medicine> {
                                   }
                                 },
                                 child:  Text(translation(context).selectimage,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         color: Color(0xff0C8A7D),
                                         fontSize: 16)),
                               ),
@@ -96,7 +96,7 @@ class _Medicine extends State<Medicine> {
                       // Time picker
                       Row(
                         children: [
-                          Text('Time:',
+                          const Text('Time:',
                               style: TextStyle(
                                   color: Color(0xff000000), fontSize: 16)),
                           TextButton(
@@ -123,7 +123,7 @@ class _Medicine extends State<Medicine> {
                       Column(
                         children: [
                            Text(translation(context).days,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Color(0xff000000), fontSize: 16)),
                           const SizedBox(height: 8.0),
                           SizedBox(
@@ -187,7 +187,7 @@ class _Medicine extends State<Medicine> {
                                 Navigator.of(context).pop();
                               }
                             }),
-                        Spacer(),
+                        const Spacer(),
                         Switch(
                           activeColor: const Color(0xff0C8A7D),
                           activeTrackColor: const Color(0xffB0E3DC),

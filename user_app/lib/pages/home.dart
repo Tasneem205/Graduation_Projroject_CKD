@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:easy_date_timeline/easy_date_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -16,6 +17,7 @@ import 'package:user_app/pages/medicine.dart';
 import 'package:user_app/pages/pages_chat/home_chat_bot.dart';
 import 'package:user_app/pages/profile.dart';
 import 'package:user_app/pages/water.dart';
+import 'package:http/http.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -50,25 +52,22 @@ class _HomeState extends State<Home> {
     // ChartData('Steps', 1000, Color.fromARGB(217, 72, 203, 140)),
     // ];
     return Scaffold(
-      backgroundColor: Color(0xffF2F7FD),
-      floatingActionButton: 
-      MaterialButton(onPressed: (){
-
-          Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const Home_chat_bot ()));
-      },
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: Colors.white,
-        ),
-        
-        child: Image.asset("assets/img/robot.png")),
-    
+      backgroundColor: const Color(0xffF2F7FD),
+      floatingActionButton: MaterialButton(
+        onPressed: () {
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const Home_chat_bot()));
+        },
+        child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.white,
+            ),
+            child: Image.asset("assets/img/robot.png")),
       ),
       appBar: AppBar(
         elevation: 2,
-        backgroundColor: Color(0xffFFFFFF),
+        backgroundColor: const Color(0xffFFFFFF),
         actions: <Widget>[
           DropdownButton<Language>(
             underline: const SizedBox(),
@@ -136,6 +135,7 @@ class _HomeState extends State<Home> {
                                     fontWeight: FontWeight.normal)),
                           ]),
                           onPressed: () {
+                    
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => const Profile()));
                           }),
@@ -406,8 +406,11 @@ class _HomeState extends State<Home> {
                                     color: Color.fromARGB(217, 72, 203, 140)),
                                 width: 60,
                                 height: 50,
-                                child: Image.asset("assets/img/Water Glass2.png",
-                                    width: 40, height: 40, fit: BoxFit.contain),
+                                child: Image.asset(
+                                    "assets/img/Water Glass2.png",
+                                    width: 40,
+                                    height: 40,
+                                    fit: BoxFit.contain),
                               ),
                               Container(
                                 child: TextButton(
@@ -462,8 +465,11 @@ class _HomeState extends State<Home> {
                                     color: Color.fromARGB(255, 158, 202, 237)),
                                 width: 60,
                                 height: 50,
-                                child: Image.asset("assets/img/Water Glass2.png",
-                                    width: 50, height: 50, fit: BoxFit.contain),
+                                child: Image.asset(
+                                    "assets/img/Water Glass2.png",
+                                    width: 50,
+                                    height: 50,
+                                    fit: BoxFit.contain),
                               ),
                               Container(
                                 child: TextButton(
@@ -514,31 +520,30 @@ class _HomeState extends State<Home> {
             // workouts
             Padding(
               padding: const EdgeInsets.only(bottom: 10),
-              child:
-                  MaterialButton(
-                    child: Card(
-                        color: const Color(0xffFFFFFF),
-                        child: Expanded(
-                          child: Row(children: [
-                            Image.asset(
-                              "assets/img/stopwatch (2).png",
-                              width: 50,
-                              height: 50,
-                            ),
-                            const SizedBox(
-                              width: 5,
-                            ),
-                            Text(
-                              translation(context).time,
-                              style: const TextStyle(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ]),
-                        )),
-                    onPressed: () {},
-                  ),
+              child: MaterialButton(
+                child: Card(
+                    color: const Color(0xffFFFFFF),
+                    child: Expanded(
+                      child: Row(children: [
+                        Image.asset(
+                          "assets/img/stopwatch (2).png",
+                          width: 50,
+                          height: 50,
+                        ),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          translation(context).time,
+                          style: const TextStyle(
+                              fontSize: 18,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ]),
+                    )),
+                onPressed: () {},
+              ),
             ),
 
             ////////////////////
